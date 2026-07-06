@@ -18,7 +18,7 @@ import { arNav, arPages } from './src/data/ar.js';
 import { arBrands } from './src/data/arBrands.js';
 import { arServices } from './src/data/arServices.js';
 import { arNetwork, arShop, arLocations } from './src/data/arMore.js';
-import { macHubHtml, gamingHtml, MAC_HUB_FAQ, GAMING_FAQ, errorMessagesHtml, ERROR_FAQ, computerWontTurnOnHtml, WONT_TURN_ON_FAQ, faqPageHtml, GENERAL_FAQ, networkHubHtml, NETWORK_HUB_FAQ, websitesHubHtml, WEBSITES_HUB_FAQ } from './src/data/richPages.js';
+import { macHubHtml, gamingHtml, MAC_HUB_FAQ, GAMING_FAQ, errorMessagesHtml, ERROR_FAQ, computerWontTurnOnHtml, WONT_TURN_ON_FAQ, faqPageHtml, GENERAL_FAQ, networkHubHtml, NETWORK_HUB_FAQ, websitesHubHtml, WEBSITES_HUB_FAQ, WHY_WEB } from './src/data/richPages.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(__dirname, 'dist');
@@ -840,6 +840,7 @@ function serviceBody(s) {
     : `<section class="section alt"><div class="wrap"><div class="eyebrow">Diagnostics &amp; pricing</div><h2>Free or express — your choice</h2><p class="sub">Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. You get a fixed quote before we start, always.</p></div></section>`;
   const cta = esc(s.ctaLabel || 'Book diagnostics');
   const faq = s.faq.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
+  const why = new Set(['website-design-development', 'seo-services', 'google-ads-management']).has(s.slug) ? WHY_WEB : '';
   const cross = s.crosslinks.map((c) => `<a href="${c.href}">${esc(c.label)} →</a>`).join('') + `<a href="/contact/">Contact & booking →</a>`;
   return `  <section class="hero"><div class="wrap"><div class="eyebrow">Service · Frederiksberg &amp; Copenhagen</div><h1>${esc(s.h1)}</h1>${s.subhead ? `<p class="lead">${esc(s.subhead)}</p>` : ''}
     <div class="cta-row"><a class="btn btn-white" href="/contact/">${cta}</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div></section>
@@ -847,6 +848,7 @@ function serviceBody(s) {
   ${bullets}
   ${callout}
   ${pricing}
+  ${why}
   <section class="section"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Common questions</h2><div class="faq">${faq}</div></div></section>
   <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Ready to get started?</h2><p>Contact us and we'll help you book the right service.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">${cta}</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related services</p><div class="crosslinks">${cross}</div></div></div></section>`;
