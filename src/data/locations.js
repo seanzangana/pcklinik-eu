@@ -34,6 +34,8 @@ export const locations = [
       { q: 'Are you close to CBS?', a: "Yes, we're in Frederiksberg, the same area as CBS's campus buildings." },
       { q: 'Can you help if I need my laptop back before an exam?', a: "Tell us the timeline — express diagnostics (600 kr, 1–2 hours) is your fastest option, and we'll be upfront about whether we can meet your deadline." },
       { q: 'Do you work with international students specifically?', a: 'Yes, regularly — no Danish required.' },
+      { q: "I'm only here for one semester on exchange — is it worth getting something repaired instead of just living with it?", a: "Often yes, especially for something you'll be using daily for the rest of your stay — but we'll give you an honest view of repair cost versus how much use you'll actually get before you leave." },
+      { q: "What happens if I need to leave the country before a repair is finished?", a: "Tell us your departure date when you book — we'll be upfront about whether we can realistically finish in time, and can discuss options (shipping the device to you, or prioritizing if it's tight) rather than leaving you stuck close to your flight." },
     ],
     crosslinks: [{ label: 'Copenhagen (overview)', href: '/computer-repair-copenhagen/' }, { label: 'Business IT Support', href: '/business-it-service-agreement/' }, { label: 'Contact', href: '/contact/' }],
   },
