@@ -34,7 +34,8 @@ function formOpen(dest, subject, nextPath) {
         <input type="hidden" name="_to" value="${dest}" />
         <input type="hidden" name="_subject" value="${esc(subject)}" />
         <input type="hidden" name="_next" value="${next}" />
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />`;
+        <input type="hidden" name="_ts" value="" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" data-lpignore="true" data-1p-ignore style="position:absolute;left:-9999px" />`;
   }
   const fs = dest === site.emailBusiness ? 'xpqgbpog' : 'maqgvelb';
   return `<form action="https://formspree.io/f/${fs}" method="POST">
@@ -112,6 +113,7 @@ const formsScript = `<script>
 (function(){
 var fs=document.querySelectorAll('form[data-ajax-form]');
 fs.forEach(function(f){
+var tsf=f.querySelector('input[name=_ts]');if(tsf){tsf.value=Date.now();}
 var s=document.createElement('div');s.className='form-status';s.setAttribute('role','status');s.setAttribute('aria-live','polite');s.style.display='none';f.appendChild(s);
 var b=f.querySelector('[type=submit]');
 f.addEventListener('submit',function(e){
