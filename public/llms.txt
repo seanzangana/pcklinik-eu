@@ -1,0 +1,14 @@
+# PCKlinik
+
+PCKlinik is a computer and Mac repair workshop on Falkoner Allé 108, 2000 Frederiksberg (Copenhagen), Denmark. We repair all major PC and Mac brands, offer task-based services (SSD upgrades, data recovery, virus removal, liquid-damage repair, network setup), sell new and refurbished computers, and provide fixed-price Business IT support for companies. Standard diagnostics are free (2–4 days) or express for 600 kr (1–2 hours), with a fixed quote before any work begins. Phone: 91 81 61 81. Email: contact@pcklinik.eu (general) / support@pcklinik.eu (business IT).
+
+## Key pages
+- [Home](https://www.pcklinik.eu/)
+- [Business IT Support](https://www.pcklinik.eu/business-it-service-agreement/)
+- [Repairs — Lenovo](https://www.pcklinik.eu/lenovo-repair/) and all major brands
+- [Mac Repair](https://www.pcklinik.eu/mac-repair/)
+- [Gaming PC Repair & Custom Builds](https://www.pcklinik.eu/gaming-pc-repair-and-build/)
+- [Services — SSD upgrade, data recovery, virus removal, network setup, and more](https://www.pcklinik.eu/ssd-upgrade/)
+- [Common Error Messages & Codes](https://www.pcklinik.eu/error-messages/)
+- [Shop](https://www.pcklinik.eu/shop/)
+- [Contact](https://www.pcklinik.eu/contact/)
