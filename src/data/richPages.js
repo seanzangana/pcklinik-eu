@@ -317,6 +317,13 @@ export const WEBSITES_HUB_FAQ = [
   { q: 'Do you build the website AND handle the SEO, or just one or the other?', a: 'Either — some clients want both from the start, others already have a site and just want SEO or Ads help.' },
   { q: 'Is this only for businesses, or can individuals get a personal website built too?', a: 'Primarily aimed at businesses, but contact us regardless of what you need.' },
 ];
+export const WHY_WEB = `  <section class="section alt"><div class="wrap"><div class="eyebrow">Why PCKlinik</div><ul class="check-list">
+    <li><strong>Real experience, not outsourced work</strong> — the same person who builds your site does the technical SEO behind it, not a template or a junior account manager.</li>
+    <li><strong>Fixed quote before we start</strong> — no hourly surprises, no scope creep billed after the fact.</li>
+    <li><strong>Built the way this very site is built</strong> — real, hand-written code, fast and mobile-friendly by default, not a drag-and-drop builder.</li>
+    <li><strong>English-speaking, international-ready</strong> — we work with clients across time zones and currencies daily.</li>
+  </ul></div></section>`;
+
 export function websitesHubHtml() {
   const cards = [
     ['Website Design & Development', 'Modern, fast, mobile-friendly sites — business sites, portfolios, or simple webshops.', '/website-design-development/'],
@@ -331,6 +338,7 @@ export function websitesHubHtml() {
   <section class="section"><div class="wrap lead-copy"><div class="crumbs"><a href="/">Home</a> › <span>Websites &amp; SEO</span></div>
     <p>Having a website isn't enough if nobody finds it. We build modern, fast websites, then make sure they actually rank — through real SEO work and, where it makes sense, targeted Google Ads. This isn't outsourced to a template or a junior account manager — the same person building your site does the technical SEO work behind it.</p></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">What we do</div><h2>Three ways we help</h2><div class="grid grid-3">${cards}</div></div></section>
+  ${WHY_WEB}
   <section class="section"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Websites &amp; SEO — common questions</h2><div class="faq">${faqHtml}</div></div></section>
   <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Want to be found online?</h2><p>Tell us what you need — a new site, better rankings, or ad campaigns that actually convert. We scope it and quote it, no obligation.</p><div class="cta-row"><a class="btn btn-white" href="${quote}">Get a quote</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks"><a href="/business-it-service-agreement/">Business IT Support →</a><a href="/contact/">Contact →</a></div></div></div></section>`;
