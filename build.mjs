@@ -42,7 +42,7 @@ function formOpen(dest, subject, nextPath) {
         <input type="hidden" name="_subject" value="${esc(subject)}" />
         <input type="hidden" name="_next" value="${next}" />`;
 }
-const arPathSet = new Set(['/ar/', ...arPages.map((x) => x.slug), ...arBrands.map((b) => `/ar/${b.slug}/`), ...arServices.map((sv) => `/ar/${sv.slug}/`), ...arNetwork.map((n) => `/ar/${n.slug}/`), ...arShop.map((sh) => `/ar/${sh.slug}/`), ...arLocations.map((l) => `/ar/${l.slug}/`), '/ar/business-it-service-agreement/', '/ar/contact/', '/ar/thank-you/']);
+const arPathSet = new Set(['/ar/', ...arPages.map((x) => x.slug), ...arBrands.map((b) => `/ar/${b.slug}/`), ...arServices.map((sv) => `/ar/${sv.slug}/`), ...arNetwork.map((n) => `/ar/${n.slug}/`), ...arShop.map((sh) => `/ar/${sh.slug}/`), ...arLocations.map((l) => `/ar/${l.slug}/`), '/ar/business-it-service-agreement/', '/ar/contact/', '/ar/thank-you/', '/ar/faq/']);
 const AR_EN_MAP = { '/ar/': '/', '/ar/website-design/': '/website-design-development/', '/ar/google-ads/': '/google-ads-management/', '/ar/business-it/': '/business-it-service-agreement/' };
 const EN_AR_MAP = { '/website-design-development/': '/ar/website-design/', '/google-ads-management/': '/ar/google-ads/', '/business-it-service-agreement/': '/ar/business-it-service-agreement/' };
 function arCounterpart(p) { return EN_AR_MAP[p] || (p === '/' ? '/ar/' : `/ar${p}`); }
@@ -547,7 +547,7 @@ function footerAr() {
   const links = arNav.map((i) => `<a href="${i.href}">${esc(i.label)}</a>`).join('');
   return `<footer class="site-footer"><div class="wrap"><div class="cols">
     <div><h2>PCKlinik</h2><a href="/ar/" style="color:var(--muted)">دعم تقني وخدمات ويب عن بُعد — بفريق يتحدث العربية.</a></div>
-    <div><h2>الخدمات عن بُعد</h2>${links}</div>
+    <div><h2>الخدمات عن بُعد</h2>${links}<a href="/ar/faq/">الأسئلة الشائعة</a></div>
     <div><h2>المتجر</h2>${arShop.map((sh) => `<a href="/ar/${sh.slug}/">${esc(sh.label)}</a>`).join('')}</div>
     <div><h2>المناطق التي نخدمها</h2><a href="/ar/computer-repair-copenhagen/" lang="en">Copenhagen</a><a href="/ar/computer-repair-frederiksberg/" lang="en">Frederiksberg</a><a href="/ar/computer-repair-vesterbro/" lang="en">Vesterbro</a><a href="/ar/computer-repair-vanloese/" lang="en">Vanl&oslash;se</a><a href="/ar/computer-repair-valby/" lang="en">Valby</a><a href="/ar/computer-repair-nordvest/" lang="en">Nordvest</a></div>
     <div><h2>لغة أخرى</h2><a href="/" hreflang="en" lang="en">English site</a><a href="/contact/" hreflang="en" lang="en">Contact (in English)</a></div>
@@ -566,7 +566,7 @@ function arPageHtml(pg) {
 
 // ---------- Arabic homepage + brand pages ----------
 const AR_HOME_FAQ = [
-  { q: 'هل تتحدثون العربية؟', a: 'نعم، فريقنا يضم متحدثين بالعربية والإنجليزية.' },
+  { q: 'هل تتحدثون العربية؟', a: 'نعم، فريقنا يضم متحدثين بالعربية والدنماركية والإنجليزية.' },
   { q: 'هل تصلحون كل ماركات الحاسوب؟', a: 'نعم، نصلح جميع الماركات الرئيسية، بالإضافة إلى الأجهزة المخصصة.' },
   { q: 'كم تكلفة الإصلاح؟', a: 'التشخيص القياسي مجاني (2–4 أيام)، أو سريع مقابل 600 كرونة (1–2 ساعة). ستحصلون دائمًا على سعر ثابت قبل بدء أي عمل.' },
   { q: "كيف يتم الدفع للعملاء خارج الدنمارك؟", a: "نقبل التحويل البنكي الدولي وبطاقات الدفع. سنوضح تفاصيل الدفع بوضوح عند الاتفاق على المشروع." },
@@ -575,6 +575,20 @@ const AR_HOME_FAQ = [
   { q: "بأي عملة تكون الفواتير؟", a: "عادة باليورو أو الكرونة الدنماركية — يمكن مناقشة ذلك حسب موقعكم عند بدء المشروع." },
   { q: "هل هناك حد أدنى لحجم المشروع؟", a: "لا يوجد حد أدنى صارم — تواصلوا معنا وسنخبركم إن كان مشروعكم مناسبًا لخدماتنا." },
 ];
+const AR_FAQ_GROUPS = [["عام والإجراءات", [["هل تتحدثون العربية؟", "نعم — خدمتنا بالكامل متاحة بالعربية والدنماركية والإنجليزية، من أول اتصال أو رسالة حتى استلام جهازكم المُصلح. لا حاجة للدنماركية."], ["كيف يعمل التشخيص والإصلاح؟", "نشخص المشكلة الفعلية أولاً، ثم نعطيكم سعرًا ثابتًا قبل بدء أي إصلاح. التشخيص القياسي مجاني (2-4 أيام)، أو اختاروا السريع مقابل 600 كرونة (1-2 ساعة) — مع الإصلاح والتسليم خلال 24 ساعة إذا لم تكن هناك حاجة لقطع غيار خاصة."], ["ماذا لو احتجت جهازي أسرع من التشخيص القياسي؟", "اختاروا التشخيص السريع (600 كرونة، 1-2 ساعة) بدلاً من الخيار المجاني القياسي. معظم الإصلاحات السريعة تكتمل خلال 24 ساعة إذا لم تكن هناك حاجة لقطع غيار خاصة."], ["هل تقدمون ضمانًا على الإصلاحات؟", "نعم، الإصلاحات تأتي بضمان. اسألوا عند الحجز عن تفاصيل نوع إصلاحكم."], ["هل بياناتي آمنة أثناء الإصلاح؟", "نعم. لا نصل إلى بياناتكم الشخصية أو نشاركها إلا بالقدر اللازم لإتمام الإصلاح، وننصح دائمًا بعمل نسخة احتياطية للملفات المهمة مسبقًا."], ["هل أحتاج موعدًا مسبقًا، أم يمكنني الحضور مباشرة؟", "خدمة بدون موعد مسبق — لا حاجة لحجز موعد."], ["هل يمكنكم استلام وتوصيل حاسوبي؟", "نعم، الاستلام والتوصيل متاحان — تواصلوا معنا للتفاصيل حسب موقعكم."], ["ماذا لو تعذر إصلاح جهازي؟", "سنخبركم بصراحة. إذا لم يكن الإصلاح مجديًا اقتصاديًا مقارنة بالاستبدال، سنقول ذلك بدلاً من تحصيل رسوم على عمل غير مجدٍ — ويمكننا توجيهكم لخيارات مجددة أو جديدة في متجرنا إذا كان ذلك الخيار الأفضل."], ["كيف أعرف إذا كان يستحق إصلاح حاسوبي، أم يجب استبداله؟", "قاعدة شائعة: إذا كانت تكلفة الإصلاح أكثر من 25-50% من تكلفة استبدال مماثل، فالاستبدال عادة القيمة الأفضل — خصوصًا لجهاز أقدم. العمر مهم أيضًا: جهاز عمره 2-3 سنوات يستحق الإصلاح غالبًا؛ جهاز عمره 7-8 سنوات قد يكون من الصعب إيجاد قطع غياره. سنعطيكم رأينا الصادق كجزء من عرض السعر الثابت، وليس فقط تقدير إصلاح."], ["ما وسائل الدفع التي تقبلونها؟", "الدفع بالبطاقة والتحويل البنكي."]]], ["الماركات التي نصلحها", [["هل تصلحون أجهزة Lenovo؟", "نعم — ThinkPad (T14، T14s، X1 Carbon، P16 والمزيد)، IdeaPad، Legion، Yoga، وThinkBook."], ["هل تصلحون أجهزة Acer؟", "نعم — طرازات Aspire وSwift وNitro وPredator."], ["هل تصلحون أجهزة HP؟", "نعم — EliteBook وProBook وPavilion وSpectre وOmen."], ["هل تصلحون أجهزة Dell؟", "نعم — XPS وLatitude وInspiron وPrecision وAlienware."], ["هل تصلحون أجهزة Asus؟", "نعم — ZenBook وVivobook وROG وTUF Gaming."], ["هل تصلحون أجهزة MSI؟", "نعم — Katana وسلسلة GF وStealth وPrestige. نحن أيضًا من الورش القليلة في الدنمارك التي تخزن قطع غيار MSI."], ["هل تصلحون أجهزة Huawei؟", "نعم — MateBook D14 وD15 وX Pro."], ["هل تصلحون MacBook وأجهزة Mac المكتبية؟", "نعم — كل أجيال MacBook (Intel وApple Silicon)، بالإضافة إلى iMac وMac mini وMac Studio وMac Pro."], ["هل تصلحون أجهزة Microsoft Surface؟", "نعم — Surface Pro وSurface Laptop وSurface Book، بما في ذلك إصلاح الشاشة اللمسية المتخصص."], ["هل تصلحون أجهزة Samsung Galaxy Book؟", "نعم — Galaxy Book3 وGalaxy Book4 Pro وGalaxy Book3 360 وGalaxy Book Go. نحن من الورش القليلة في Copenhagen ذات الخبرة الحقيقية بهذه الماركة الأحدث."], ["ماذا عن الماركات غير المذكورة هنا — Toshiba، Gigabyte، LG gram، Razer؟", "نصلح تقريبًا أي ماركة أو جهاز مخصص، وليس فقط ما له صفحات مخصصة — راجعوا صفحة \"ماركات أخرى وأجهزة مخصصة\"."], ["هل تبنون حواسيب ألعاب مخصصة، وليس فقط إصلاحها؟", "نعم — أخبرونا بميزانيتكم والاستخدام المطلوب، وسنقترح المكونات ونبنيها ونختبرها قبل التسليم."]]], ["الخدمات", [["هل يمكنكم ترقية حاسوبي القديم إلى SSD؟", "نعم — غالبًا واحد من أكثر التحسينات وضوحًا التي يمكن إجراؤها على جهاز قديم."], ["هل تصلحون أضرار السوائل؟", "نعم، لأي ماركة أو طراز. ملاحظة: تشخيص أضرار السوائل يختلف عن أسعارنا القياسية — سعر ثابت 600 كرونة، يستغرق 3-4 أيام، بدون خيار سريع، لأن التقييم السليم يحتاج وقتًا."], ["هل يمكنكم استرجاع البيانات من قرص صلب فاشل؟", "غالبًا نعم — يعتمد على نوع وشدة العطل. نقيّم أولاً ونعطي إجابة صادقة."], ["هل تزيلون الفيروسات والبرامج الضارة؟", "نعم، على كل من PC وMac."], ["هل تنظفون الغبار وتعيدون وضع معجون التبريد؟", "نعم — إصلاح شائع لمشاكل ارتفاع الحرارة أو ضجيج المروحة على اللابتوب وحواسيب الألعاب المكتبية."], ["هل تصلحون منافذ الشحن؟", "نعم، عبر جميع ماركات اللابتوب."]]], ["الدعم التقني للشركات", [["هل تقدمون دعمًا تقنيًا مستمرًا للشركات، وليس فقط إصلاحات لمرة واحدة؟", "نعم — نقدم اتفاقيات دعم تقني بسعر ثابت تشمل دعمًا غير محدود، ومراقبة، وأمانًا. راجعوا صفحة الدعم التقني للشركات للأسعار والتفاصيل."], ["ما الفرق بين إصلاح لمرة واحدة واتفاقية دعم؟", "الإصلاح حل واحد لمشكلة محددة. اتفاقية الدعم ترتيب شهري ثابت ومستمر يشمل دعمًا غير محدود ومراقبة وأمانًا لتقنية شركتكم — مصمم لمنع المشاكل بدلاً من إصلاحها بعد وقوعها فقط."]]], ["المتجر", [["هل تبيعون حواسيب، وليس فقط إصلاحها؟", "نعم — حواسيب جديدة ومجددة، بالإضافة إلى معدات النسخ الاحتياطي والأمان، متوفرة في متجرنا."], ["هل الحواسيب المجددة مضمونة؟", "نعم — الحواسيب المجددة تأتي بضمان؛ راجعوا المتجر للتفاصيل."]]]];
+const AR_GENERAL_FAQ = AR_FAQ_GROUPS.flatMap(([, items]) => items.map(([q, a]) => ({ q, a })));
+function arFaqPageHtml() {
+  const sections = AR_FAQ_GROUPS.map(([title, items], i) => {
+    const rows = items.map(([q, a]) => `<details><summary>${esc(q)}</summary><div class="answer">${esc(a)}</div></details>`).join('');
+    return `<section class="section${i % 2 ? ' alt' : ''}"><div class="wrap"><div class="eyebrow">${esc(title)}</div><div class="faq" style="max-width:900px">${rows}</div></div></section>`;
+  }).join('');
+  return `  <section class="hero"><div class="wrap"><div class="eyebrow">مساعدة · الأسئلة الشائعة</div>
+    <h1>الأسئلة الشائعة</h1><p class="lead">كل ما يخص إصلاحاتنا، الماركات، الخدمات، الدعم التقني للشركات، والمتجر — بالعربية.</p>
+    <div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></section>
+  ${sections}
+  <section class="section"><div class="wrap"><div class="cta-band"><h2>ما زال لديكم سؤال؟</h2><p>اتصلوا، راسلونا، أو مروا على الورشة في Falkoner Allé — نرد بسرعة وبلغتكم.</p><div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></div></section>`;
+}
+
 function arHomeHtml() {
   const grid = arBrands.map((b) => `<a class="card card-link" href="/ar/${b.slug}/"><h3>${esc(b.label)}</h3><p>${esc(b.gridSub)}</p><span class="arrow">التفاصيل →</span></a>`).join('');
   const remote = [
@@ -584,7 +598,7 @@ function arHomeHtml() {
     ['/ar/business-it/', 'استشارات تقنية للأعمال', 'إعداد الشبكات والأمان واستراتيجية تقنية عن بُعد.'],
   ].map(([h, t, d]) => `<a class="card card-link" href="${h}"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="arrow">التفاصيل →</span></a>`).join('');
   const faq = AR_HOME_FAQ.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
-  return `  <section class="hero"><div class="wrap"><div class="eyebrow">Frederiksberg وCopenhagen · نتحدث العربية والإنجليزية</div>
+  return `  <section class="hero"><div class="wrap"><div class="eyebrow">Frederiksberg وCopenhagen · نتحدث العربية والدنماركية والإنجليزية</div>
     <h1>إصلاح الحاسوب وخدمات تقنية المعلومات — لك أو لعملك</h1>
     <p class="lead">إصلاح سريع وصادق للأفراد. دعم تقني بسعر ثابت للشركات. لا حاجة للدنماركية أو الإنجليزية — نتحدث العربية أيضًا.</p>
     <p class="lead" style="font-size:15px">إذا كنتم في Copenhagen، يمكننا أيضًا الاجتماع شخصيًا في ورشتنا لمناقشة مشروعكم — الخدمة عن بُعد اختيارية، وليست إلزامية.</p></div></section>
@@ -605,7 +619,7 @@ function arHomeHtml() {
   <section class="section alt"><div class="wrap"><div class="eyebrow">لماذا PCKlinik</div><h2>لماذا تختارنا</h2><ul class="why-list">
     <li><strong>خبرة حقيقية</strong>فريق متمرس، وليس مركز اتصال.</li>
     <li><strong>سعر ثابت قبل البدء</strong>بدون مفاجآت.</li>
-    <li><strong>نتحدث العربية والإنجليزية</strong>لا حاجة للدنماركية.</li></ul></div></section>
+    <li><strong>نتحدث العربية والدنماركية والإنجليزية</strong>لا حاجة للدنماركية.</li></ul></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">الأسئلة الشائعة</div><h2>أسئلة متكررة</h2><div class="faq">${faq}</div></div></section>
   <section class="section"><div class="wrap"><div class="cta-band"><h2>هل لديكم سؤال؟</h2><p>تواصلوا معنا وسنرد عليكم بلغتكم مباشرة.</p><div class="cta-row"><a class="btn btn-white" href="${site.phoneHref}">📞 ${arPhone}</a><a class="btn btn-ghost-light" href="mailto:${site.emailConsumer}">${arEmail}</a></div></div></div></section>`;
 }
@@ -887,7 +901,8 @@ async function run() {
   pages.push(['/ar/contact/', page({ title: 'اتصل بنا | PCKlinik', description: 'تواصلوا مع PCKlinik في Frederiksberg وCopenhagen. نتحدث العربية والدنماركية والإنجليزية.', p: '/ar/contact/', body: arContactHtml(), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic (RTL) remote-services section
   // Arabic homepage (Batch 1)
-  pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'إصلاح حاسوب وMac في Frederiksberg وCopenhagen. فريق يتحدث العربية والإنجليزية. تشخيص مجاني، سعر ثابت.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'إصلاح حاسوب وMac في Frederiksberg وCopenhagen. فريق يتحدث العربية والدنماركية والإنجليزية. تشخيص مجاني، سعر ثابت.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  pages.push(['/ar/faq/', page({ title: 'الأسئلة الشائعة | PCKlinik', description: 'أسئلة شائعة حول إصلاح الحاسوب وMac، الأسعار، الماركات، والخدمات في PCKlinik. فريق يتحدث العربية والدنماركية والإنجليزية.', p: '/ar/faq/', body: arFaqPageHtml(), schema: faqSchemaFrom(AR_GENERAL_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic remote-service sub pages (skip old hub)
   for (const pg of arPages.filter((x) => x.slug !== '/ar/')) pages.push([pg.slug, page({ title: pg.title, description: pg.description, p: pg.slug, body: arPageHtml(pg), schema: pg.faq ? faqSchemaFrom(pg.faq) : null, lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic brand/repair pages (Batch 2 — 18)
