@@ -42,7 +42,19 @@ function formOpen(dest, subject, nextPath) {
         <input type="hidden" name="_subject" value="${esc(subject)}" />
         <input type="hidden" name="_next" value="${next}" />`;
 }
-const arPathSet = new Set(['/ar/', ...arPages.map((x) => x.slug), ...arBrands.map((b) => `/ar/${b.slug}/`), ...arServices.map((sv) => `/ar/${sv.slug}/`), ...arNetwork.map((n) => `/ar/${n.slug}/`), ...arShop.map((sh) => `/ar/${sh.slug}/`), ...arLocations.map((l) => `/ar/${l.slug}/`), '/ar/business-it-service-agreement/', '/ar/contact/', '/ar/thank-you/', '/ar/faq/']);
+const AR_NEWS = [
+  { slug: 'how-to-tell-if-your-laptop-battery-needs-replacing', category: 'أدلة', date: '2026-07-05',
+    title: 'كيف تعرف أن بطارية لابتوبك تحتاج إلى استبدال',
+    description: 'خمس علامات واضحة على أن بطارية لابتوبك في طريقها للنهاية — وكيف تتحقق من صحتها الفعلية قبل أن تنفق المال.' },
+  { slug: 'common-mac-startup-screens-and-what-they-mean', category: 'أدلة', date: '2026-07-03',
+    title: 'شاشات بدء تشغيل Mac الشائعة وماذا تعني',
+    description: 'مجلد بعلامة استفهام، دائرة مشطوبة، قفل — إليكم ما تخبركم به الرموز على شاشة بدء تشغيل Mac فعليًا.' },
+  { slug: 'the-3-2-1-backup-rule-and-why-it-matters', category: 'أدلة', date: '2026-07-01',
+    title: 'قاعدة النسخ الاحتياطي 3-2-1، ولماذا هي مهمة',
+    description: 'قاعدة بسيطة وسهلة التذكر لعمل نسخة احتياطية صحيحة لبياناتكم — حتى لا يمحو عطل أو سرقة أو خطأ واحد كل شيء.' },
+];
+
+const arPathSet = new Set(['/ar/', ...arPages.map((x) => x.slug), ...arBrands.map((b) => `/ar/${b.slug}/`), ...arServices.map((sv) => `/ar/${sv.slug}/`), ...arNetwork.map((n) => `/ar/${n.slug}/`), ...arShop.map((sh) => `/ar/${sh.slug}/`), ...arLocations.map((l) => `/ar/${l.slug}/`), '/ar/business-it-service-agreement/', '/ar/contact/', '/ar/thank-you/', '/ar/faq/', '/ar/news/', ...AR_NEWS.map((n) => `/ar/news/${n.slug}/`)]);
 const AR_EN_MAP = { '/ar/': '/', '/ar/website-design/': '/website-design-development/', '/ar/google-ads/': '/google-ads-management/', '/ar/business-it/': '/business-it-service-agreement/' };
 const EN_AR_MAP = { '/website-design-development/': '/ar/website-design/', '/google-ads-management/': '/ar/google-ads/', '/business-it-service-agreement/': '/ar/business-it-service-agreement/' };
 function arCounterpart(p) { return EN_AR_MAP[p] || (p === '/' ? '/ar/' : `/ar${p}`); }
@@ -515,6 +527,7 @@ function headerAr(p) {
       { label: 'معدات الشبكة', children: arNetwork.map((n) => ({ label: n.label, href: `/ar/${n.slug}/` })).concat([svc('wifi-network-troubleshooting')]) },
       { label: 'المساعدة والأدلة', children: ['computer-wont-turn-on', 'error-messages'].map(svc) },
     ] },
+    { label: 'الأخبار', href: '/ar/news/' },
     { label: 'المتجر', href: '/ar/shop/', children: arShop.map((sh) => ({ label: sh.label, href: `/ar/${sh.slug}/` })) },
     { label: 'اتصل بنا', href: '/ar/contact/' },
   ];
@@ -547,7 +560,7 @@ function footerAr() {
   const links = arNav.map((i) => `<a href="${i.href}">${esc(i.label)}</a>`).join('');
   return `<footer class="site-footer"><div class="wrap"><div class="cols">
     <div><h2>PCKlinik</h2><a href="/ar/" style="color:var(--muted)">دعم تقني وخدمات ويب عن بُعد — بفريق يتحدث العربية.</a></div>
-    <div><h2>الخدمات عن بُعد</h2>${links}<a href="/ar/faq/">الأسئلة الشائعة</a></div>
+    <div><h2>الخدمات عن بُعد</h2>${links}<a href="/ar/faq/">الأسئلة الشائعة</a><a href="/ar/news/">الأخبار</a></div>
     <div><h2>المتجر</h2>${arShop.map((sh) => `<a href="/ar/${sh.slug}/">${esc(sh.label)}</a>`).join('')}</div>
     <div><h2>المناطق التي نخدمها</h2><a href="/ar/computer-repair-copenhagen/" lang="en">Copenhagen</a><a href="/ar/computer-repair-frederiksberg/" lang="en">Frederiksberg</a><a href="/ar/computer-repair-vesterbro/" lang="en">Vesterbro</a><a href="/ar/computer-repair-vanloese/" lang="en">Vanl&oslash;se</a><a href="/ar/computer-repair-valby/" lang="en">Valby</a><a href="/ar/computer-repair-nordvest/" lang="en">Nordvest</a></div>
     <div><h2>لغة أخرى</h2><a href="/" hreflang="en" lang="en">English site</a><a href="/contact/" hreflang="en" lang="en">Contact (in English)</a></div>
@@ -587,6 +600,26 @@ function arFaqPageHtml() {
     <div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></section>
   ${sections}
   <section class="section"><div class="wrap"><div class="cta-band"><h2>ما زال لديكم سؤال؟</h2><p>اتصلوا، راسلونا، أو مروا على الورشة في Falkoner Allé — نرد بسرعة وبلغتكم.</p><div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></div></section>`;
+}
+
+function arNewsIndexHtml() {
+  const cards = AR_NEWS.map((n) => `<a class="card card-link" href="/ar/news/${n.slug}/"><div class="eyebrow" style="margin-bottom:8px">${esc(n.category)} · ${esc(fmtDate(n.date))}</div><h3>${esc(n.title)}</h3><p>${esc(n.description)}</p><span class="arrow">اقرؤوا المزيد ←</span></a>`).join('');
+  return `  <section class="hero"><div class="wrap"><div class="eyebrow">الأخبار · الأدلة</div><h1>الأخبار والأدلة</h1>
+    <p class="lead">إجابات عملية ومباشرة لأسئلة الحاسوب وMac الشائعة — من فريق يصلحها يوميًا.</p></div></section>
+  <section class="section"><div class="wrap"><div class="grid grid-3">${cards}</div>
+    <p class="sub" style="margin-top:32px">لديكم سؤال لا تجدون إجابته هنا؟ <a href="/ar/contact/">تواصلوا معنا مباشرة</a>.</p></div></section>`;
+}
+function arNewsPostHtml(n) {
+  const others = AR_NEWS.filter((x) => x.slug !== n.slug).slice(0, 2).map((o) => `<a href="/ar/news/${o.slug}/">${esc(o.title)} ←</a>`).join('');
+  return `  <section class="hero"><div class="wrap"><div class="crumbs"><a href="/ar/news/">الأخبار</a> › <span>${esc(n.category)}</span></div>
+    <h1>${esc(n.title)}</h1><p class="lead">${esc(fmtDate(n.date))}</p></div></section>
+  <section class="section"><div class="wrap"><div class="lead-copy" style="max-width:760px"><p>${esc(n.description)}</p>
+    <div class="callout"><strong>الترجمة العربية الكاملة قيد الإعداد.</strong> المقال بالكامل متاح حاليًا بالإنجليزية — <a href="/news/${n.slug}/">اقرؤوه هنا ←</a></div>
+    ${others ? `<div style="margin-top:40px"><p class="eyebrow">المزيد من الأخبار</p><div class="crosslinks">${others}</div></div>` : ''}</div></section>
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>تحتاجون مساعدة في هذا؟</h2><p>تشخيص مجاني (2–4 أيام) أو سريع مقابل 600 كرونة (1–2 ساعة). سعر ثابت قبل أن نبدأ.</p><div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></div></section>`;
+}
+function arNewsPostSchema(n) {
+  return { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: n.title, datePublished: n.date, dateModified: n.date, description: n.description, inLanguage: 'ar', author: { '@type': 'Organization', name: 'PCKlinik' }, publisher: { '@type': 'Organization', name: 'PCKlinik' }, mainEntityOfPage: `${site.domain}/ar/news/${n.slug}/` };
 }
 
 function arHomeHtml() {
@@ -911,6 +944,8 @@ async function run() {
   // Arabic homepage (Batch 1)
   pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'إصلاح حاسوب وMac في Frederiksberg وCopenhagen. فريق يتحدث العربية والدنماركية والإنجليزية. تشخيص مجاني، سعر ثابت.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   pages.push(['/ar/faq/', page({ title: 'الأسئلة الشائعة | PCKlinik', description: 'أسئلة شائعة حول إصلاح الحاسوب وMac، الأسعار، الماركات، والخدمات في PCKlinik. فريق يتحدث العربية والدنماركية والإنجليزية.', p: '/ar/faq/', body: arFaqPageHtml(), schema: faqSchemaFrom(AR_GENERAL_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  pages.push(['/ar/news/', page({ title: 'الأخبار والأدلة | PCKlinik', description: 'أدلة عملية حول إصلاح الحاسوب وMac من PCKlinik في Frederiksberg وCopenhagen.', p: '/ar/news/', body: arNewsIndexHtml(), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  for (const n of AR_NEWS) pages.push([`/ar/news/${n.slug}/`, page({ title: `${n.title} | PCKlinik`, description: n.description, p: `/ar/news/${n.slug}/`, body: arNewsPostHtml(n), schema: arNewsPostSchema(n), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic remote-service sub pages (skip old hub)
   for (const pg of arPages.filter((x) => x.slug !== '/ar/')) pages.push([pg.slug, page({ title: pg.title, description: pg.description, p: pg.slug, body: arPageHtml(pg), schema: pg.faq ? faqSchemaFrom(pg.faq) : null, lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic brand/repair pages (Batch 2 — 18)
