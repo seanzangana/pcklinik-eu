@@ -77,6 +77,8 @@ export function gamingHtml() {
     { q: 'My gaming PC is overheating — what does that usually mean?', a: 'Most often dust buildup or dried thermal paste. We do a full cooling service — clean-out, fan check, fresh thermal compound — which resolves the majority of overheating cases.' },
     { q: 'Can you upgrade my existing gaming PC instead of building a new one?', a: 'Yes — RAM, storage, GPU, and PSU upgrades are common requests, and often more cost-effective than a full rebuild.' },
     { q: 'Do you work on pre-built gaming PCs (not just custom builds)?', a: 'Yes, we repair and service pre-built gaming desktops from any manufacturer as well as self-built and custom rigs.' },
+  
+    { q: "Why does my gaming PC randomly restart during intense gameplay?", a: "Often a power supply struggling under load, or overheating — we test both rather than guessing." },
   ];
   const faqHtml = faq.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
   const buildQuote = `mailto:${site.emailConsumer}?subject=${encodeURIComponent('Custom PC build quote')}`;
@@ -110,6 +112,7 @@ export const GAMING_FAQ = [
   { q: 'My gaming PC is overheating — what does that usually mean?', a: 'Most often dust buildup or dried thermal paste. We do a full cooling service — clean-out, fan check, fresh thermal compound — which resolves the majority of overheating cases.' },
   { q: 'Can you upgrade my existing gaming PC instead of building a new one?', a: 'Yes — RAM, storage, GPU, and PSU upgrades are common requests, and often more cost-effective than a full rebuild.' },
   { q: 'Do you work on pre-built gaming PCs (not just custom builds)?', a: 'Yes, we repair and service pre-built gaming desktops from any manufacturer as well as self-built and custom rigs.' },
+      { q: "Why does my gaming PC randomly restart during intense gameplay?", a: "Often a power supply struggling under load, or overheating — we test both rather than guessing." },
 ];
 
 
@@ -120,6 +123,7 @@ export const ERROR_FAQ = [
   { q: 'Should I try to fix an error code myself before bringing it in?', a: "Basic steps (a restart, checking for obvious cable/connection issues) are fine to try. Beyond that, especially for BSODs or kernel panics, we'd recommend bringing it in rather than risking further data loss from repeated troubleshooting attempts." },
   { q: "Does a blue screen or kernel panic mean I've lost my data?", a: 'Not necessarily — these are safety mechanisms, not data-destroying events by themselves. The risk comes from an underlying failing drive, which is exactly what we check first.' },
   { q: 'Can you tell what’s wrong just from the error code?', a: 'The code narrows down the possibilities, but we always verify with actual diagnostics rather than assuming — the same code can point to several different root causes.' },
+      { q: "What does \"CRITICAL_PROCESS_DIED\" actually mean?", a: "A core Windows process crashed unexpectedly — often caused by corrupted system files or a recent driver update gone wrong, not necessarily a hardware fault." },
 ];
 const STOP_CODES = [
   ['MEMORY_MANAGEMENT', 'Faulty RAM, corrupted system files, or a bad driver'],
@@ -181,6 +185,7 @@ export const WONT_TURN_ON_FAQ = [
   { q: 'The fans are spinning but I see nothing on screen — is this serious?', a: "It's actually one of the more fixable scenarios — the core computer is working, it's a display-specific issue, which is often a straightforward screen or cable repair rather than a deeper hardware problem." },
   { q: "Will I lose my data if my computer won't turn on?", a: "Not from the fact that it won't turn on by itself — but if a failing drive is the underlying cause, backing up or recovering data becomes time-sensitive. We prioritize this if that's what diagnostics reveal." },
   { q: 'Should I keep trying to turn it on myself, or bring it in?', a: "A few basic checks (charger connection, a different outlet) are fine to try. Beyond that, especially if you hear beeping or see repeated restart loops, we'd recommend bringing it in rather than risking further complications." },
+      { q: "My laptop screen is completely black but I can hear the fan running — what does that mean?", a: "The computer itself is working; likely a display-specific issue (screen, cable, or graphics) rather than a power problem — see our Screen Replacement page." },
 ];
 export function computerWontTurnOnHtml() {
   const scen = [

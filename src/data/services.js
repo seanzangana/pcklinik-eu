@@ -31,6 +31,8 @@ export const services = [
       { q: "Is optimization a one-time service or does it need repeating?", a: "Mostly one-time, though avoiding excessive startup programs helps maintain the improvement." },
       { q: 'My PC used to be fast — why has it gotten slow?', a: 'Usually accumulated startup programs and background processes, not hardware failure.' },
       { q: 'Do I need a new PC, or can this be fixed?', a: "Often it can be fixed. We'll tell you honestly if the hardware itself is the limit." },
+    
+      { q: "Why does my laptop fan run constantly even when I'm not doing much?", a: "Often a combination of dust buildup and background processes — we check both rather than assuming it's just one or the other." },
     ],
     crosslinks: [{ label: 'Virus & Malware Removal', href: '/virus-removal/' }, { label: 'SSD Upgrade', href: '/ssd-upgrade/' }],
   },
@@ -45,6 +47,8 @@ export const services = [
       { q: "Is an SSD always a direct replacement for a failed HDD?", a: "In most modern laptops yes, though we confirm compatibility for your specific model." },
       { q: 'My hard drive is making a clicking noise — what does that mean?', a: 'Usually a mechanical failure. Back up what you can immediately and bring it in.' },
       { q: 'Can you recover my data if the drive has failed?', a: 'Often yes, though it depends on the type and severity of the failure. See our data recovery page for more.' },
+    
+      { q: "Is a \"S.M.A.R.T. error\" warning serious?", a: "Yes — this is the drive's own health monitoring flagging a real, developing problem. Worth backing up immediately and having it checked, not waiting for it to fail completely." },
     ],
     crosslinks: [{ label: 'Data Backup & Recovery', href: '/data-backup-and-recovery/' }, { label: 'SSD Upgrade', href: '/ssd-upgrade/' }],
   },
@@ -59,6 +63,9 @@ export const services = [
       { q: "Can a screen be repaired instead of fully replaced?", a: "Occasionally for certain faults, though full replacement is more common for cracked screens." },
       { q: 'Do you replace screens on brands not listed on your site?', a: 'Yes — see our Other Brands & Custom Builds page too.' },
       { q: 'How long does a screen replacement take?', a: 'Often same-day with express diagnostics.' },
+    
+      { q: "Why is my laptop screen flickering, not just cracked?", a: "Flickering usually points to a loose display cable or a failing backlight/inverter, rather than the glass itself — different fix from a cracked screen, often cheaper." },
+      { q: "Can a screen with dead pixels be repaired, or does it need full replacement?", a: "Dead pixels typically require full panel replacement — there's no reliable repair for individual pixels." },
     ],
     crosslinks: [{ label: 'Other Brands & Custom Builds', href: '/other-brands-repair/' }, { label: 'Mac Screen Replacement', href: '/mac-screen-replacement/' }],
   },
@@ -113,6 +120,8 @@ export const services = [
     faq: [
       { q: "How long does a Mac battery typically last before needing replacement?", a: "Generally 3–5 years of regular use, though it varies by usage pattern." },
       { q: 'My MacBook trackpad feels raised on one side — is that a battery problem?', a: 'Yes, this is a classic sign of a swollen battery. Bring it in soon.' },
+    
+      { q: "Why does my MacBook battery percentage jump around unexpectedly?", a: "Usually indicates the battery's internal calibration has drifted — a real sign it's due for replacement, not just a software glitch." },
     ],
     crosslinks: [{ label: 'MacBook Repair', href: '/macbook-repair/' }, { label: 'Mac Repair (overview)', href: '/mac-repair/' }],
   },
@@ -178,6 +187,8 @@ export const services = [
       { q: 'Do Macs get viruses too?', a: 'Yes, less commonly than PCs but it does happen, and Macs are not immune to malware or adware.' },
       { q: 'What are the signs my computer has a virus or malware?', a: 'Common signs include: unexpected pop-ups or ads even when your browser is closed, programs launching on their own, noticeably slower performance, your browser homepage or search engine changing without you doing it, unfamiliar programs you don’t remember installing, and your antivirus being disabled without your action. Any one alone isn’t definitive, but several together are a strong signal.' },
       { q: 'Will removing malware delete my files?', a: 'We aim to remove the infection without affecting your personal files, though a full backup beforehand is always recommended.' },
+    
+      { q: "Why do I keep getting redirected to strange websites in my browser?", a: "Classic sign of adware or a browser hijacker — different from a full virus infection, but still needs removing properly rather than just changing your homepage back." },
     ],
     crosslinks: [{ label: 'PC Optimization', href: '/pc-optimization/' }, { label: 'Data Backup & Recovery', href: '/data-backup-and-recovery/' }],
   },
@@ -366,6 +377,8 @@ export const services = [
       { q: "My phone connects to WiFi fine but my laptop won't — what does that mean?", a: 'The problem is very likely with your laptop specifically (drivers, adapter, or settings), not the router or internet connection.' },
       { q: 'Can this be fixed remotely, or do I need to bring it in?', a: 'Software and driver issues can usually be fixed via our Remote Support service. If it turns out to be a failed WiFi adapter, that needs an in-person repair.' },
       { q: 'Is a failing WiFi adapter expensive to fix?', a: "It depends on the laptop, but it's often a straightforward component replacement — we'll give you a fixed quote after diagnostics." },
+    
+      { q: "Why does my WiFi disconnect randomly throughout the day?", a: "Often driver issues, router firmware needing an update, or interference from other devices — we diagnose which before assuming a full replacement is needed." },
     ],
     crosslinks: [{ label: 'Remote Support', href: '/remote-support/' }, { label: 'General FAQ', href: '/faq/' }],
   },
