@@ -1,20 +1,17 @@
-// Cloudflare Pages Function — shared form handler for pcklinik.eu / pcklinik.dk
-// Sends the submission via the Resend API (https://resend.com) to a
-// parameterized destination (_to).
+// Cloudflare Pages Function — shared contact-form handler for pcklinik.eu.
+// Sends the notification via the Resend API (key: RESEND_API_KEY).
 //
-// Two response modes:
+// Response modes:
 //   - fetch/AJAX (Accept: application/json)  -> JSON { ok: true|false }
 //   - plain form POST (no JS)                -> 303 redirect to _next
-// so the site works with and without JavaScript.
 //
-// Resend is used instead of Cloudflare's send_email binding because it needs
-// only SPF/DKIM TXT records (no MX changes) — so it coexists with the current
-// One.com mailboxes and survives the future Google Workspace move untouched.
+// Anti-spam: two independent signals — honeypot (_gotcha) + time-to-submit
+// (_ts). A submission is only DROPPED when BOTH agree, so a single false
+// positive (e.g. a password manager autofilling the hidden honeypot) never
+// silently eats a real message — it is delivered, just tagged "[Possible spam]".
 //
-// Setup: verify pcklinik.eu (and later pcklinik.dk) in Resend, then set the API
-// key as a secret:  npx wrangler pages secret put RESEND_API_KEY
-//
-// Security: _to is validated against ALLOWED_DESTINATIONS (no open relay).
+// Routing: _to is the actual destination, validated against ALLOWED_DESTINATIONS
+// (contact/ask -> contact@, Business IT -> support@). Per-domain sender.
 
 const ALLOWED_DESTINATIONS = new Set([
   "contact@pcklinik.eu",
@@ -23,10 +20,12 @@ const ALLOWED_DESTINATIONS = new Set([
   "support@pcklinik.dk",
 ]);
 
+const MIN_SUBMIT_MS = 2000; // faster than this after page load = suspicious
+const EMAIL_RE = /.+@.+\..+/;
+
 function fromFor(dest) {
-  return dest.endsWith("@pcklinik.dk")
-    ? "PCKlinik <noreply@pcklinik.dk>"
-    : "PCKlinik <noreply@pcklinik.eu>";
+  const domain = dest.endsWith("@pcklinik.dk") ? "pcklinik.dk" : "pcklinik.eu";
+  return "PCKlinik Website <noreply@" + domain + ">";
 }
 
 function redirect(url) {
@@ -38,6 +37,10 @@ function json(obj, status = 200) {
     status,
     headers: { "Content-Type": "application/json; charset=utf-8" },
   });
+}
+
+function esc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 export async function onRequestPost(context) {
@@ -60,10 +63,15 @@ export async function onRequestPost(context) {
 
   const next = form._next || "/";
 
-  // Honeypot — bots fill hidden fields; silently accept to avoid retries.
-  if (form._gotcha) {
-    console.warn("submit-form: honeypot triggered, dropping submission");
-    return wantsJson ? json({ ok: true }) : redirect(next);
+  // --- Spam scoring: only drop when TWO signals agree. ---
+  const isHoneypotTripped = String(form._gotcha || "").trim() !== "";
+  const ts = Number(form._ts);
+  const isTooFast = Number.isFinite(ts) && Date.now() - ts < MIN_SUBMIT_MS;
+  const spamScore = (isHoneypotTripped ? 1 : 0) + (isTooFast ? 1 : 0);
+
+  if (spamScore >= 2) {
+    console.warn("submit-form: spam (honeypot + too-fast), dropping");
+    return wantsJson ? json({ ok: true }) : redirect(next); // fake success, don't send
   }
 
   const to = String(form._to || "").trim().toLowerCase();
@@ -76,19 +84,27 @@ export async function onRequestPost(context) {
     return wantsJson ? json({ ok: false, error: "not_configured" }, 500) : new Response("Email not configured", { status: 500 });
   }
 
-  const subject = (form._subject || "New website form submission").toString();
+  const baseSubject = (form._subject || "New website form submission").toString();
+  const subject = spamScore === 1 ? "[Possible spam] " + baseSubject : baseSubject;
 
-  const lines = [];
+  const rows = [];
   for (const [k, v] of Object.entries(form)) {
     if (k.startsWith("_")) continue;
-    if (v === undefined || v === null || v === "") continue;
-    lines.push(k + ": " + v);
+    if (v === undefined || v === null || String(v) === "") continue;
+    rows.push([k, String(v)]);
   }
-  const body = lines.join("\n") || "(no fields submitted)";
+  const text = rows.map(([k, v]) => k + ": " + v).join("\n") || "(no fields submitted)";
+  const html =
+    '<div style="font-family:system-ui,Arial,sans-serif;font-size:15px;color:#111">' +
+    "<h2 style=\"margin:0 0 12px\">" + esc(subject) + "</h2><table style=\"border-collapse:collapse\">" +
+    rows.map(([k, v]) =>
+      '<tr><td style="padding:4px 12px 4px 0;color:#555;vertical-align:top"><strong>' +
+      esc(k) + "</strong></td><td style=\"padding:4px 0\">" + esc(v).replace(/\n/g, "<br>") + "</td></tr>"
+    ).join("") + "</table></div>";
 
   const replyTo = (form.email || form.contact || "").toString().trim();
-  const payload = { from: fromFor(to), to: [to], subject, text: body };
-  if (replyTo && /.+@.+\..+/.test(replyTo)) payload.reply_to = replyTo;
+  const payload = { from: fromFor(to), to: [to], subject, text, html };
+  if (replyTo && EMAIL_RE.test(replyTo)) payload.reply_to = replyTo;
 
   let res;
   try {
