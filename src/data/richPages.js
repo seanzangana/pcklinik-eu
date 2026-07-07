@@ -10,8 +10,8 @@ export function macHubHtml() {
   const problemsHtml = problems.map((p) => `<li>${esc(p)}</li>`).join('');
   const faq = [
     { q: "Do you offer a loaner device while my Mac is being repaired?", a: "Not currently — ask when you book if this matters to you." },
-    { q: "Is diagnostics free for both MacBook and desktop Mac?", a: "Yes, the same free/express pricing applies across all Mac products." },
-    { q: 'How much does Mac repair cost?', a: 'It depends on the fault and the model. We always diagnose first and give you a fixed quote before starting — standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours).' },
+    { q: "Does diagnostics cost the same for both MacBook and desktop Mac?", a: "Yes, the same standard/express pricing applies across all Mac products." },
+    { q: 'How much does Mac repair cost?', a: 'It depends on the fault and the model. We always diagnose first and give you a fixed quote before starting — standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours).' },
     { q: 'How long does a Mac repair take?', a: 'Many repairs are completed the same day, especially with express diagnostics. More involved repairs can take longer depending on parts availability.' },
     { q: 'Can every Mac be repaired?', a: "Most can, though it depends on the extent of the damage and the age of the model. We'll always tell you honestly if a repair isn't worthwhile." },
     { q: 'Does it matter if my Mac is old?', a: 'No — we repair Macs across generations, from current Apple Silicon models to much older Intel Macs.' },
@@ -21,9 +21,9 @@ export function macHubHtml() {
     <h1>Mac Repair in Frederiksberg &amp; Copenhagen</h1><p class="lead">Every Mac, one workshop — laptop or desktop.</p>
     <div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div></section>
   <section class="section"><div class="wrap lead-copy"><div class="crumbs"><a href="/">Home</a> › <span>Mac Repair</span></div>
-    <p>Whatever's wrong with your Mac — a MacBook, iMac, Mac mini, Mac Studio, or Mac Pro — we repair it. We diagnose the actual problem first, give you a fixed quote before starting, and get most repairs done fast. Standard diagnostics are free (2–4 days), or choose express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.</p></div></section>
+    <p>Whatever's wrong with your Mac — a MacBook, iMac, Mac mini, Mac Studio, or Mac Pro — we repair it. We diagnose the actual problem first, give you a fixed quote before starting, and get most repairs done fast. Standard diagnostics are 300 kr (2–4 days), or choose express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.</p></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">Our Promise</div><h2>Three simple steps</h2><div class="steps">
-    <div class="step"><div class="num">1</div><h3>Book diagnostics</h3><p>Free (2–4 days) or express (600 kr, 1–2 hours).</p></div>
+    <div class="step"><div class="num">1</div><h3>Book diagnostics</h3><p>300 kr (2–4 days) or express (600 kr, 1–2 hours).</p></div>
     <div class="step"><div class="num">2</div><h3>Get a fixed quote</h3><p>You approve the price before we touch anything.</p></div>
     <div class="step"><div class="num">3</div><h3>We repair it</h3><p>Most repairs completed the same day — we let you know when it's ready.</p></div></div></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">Choose your Mac</div><h2>Which Mac do you have?</h2><div class="grid grid-2">
@@ -36,13 +36,13 @@ export function macHubHtml() {
   <section class="section"><div class="wrap"><div class="eyebrow">Repair or replace?</div><h2>Is it worth repairing?</h2>
     <p class="sub">We'll always give you an honest answer — not just a repair estimate. If a repair doesn't make financial sense compared to replacing the Mac, we'll tell you plainly, and point you toward our <a href="/shop/computers/refurbished/">refurbished</a> and <a href="/shop/computers/new/">new computers</a> in the shop if that's the better option. Our goal is the right outcome for you, not just billable work.</p></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Mac repair — common questions</h2><div class="faq">${faqHtml}</div></div></section>
-  <section class="section"><div class="wrap"><div class="cta-band"><h2>Ready to get your Mac looked at?</h2><p>Free diagnostics (2–4 days) or express for 600 kr (1–2 hours). Fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
+  <section class="section"><div class="wrap"><div class="cta-band"><h2>Ready to get your Mac looked at?</h2><p>Diagnostics 300 kr (2–4 days) or express for 600 kr (1–2 hours). Fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks"><a href="/macbook-repair/">MacBook Repair →</a><a href="/mac-desktop-repair/">Desktop Mac Repair →</a><a href="/mac-battery-replacement/">Mac Battery Replacement →</a><a href="/contact/">Contact & booking →</a></div></div></div></section>`;
 }
 export const MAC_HUB_FAQ = [
   { q: "Do you offer a loaner device while my Mac is being repaired?", a: "Not currently — ask when you book if this matters to you." },
-  { q: "Is diagnostics free for both MacBook and desktop Mac?", a: "Yes, the same free/express pricing applies across all Mac products." },
-  { q: 'How much does Mac repair cost?', a: 'It depends on the fault and the model. We always diagnose first and give you a fixed quote before starting — standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours).' },
+  { q: "Does diagnostics cost the same for both MacBook and desktop Mac?", a: "Yes, the same standard/express pricing applies across all Mac products." },
+  { q: 'How much does Mac repair cost?', a: 'It depends on the fault and the model. We always diagnose first and give you a fixed quote before starting — standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours).' },
   { q: 'How long does a Mac repair take?', a: 'Many repairs are completed the same day, especially with express diagnostics. More involved repairs can take longer depending on parts availability.' },
   { q: 'Can every Mac be repaired?', a: "Most can, though it depends on the extent of the damage and the age of the model. We'll always tell you honestly if a repair isn't worthwhile." },
   { q: 'Does it matter if my Mac is old?', a: 'No — we repair Macs across generations, from current Apple Silicon models to much older Intel Macs.' },
@@ -87,7 +87,7 @@ export function gamingHtml() {
     <div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${buildQuote}">Get a build quote</a></div></div></section>
   <section class="section"><div class="wrap lead-copy"><div class="crumbs"><a href="/">Home</a> › <span>Gaming PCs</span></div>
     <p>Whether your gaming PC is overheating, underperforming, or you want a completely custom build from the ground up, PCKlinik handles it. We repair and service gaming desktops of every kind — pre-built or self-assembled — and we build custom gaming PCs to spec for customers who want something built right the first time.</p>
-    <p><strong>For repairs and service:</strong> standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.</p>
+    <p><strong>For repairs and service:</strong> standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.</p>
     <p><strong>For custom builds:</strong> it's a different process — no diagnostics involved. We discuss your budget, use case (gaming, streaming, editing), and preferences, then quote a fixed build price before ordering any parts.</p></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">Repair &amp; Service</div><h2>Common issues we fix</h2><ul class="why-list">${issues}</ul>
     <div class="grid grid-4" style="margin-top:32px">${cards}</div></div></section>
@@ -102,7 +102,7 @@ export function gamingHtml() {
     <div class="cta-row" style="margin-top:24px"><a class="btn btn-primary" href="${buildQuote}">Get a build quote</a></div></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">Why PCKlinik</div><h2>Built and repaired properly</h2><ul class="why-list">${why}</ul></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Gaming PCs — common questions</h2><div class="faq">${faqHtml}</div></div></section>
-  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Repair, upgrade, or build from scratch?</h2><p>Diagnostics are free (2–4 days) or express (600 kr). Custom builds are quote-based — no diagnostics fee.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${buildQuote}">Get a build quote</a></div></div>
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Repair, upgrade, or build from scratch?</h2><p>Diagnostics are 300 kr (2–4 days) or express (600 kr). Custom builds are quote-based — no diagnostics fee.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${buildQuote}">Get a build quote</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks"><a href="/mac-desktop-repair/">Desktop Mac Repair →</a><a href="/msi-repair/">MSI Repair →</a><a href="/pc-cleaning/">PC Cleaning →</a><a href="/contact/">Contact & booking →</a></div></div></div></section>`;
 }
 export const GAMING_FAQ = [
@@ -173,7 +173,7 @@ export function errorMessagesHtml() {
     </div></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">Mac</div><h2>Mac errors</h2><div class="lead-copy">${msubs}</div></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Error messages — common questions</h2><div class="faq">${faqHtml}</div></div></section>
-  <section class="section"><div class="wrap"><div class="cta-band"><h2>Got one of these errors?</h2><p>We diagnose the root cause, not just the code. Free diagnostics (2–4 days) or express (600 kr, 1–2 hours), fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
+  <section class="section"><div class="wrap"><div class="cta-band"><h2>Got one of these errors?</h2><p>We diagnose the root cause, not just the code. Diagnostics 300 kr (2–4 days) or express (600 kr, 1–2 hours), fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks"><a href="/data-backup-and-recovery/">Data Backup & Recovery →</a><a href="/hard-drive-replacement/">Hard Drive Replacement →</a><a href="/system-installation/">System Installation →</a><a href="/virus-removal/">Virus &amp; Malware Removal →</a><a href="/contact/">Contact & booking →</a></div></div></div></section>`;
 }
 
@@ -209,9 +209,9 @@ export function computerWontTurnOnHtml() {
   <section class="section"><div class="wrap lead-copy"><div class="crumbs"><a href="/">Home</a> › <span>Computer Won't Turn On</span></div>
     <p>"Won't turn on" can actually mean a few different things, and each points to a different cause. Before assuming the worst, it helps to know which of these three situations matches yours:</p></div></section>
   ${scen}
-  <section class="section alt"><div class="wrap"><div class="eyebrow">Diagnostics &amp; pricing</div><h2>Free or express — your choice</h2><p class="sub">Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. You get a fixed quote before we start.</p></div></section>
+  <section class="section alt"><div class="wrap"><div class="eyebrow">Diagnostics &amp; pricing</div><h2>Standard or express — your choice</h2><p class="sub">Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. You get a fixed quote before we start.</p></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Won't turn on — common questions</h2><div class="faq">${faqHtml}</div></div></section>
-  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Not sure which scenario is yours?</h2><p>Bring it in — free diagnostics (2–4 days) or express (600 kr). We isolate the cause before quoting.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Not sure which scenario is yours?</h2><p>Bring it in — diagnostics 300 kr (2–4 days) or express (600 kr). We isolate the cause before quoting.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book diagnostics</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks"><a href="/charging-port-repair/">Charging Port Repair →</a><a href="/screen-replacement/">Screen Replacement →</a><a href="/error-messages/">Error Messages →</a><a href="/faq/">General FAQ →</a></div></div></div></section>`;
 }
 
@@ -223,8 +223,8 @@ const FAQ_GROUPS = [
     ["What should I do before bringing my device in for repair?", "If possible: back up important data, remove any case or accessories, and note your device's passcode if we'll need to test it after repair. Not required, but it speeds things up."],
     ["Do you offer any discount for students?", "Contact us directly to ask — worth checking, especially given our location near Copenhagen Business School."],
     ['Do you speak English?', 'Yes — our entire service is in English, from your first call or email through to picking up your repaired device. No Danish required.'],
-    ['How does diagnostics and repair work?', 'We diagnose the actual problem first, then give you a fixed quote before any repair work starts. Standard diagnostics are free (2–4 days), or choose express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.'],
-    ['What if I need my device back faster than standard diagnostics?', 'Choose express diagnostics (600 kr, 1–2 hours) instead of the free standard option. Most express repairs are completed within 24 hours if no special parts need ordering.'],
+    ['How does diagnostics and repair work?', 'We diagnose the actual problem first, then give you a fixed quote before any repair work starts. Standard diagnostics are 300 kr (2–4 days), or choose express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.'],
+    ['What if I need my device back faster than standard diagnostics?', 'Choose express diagnostics (600 kr, 1–2 hours) instead of the standard option (300 kr). Most express repairs are completed within 24 hours if no special parts need ordering.'],
     ['Do you offer a warranty on repairs?', 'Yes, repairs come with a warranty. Ask at the time of booking for specifics on your repair type.'],
     ['Is my data safe during repair?', "Yes. We don't access or share personal data beyond what's necessary to complete the repair, and we recommend backing up important files beforehand regardless."],
     ['Do I need an appointment, or can I walk in?', 'Walk-in service — no appointment needed.'],

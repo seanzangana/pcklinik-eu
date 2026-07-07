@@ -100,6 +100,7 @@ export const nav = [
 
 // hreflang: EN URL -> DK equivalent. New pages omitted until DK parity exists.
 export const hreflangMap = {
+  '/students/': 'https://www.pcklinik.dk/studerende/',
   '/': 'https://www.pcklinik.dk/',
   '/lenovo-repair/': 'https://www.pcklinik.dk/lenovo-reparation/',
   '/acer-repair/': 'https://www.pcklinik.dk/acer-reparation/',

@@ -11,13 +11,13 @@ export const repairs = [
     slug: 'lenovo-repair',
     brand: 'Lenovo',
     title: 'Lenovo Repair: ThinkPad T14, IdeaPad, Legion | PCKlinik',
-    description: 'Lenovo ThinkPad T14, T14s, X1 Carbon, IdeaPad 3/5 and Legion repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Lenovo ThinkPad T14, T14s, X1 Carbon, IdeaPad 3/5 and Legion repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Lenovo Repair in Frederiksberg & Copenhagen',
     h2: 'ThinkPad, IdeaPad, Legion, Yoga and ThinkBook — we repair them all',
     intro: [
       'Having problems with your Lenovo? At PCKlinik we repair every Lenovo series — <strong>ThinkPad T14, T14s, T16, X1 Carbon, X1 Yoga and P16</strong>, <strong>IdeaPad 3, IdeaPad 5 and IdeaPad Slim</strong>, <strong>Legion 5 and Legion Pro</strong>, and <strong>Yoga 7, Yoga Slim</strong> and <strong>ThinkBook</strong> — for individuals and businesses across Frederiksberg and Copenhagen.',
       "Whether it's a cracked screen on your <strong>ThinkPad T14</strong>, a loose hinge on your <strong>X1 Carbon</strong>, a battery that's given up on your <strong>IdeaPad 5</strong>, or a <strong>Legion</strong> overheating under load, we work through it methodically.",
-      'We diagnose your Lenovo thoroughly and give you a fixed quote before we start — so you always know the cost before we touch the machine. Standard diagnostics are free (2–4 days), or choose express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. Most Lenovo repairs are completed the same day, right from our workshop on Falkoner Allé.',
+      'We diagnose your Lenovo thoroughly and give you a fixed quote before we start — so you always know the cost before we touch the machine. Standard diagnostics are 300 kr (2–4 days), or choose express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. Most Lenovo repairs are completed the same day, right from our workshop on Falkoner Allé.',
     ],
     models: [
       { series: 'ThinkPad T-series (business)', models: 'T14, T14s, T14 Gen 4, T16', issue: 'Hinge damage, screen replacement, keyboard, battery' },
@@ -45,7 +45,7 @@ export const repairs = [
     faq: [
       { q: "Do you offer a warranty on ThinkPad hinge repairs specifically?", a: "Yes, the same warranty as any other repair." },
       { q: "Can you fix a Lenovo that won't charge past a certain percentage?", a: "Usually a battery issue — we diagnose and replace as needed." },
-      { q: 'How much does it cost to replace the screen on a Lenovo ThinkPad T14?', a: "It depends on the damage and model. Diagnostics are free (2–4 days) — or express for 600 kr (1–2 hours). We'll give you a fixed quote afterward, so you know the price before repair begins." },
+      { q: 'How much does it cost to replace the screen on a Lenovo ThinkPad T14?', a: "It depends on the damage and model. Diagnostics are 300 kr (2–4 days) — or express for 600 kr (1–2 hours). We'll give you a fixed quote afterward, so you know the price before repair begins." },
       { q: 'Can you fix hinges on a ThinkPad X1 Carbon?', a: 'Yes, hinge damage is one of the most common faults on the X1 Carbon and X1 Yoga. We replace or repair hinges so the lid closes correctly again.' },
       { q: 'My Legion 5 overheats during gaming — can you help?', a: 'Yes. Overheating on Legion models is usually caused by dust in the cooling system or a fan that needs replacing. We clean and repair cooling on all Legion models.' },
       { q: 'Do you repair IdeaPad 3 and IdeaPad 5?', a: 'Yes, we repair all IdeaPad models — screen, battery, and software issues like slow boot or system crashes.' },
@@ -64,12 +64,12 @@ export const repairs = [
     slug: 'acer-repair',
     brand: 'Acer',
     title: 'Acer Repair: Aspire, Nitro, Swift | PCKlinik',
-    description: 'Acer Aspire 5, Nitro 5, Swift and Predator repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Acer Aspire 5, Nitro 5, Swift and Predator repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Acer Repair in Frederiksberg & Copenhagen',
     h2: 'Aspire, Nitro, Swift and Predator — we repair them all',
     intro: [
       'Having problems with your Acer? At PCKlinik we repair every Acer series — <strong>Aspire 3, Aspire 5, Nitro 5, Swift 3, Swift 5</strong> and <strong>Predator Helios</strong> — for individuals and businesses in Frederiksberg and Copenhagen. Acer is known as one of the most reliable and affordable brands to repair, since parts are generally available and inexpensive.',
-      "Whether it's a cracked screen on your <strong>Aspire 5</strong>, a battery that's run dry on your <strong>Swift 3</strong>, or a <strong>Nitro 5</strong> overheating during gaming, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a cracked screen on your <strong>Aspire 5</strong>, a battery that's run dry on your <strong>Swift 3</strong>, or a <strong>Nitro 5</strong> overheating during gaming, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'Aspire (everyday)', models: 'Aspire 3, Aspire 5, Aspire 7', issue: 'Battery replacement, slow performance, screen' },
@@ -94,7 +94,7 @@ export const repairs = [
     faq: [
       { q: "Do you repair Acer Chromebooks, or only Windows models?", a: "Both." },
       { q: "Is Acer Predator cooling different from standard laptop cooling?", a: "Yes, higher-performance systems need more careful cleaning and thermal paste application, which we're experienced with." },
-      { q: 'How much does it cost to replace a battery on an Acer Aspire 5?', a: "Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours). You'll get a fixed quote before repair begins." },
+      { q: 'How much does it cost to replace a battery on an Acer Aspire 5?', a: "Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours). You'll get a fixed quote before repair begins." },
       { q: 'Can you fix an Acer Nitro 5 that overheats?', a: 'Yes, overheating on Nitro and Predator models is usually dust or a fan issue.' },
       { q: 'Do you repair older Acer Aspire models?', a: 'Yes, regardless of age, as long as parts are available.' },
     ],
@@ -112,12 +112,12 @@ export const repairs = [
     slug: 'hp-repair',
     brand: 'HP',
     title: 'HP Repair: EliteBook, Pavilion, Spectre | PCKlinik',
-    description: 'HP EliteBook 840, Pavilion, Spectre x360 and Omen repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'HP EliteBook 840, Pavilion, Spectre x360 and Omen repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'HP Repair in Frederiksberg & Copenhagen',
     h2: 'EliteBook, Pavilion, Spectre and Omen — we repair them all',
     intro: [
       'Having problems with your HP? At PCKlinik we repair every HP series — <strong>EliteBook 840, EliteBook 850, Pavilion, Spectre x360</strong> and <strong>Omen</strong> — for individuals and businesses in Frederiksberg and Copenhagen. HP is one of the most common brands in Danish offices, and we have deep experience with both the business and consumer lines.',
-      "Whether it's a cracked screen on your <strong>Pavilion</strong>, a loose hinge on your <strong>Spectre x360</strong>, or an <strong>EliteBook</strong> that won't boot, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a cracked screen on your <strong>Pavilion</strong>, a loose hinge on your <strong>Spectre x360</strong>, or an <strong>EliteBook</strong> that won't boot, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'EliteBook (business)', models: 'EliteBook 840, EliteBook 850', issue: 'Keyboard, screen, hinges, battery' },
@@ -160,12 +160,12 @@ export const repairs = [
     slug: 'dell-repair',
     brand: 'Dell',
     title: 'Dell Repair: XPS, Latitude, Inspiron | PCKlinik',
-    description: 'Dell XPS 13/15, Latitude, Inspiron and Precision repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Dell XPS 13/15, Latitude, Inspiron and Precision repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Dell Repair in Frederiksberg & Copenhagen',
     h2: 'XPS, Latitude, Inspiron and Precision — we repair them all',
     intro: [
       'Having problems with your Dell? At PCKlinik we repair every Dell series — <strong>XPS 13, XPS 15, Latitude 5440, Latitude 7440, Inspiron 15</strong> and <strong>Precision</strong> workstations — for individuals and businesses in Frederiksberg and Copenhagen.',
-      "Whether it's a loose hinge on your <strong>XPS 13</strong> (a well-known Dell weak point), a battery that's run dry on your <strong>Inspiron</strong>, or a <strong>Latitude</strong> giving you trouble at work, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a loose hinge on your <strong>XPS 13</strong> (a well-known Dell weak point), a battery that's run dry on your <strong>Inspiron</strong>, or a <strong>Latitude</strong> giving you trouble at work, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'XPS (premium consumer)', models: 'XPS 13, XPS 15', issue: 'Hinges, screen, battery' },
@@ -208,12 +208,12 @@ export const repairs = [
     slug: 'asus-repair',
     brand: 'Asus',
     title: 'Asus Repair: ZenBook, ROG, Vivobook | PCKlinik',
-    description: 'Asus ZenBook 14, ROG Strix, TUF Gaming and Vivobook repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Asus ZenBook 14, ROG Strix, TUF Gaming and Vivobook repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Asus Repair in Frederiksberg & Copenhagen',
     h2: 'ZenBook, Vivobook, ROG and TUF — we repair them all',
     intro: [
       'Having problems with your Asus? At PCKlinik we repair every Asus series — <strong>ZenBook 14, Vivobook 15, ROG Strix, TUF Gaming</strong> and <strong>Chromebook</strong> — for individuals and businesses in Frederiksberg and Copenhagen. Asus computers are often built more compactly than many other brands, which takes real experience to repair correctly.',
-      "Whether it's a cracked screen on your <strong>Vivobook</strong>, a battery that's run dry on your <strong>ZenBook</strong>, or a <strong>ROG Strix</strong> overheating during gaming, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a cracked screen on your <strong>Vivobook</strong>, a battery that's run dry on your <strong>ZenBook</strong>, or a <strong>ROG Strix</strong> overheating during gaming, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'ZenBook (premium ultraportable)', models: 'ZenBook 14, ZenBook Pro', issue: 'Screen, battery, hinges' },
@@ -256,12 +256,12 @@ export const repairs = [
     slug: 'msi-repair',
     brand: 'MSI',
     title: 'MSI Repair: Katana, GF63, Stealth | PCKlinik',
-    description: 'MSI Katana, GF63, Stealth and Prestige repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'MSI Katana, GF63, Stealth and Prestige repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'MSI Repair in Frederiksberg & Copenhagen',
     h2: 'Katana, GF63, Stealth and Prestige — we repair them all',
     intro: [
       "Having problems with your MSI gaming computer? At PCKlinik we repair every MSI series — <strong>Katana 15, GF63, Stealth, Prestige</strong> and <strong>Cyborg</strong> — for gamers and creative professionals in Frederiksberg and Copenhagen. We're one of the few workshops in Denmark that stocks MSI parts, meaning faster turnaround.",
-      "Whether it's a <strong>GF63</strong> overheating during gaming, a cracked screen on your <strong>Katana 15</strong>, or a battery that's given up on your <strong>Stealth</strong>, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a <strong>GF63</strong> overheating during gaming, a cracked screen on your <strong>Katana 15</strong>, or a battery that's given up on your <strong>Stealth</strong>, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'Katana (mid-range gaming)', models: 'Katana 15, Katana 17', issue: 'Cooling, screen, fan noise' },
@@ -304,12 +304,12 @@ export const repairs = [
     slug: 'huawei-repair',
     brand: 'Huawei',
     title: 'Huawei Repair: MateBook D14, X Pro | PCKlinik',
-    description: 'Huawei MateBook D14, MateBook X Pro and MateBook 14 repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Huawei MateBook D14, MateBook X Pro and MateBook 14 repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Huawei Repair in Frederiksberg & Copenhagen',
     h2: 'MateBook D14, MateBook X Pro and MateBook 14 — we repair them all',
     intro: [
       'Having problems with your Huawei? At PCKlinik we repair every Huawei MateBook series — <strong>MateBook D14, MateBook D15, MateBook X Pro</strong> and <strong>MateBook 14</strong> — for individuals and businesses in Frederiksberg and Copenhagen.',
-      "Whether it's a cracked screen on your <strong>MateBook D14</strong>, a charging port acting up on your <strong>MateBook X Pro</strong>, or a computer that freezes and restarts, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a cracked screen on your <strong>MateBook D14</strong>, a charging port acting up on your <strong>MateBook X Pro</strong>, or a computer that freezes and restarts, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'MateBook D (budget consumer)', models: 'MateBook D14, MateBook D15', issue: 'Battery replacement, screen, slow performance' },
@@ -334,7 +334,7 @@ export const repairs = [
       { q: "Is it hard to find parts for Huawei laptops in Denmark?", a: "Less common than major brands, but we have experience sourcing what's needed." },
       { q: 'Do you repair the Huawei MateBook X Pro?', a: 'Yes, including screen, charging port and battery.' },
       { q: 'My MateBook D14 keeps freezing — can you help?', a: 'Yes, we diagnose and fix both software and hardware issues.' },
-      { q: 'How much does a MateBook battery replacement cost?', a: "Diagnostics are free (2–4 days) or express for 600 kr — you'll get a fixed quote afterward." },
+      { q: 'How much does a MateBook battery replacement cost?', a: "Diagnostics are 300 kr (2–4 days) or express for 600 kr — you'll get a fixed quote afterward." },
     ],
     photos: [
       { path: '/images/huawei/matebook-d14-screen.jpg', alt: 'Huawei MateBook D14 screen repair Frederiksberg' },
@@ -349,12 +349,12 @@ export const repairs = [
     slug: 'macbook-repair',
     brand: 'MacBook',
     title: 'MacBook Repair: Pro, Air, M1/M2/M3 | PCKlinik',
-    description: 'MacBook Pro 13"/14"/16" and MacBook Air M1/M2/M3 repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'MacBook Pro 13"/14"/16" and MacBook Air M1/M2/M3 repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'MacBook Repair in Frederiksberg & Copenhagen',
     h2: 'MacBook Pro, MacBook Air and older models — we repair them all',
     intro: [
       'Is your MacBook broken? At PCKlinik we repair every MacBook model — from the latest <strong>MacBook Pro 14" and 16" with M3 chip</strong> and <strong>MacBook Air M1/M2/M3</strong>, to older models like the <strong>MacBook Pro 13" (A1278/A1286)</strong> — for individuals and businesses in Frederiksberg and Copenhagen.',
-      "Whether it's a cracked screen on your <strong>MacBook Air M2</strong>, a swollen battery on an older <strong>MacBook Pro 13\"</strong>, or a keyboard fault on a <strong>MacBook Pro</strong> with the butterfly keyboard, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. We offer a price guarantee on MacBook repairs, and many repairs like screen and battery replacement are completed within 1 hour.",
+      "Whether it's a cracked screen on your <strong>MacBook Air M2</strong>, a swollen battery on an older <strong>MacBook Pro 13\"</strong>, or a keyboard fault on a <strong>MacBook Pro</strong> with the butterfly keyboard, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. We offer a price guarantee on MacBook repairs, and many repairs like screen and battery replacement are completed within 1 hour.",
     ],
     models: [
       { series: 'MacBook Pro (latest, Apple Silicon)', models: 'MacBook Pro 14" M3, MacBook Pro 16" M3', issue: 'Screen, battery, logic board' },
@@ -379,7 +379,7 @@ export const repairs = [
       { q: "Do you replace MacBook Pro speakers if they're distorted?", a: "Yes, speaker issues are diagnosed and repaired." },
       { q: "Can you fix a MacBook that won't recognize the charger?", a: "Yes — could be the charger, the port, or the logic board; we diagnose which." },
       { q: 'Do you repair the latest MacBook Pro with M3 chip?', a: 'Yes, we repair all MacBook models regardless of age or chip.' },
-      { q: 'My battery on an old MacBook Pro 13" is swollen — is that dangerous?', a: 'A swollen battery should be replaced as soon as possible. Contact us for free diagnostics and a fixed quote.' },
+      { q: 'My battery on an old MacBook Pro 13" is swollen — is that dangerous?', a: 'A swollen battery should be replaced as soon as possible. Contact us for diagnostics from 300 kr and a fixed quote.' },
       { q: 'Can you fix butterfly-keyboard issues on an older MacBook Pro?', a: "Yes, it's a known Apple issue on 2016–2019 models, and we have deep experience with it." },
     ],
     photos: [
@@ -396,12 +396,12 @@ export const repairs = [
     slug: 'microsoft-surface-repair',
     brand: 'Microsoft Surface',
     title: 'Microsoft Surface Repair: Pro, Laptop, Book | PCKlinik',
-    description: 'Microsoft Surface Pro, Surface Laptop and Surface Book repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Microsoft Surface Pro, Surface Laptop and Surface Book repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Microsoft Surface Repair in Frederiksberg & Copenhagen',
     h2: 'Surface Pro, Surface Laptop and Surface Book — we repair them all',
     intro: [
       'Having problems with your Microsoft Surface? At PCKlinik we repair every Surface model — <strong>Surface Pro 9, Surface Laptop 5, Surface Book 3</strong> and <strong>Surface Laptop Go</strong> — for individuals and businesses in Frederiksberg and Copenhagen. Surface devices take real expertise to repair correctly, given their compact, screen-integrated design.',
-      "Whether it's a cracked touch-screen on your <strong>Surface Pro</strong>, a loose hinge on your <strong>Surface Book</strong>, or a charging port acting up on your <strong>Surface Laptop</strong>, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a cracked touch-screen on your <strong>Surface Pro</strong>, a loose hinge on your <strong>Surface Book</strong>, or a charging port acting up on your <strong>Surface Laptop</strong>, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'Surface Pro (2-in-1 tablet)', models: 'Surface Pro 8, Surface Pro 9', issue: 'Touch-screen/digitizer, kickstand hinge, charging port' },
@@ -443,12 +443,12 @@ export const repairs = [
     slug: 'samsung-repair',
     brand: 'Samsung',
     title: 'Samsung Repair: Galaxy Book Pro, Go | PCKlinik',
-    description: 'Samsung Galaxy Book3, Galaxy Book4 Pro and Galaxy Book Go repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'Samsung Galaxy Book3, Galaxy Book4 Pro and Galaxy Book Go repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Samsung Repair in Frederiksberg & Copenhagen',
     h2: 'Galaxy Book3, Galaxy Book4 Pro and Galaxy Book Go — we repair them all',
     intro: [
       "Having problems with your Samsung Galaxy Book? At PCKlinik we repair every Samsung laptop model — <strong>Galaxy Book3, Galaxy Book4 Pro, Galaxy Book3 360</strong> and <strong>Galaxy Book Go</strong> — for individuals and businesses in Frederiksberg and Copenhagen. Samsung is a relatively new name in laptops, and we're among the few workshops in Copenhagen with real experience on the brand.",
-      "Whether it's a cracked screen on your <strong>Galaxy Book3</strong>, an S Pen not registering on your <strong>Galaxy Book3 360</strong>, or a battery that's run dry, we work through it methodically. Diagnostics are free (2–4 days) or express for 600 kr (1–2 hours).",
+      "Whether it's a cracked screen on your <strong>Galaxy Book3</strong>, an S Pen not registering on your <strong>Galaxy Book3 360</strong>, or a battery that's run dry, we work through it methodically. Diagnostics are 300 kr (2–4 days) or express for 600 kr (1–2 hours).",
     ],
     models: [
       { series: 'Galaxy Book (standard)', models: 'Galaxy Book3, Galaxy Book4', issue: 'Screen, battery' },
@@ -489,12 +489,12 @@ export const repairs = [
     slug: 'mac-desktop-repair',
     brand: 'Desktop Mac',
     title: 'Desktop Mac Repair: iMac, Mac mini, Mac Studio | PCKlinik',
-    description: 'iMac, Mac mini, Mac Studio and Mac Pro repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote. Call 91 81 61 81.',
+    description: 'iMac, Mac mini, Mac Studio and Mac Pro repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote. Call 91 81 61 81.',
     h1: 'Desktop Mac Repair in Frederiksberg & Copenhagen',
     h2: 'iMac, Mac mini, Mac Studio and Mac Pro — we repair them all',
     intro: [
       'Having problems with your desktop Mac? At PCKlinik we repair every Mac model — <strong>iMac 24" (M1/M3), iMac 27" (Intel), Mac mini (M2/M4), Mac Studio (M1 Max/Ultra, M2 Max/Ultra)</strong> and <strong>Mac Pro</strong> — for individuals and businesses in Frederiksberg and Copenhagen.',
-      "Whether it's an <strong>iMac</strong> that won't boot, a <strong>Mac mini</strong> that's become suspiciously slow, or a <strong>Mac Studio</strong> making unusual fan noise, we work through it methodically. We diagnose your Mac thoroughly and give you a fixed quote before we start — so you always know the cost before we touch the machine. Standard diagnostics are free (2–4 days), or choose express for 600 kr (1–2 hours).",
+      "Whether it's an <strong>iMac</strong> that won't boot, a <strong>Mac mini</strong> that's become suspiciously slow, or a <strong>Mac Studio</strong> making unusual fan noise, we work through it methodically. We diagnose your Mac thoroughly and give you a fixed quote before we start — so you always know the cost before we touch the machine. Standard diagnostics are 300 kr (2–4 days), or choose express for 600 kr (1–2 hours).",
       'Looking for MacBook (laptop) repair instead? We have a dedicated page for that — <a href="/macbook-repair/">see MacBook repair here</a>.',
     ],
     models: [
@@ -539,12 +539,12 @@ export const repairs = [
     slug: 'other-brands-repair',
     brand: 'Other Brands & Custom Builds',
     title: 'Other Brands & Custom Build Repair | PCKlinik',
-    description: 'Computer repair for Gigabyte, LG gram, Razer, custom-built desktops and any brand not listed — Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Computer repair for Gigabyte, LG gram, Razer, custom-built desktops and any brand not listed — Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Other Brands & Custom Build Repair',
     h2: "Don't see your brand listed? We repair it anyway.",
     intro: [
       "We repair every computer brand and setup, not just the ones with dedicated pages — including <strong>Gigabyte, Chromebook, MSI's less common lines, and other less-common brands</strong>, and fully <strong>custom-built desktop PCs</strong>. Whether it's a laptop from a brand we haven't listed individually, or a custom gaming rig built from scratch, we approach it the same way: thorough diagnostics, then a fixed quote before we start.",
-      'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
+      'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
     ],
     services: [
       { title: 'Screen Replacement', body: 'Cracked or damaged screen, any brand.' },
@@ -558,7 +558,7 @@ export const repairs = [
       { q: 'Do you repair Gigabyte laptops?', a: 'Yes — Gigabyte (including their AORUS gaming line) is covered here, alongside any other brand not individually listed.' },
       { q: 'Do you repair Chromebooks?', a: 'Yes, across brands — Chromebook-specific issues (software, battery, screen) are handled the same way as any other laptop.' },
       { q: "I have a laptop from a brand I've genuinely never heard mentioned anywhere on your site — will you still take a look?", a: "Yes — this page exists specifically for that situation. Bring it in, we'll diagnose it the same way as any other brand." },
-      { q: 'Do custom-built desktop PCs get the same free/express diagnostics pricing as branded laptops?', a: "Yes, the same pricing model applies regardless of whether it's a major brand, a lesser-known brand, or a custom build." },
+      { q: 'Do custom-built desktop PCs get the same standard/express diagnostics pricing as branded laptops?', a: "Yes, the same pricing model applies regardless of whether it's a major brand, a lesser-known brand, or a custom build." },
     ],
     crosslinks: [{ label: 'MSI Repair', href: '/msi-repair/' }, { label: 'Mac (desktop) Repair', href: '/mac-desktop-repair/' }],
     ctaPrimary: 'Book diagnostics',
@@ -569,12 +569,12 @@ export const repairs = [
     slug: 'toshiba-dynabook-repair',
     brand: 'Toshiba & Dynabook',
     title: 'Toshiba & Dynabook Repair | PCKlinik',
-    description: 'Toshiba and Dynabook laptop repair — Satellite, Portégé, Tecra — in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Toshiba and Dynabook laptop repair — Satellite, Portégé, Tecra — in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Toshiba & Dynabook Repair in Frederiksberg & Copenhagen',
     h2: 'Satellite, Portégé, Tecra, and older Toshiba models',
     intro: [
       "Toshiba's laptop business was acquired by Sharp and rebranded as Dynabook, but we repair both the older Toshiba-branded models and the newer Dynabook lines. Whether it's an older Satellite that's still going strong, or a business-focused Portégé or Tecra, we diagnose and repair them the same way as every other brand.",
-      'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
+      'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
     ],
     models: [
       { series: 'Satellite (consumer)', models: 'Satellite Pro, Satellite C/L series', issue: 'Battery, screen, slow performance' },
@@ -606,12 +606,12 @@ export const repairs = [
   {
     slug: 'fujitsu-repair', brand: 'Fujitsu',
     title: 'Fujitsu Laptop Repair | PCKlinik',
-    description: 'Fujitsu LIFEBOOK repair in Frederiksberg and Copenhagen. We also sell refurbished Fujitsu laptops. Free diagnostics, fixed quote.',
+    description: 'Fujitsu LIFEBOOK repair in Frederiksberg and Copenhagen. We also sell refurbished Fujitsu laptops. Diagnostics from 300 kr, fixed quote.',
     h1: 'Fujitsu Repair in Frederiksberg & Copenhagen',
     h2: 'LIFEBOOK and other Fujitsu laptops — a brand we know well',
     intro: [
       "Fujitsu makes reliable, business-focused laptops that don't get as much attention as the bigger brands — but we know them well. We both repair Fujitsu laptops and sell refurbished Fujitsu units in our shop, so we're genuinely familiar with common failure points across their lineup, not just repairing them occasionally.",
-      'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
+      'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
     ],
     models: [
       { series: 'LIFEBOOK (business)', models: 'LIFEBOOK U, LIFEBOOK E series', issue: 'Battery, screen, keyboard' },
@@ -642,12 +642,12 @@ export const repairs = [
   {
     slug: 'lg-gram-repair', brand: 'LG gram',
     title: 'LG gram Laptop Repair | PCKlinik',
-    description: 'LG gram laptop repair in Frederiksberg and Copenhagen. Screen, battery, keyboard. Free diagnostics, fixed quote.',
+    description: 'LG gram laptop repair in Frederiksberg and Copenhagen. Screen, battery, keyboard. Diagnostics from 300 kr, fixed quote.',
     h1: 'LG gram Repair in Frederiksberg & Copenhagen',
     h2: 'Ultra-lightweight laptops, properly repaired',
     intro: [
       "LG gram laptops are known for being exceptionally lightweight without sacrificing screen size — popular with students and professionals who travel often. That lightweight build uses different internal engineering than most laptops, which we've got experience with.",
-      'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
+      'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
     ],
     services: [
       { title: 'Screen Replacement', body: "LG gram's large, thin displays repaired properly." },
@@ -674,12 +674,12 @@ export const repairs = [
   {
     slug: 'razer-blade-repair', brand: 'Razer Blade',
     title: 'Razer Blade Laptop Repair | PCKlinik',
-    description: 'Razer Blade gaming laptop repair in Frederiksberg and Copenhagen. Screen, cooling, battery. Free diagnostics, fixed quote.',
+    description: 'Razer Blade gaming laptop repair in Frederiksberg and Copenhagen. Screen, cooling, battery. Diagnostics from 300 kr, fixed quote.',
     h1: 'Razer Blade Repair in Frederiksberg & Copenhagen',
     h2: 'Premium gaming laptops, repaired properly',
     intro: [
       'Razer Blade laptops pack high-performance gaming hardware into a thin aluminum chassis — which means cooling and thermal management matter even more than on typical gaming laptops. We repair Razer Blade screens, cooling systems, batteries, and more.',
-      'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
+      'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering.',
     ],
     services: [
       { title: 'Cooling & Thermal Service', body: 'The thin chassis design makes proper cooling maintenance especially important on Razer Blade models.' },

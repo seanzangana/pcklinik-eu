@@ -7,7 +7,7 @@ export const services = [
   {
     slug: 'ssd-upgrade', group: 'PC',
     title: 'SSD Upgrade Service | PCKlinik',
-    description: 'Upgrade your PC or laptop to SSD in Frederiksberg and Copenhagen. Faster boot times, same-day service. Free diagnostics, fixed quote.',
+    description: 'Upgrade your PC or laptop to SSD in Frederiksberg and Copenhagen. Faster boot times, same-day service. Diagnostics from 300 kr, fixed quote.',
     h1: 'SSD Upgrade', subhead: 'One of the biggest speed boosts you can give an older machine',
     intro: ['Still running on a mechanical hard drive? An SSD upgrade is one of the single biggest speed improvements you can make to an older PC or laptop — often turning a 2-minute boot into 15 seconds. We handle the upgrade, transfer your data and operating system, and get you running on the new drive with nothing lost.'],
     whatsIncluded: 'SSD sourcing (or use your own), full data/OS migration, installation, and testing.',
@@ -22,7 +22,7 @@ export const services = [
   {
     slug: 'pc-optimization', group: 'PC',
     title: 'PC Optimization & Speed-Up Service | PCKlinik',
-    description: 'Is your PC slow? We optimize startup, remove bloatware, and tune performance in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Is your PC slow? We optimize startup, remove bloatware, and tune performance in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'PC Optimization', subhead: 'A slow PC is rarely "just old"',
     intro: ['A slow PC is rarely "just old" — it\'s usually a buildup of startup programs, bloatware, fragmented drives, or background processes eating resources. We diagnose what\'s actually slowing your machine down and fix it, rather than just recommending you buy a new computer.'],
     whatsIncluded: 'Startup cleanup, malware/bloatware removal, driver updates, storage cleanup.',
@@ -39,7 +39,7 @@ export const services = [
   {
     slug: 'hard-drive-replacement', group: 'PC',
     title: 'Hard Drive Replacement | PCKlinik',
-    description: 'Hard drive failing or failed? Replacement and data recovery in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Hard drive failing or failed? Replacement and data recovery in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Hard Drive Replacement', subhead: 'Clicking, freezing, or a drive that won\'t show up',
     intro: ["Clicking noises, frequent freezing, or a drive that's not detected at all are classic signs of hard drive failure. We diagnose whether it's failing or failed, replace it (with an SSD upgrade if you'd like), and attempt data recovery where possible."],
     faq: [
@@ -55,7 +55,7 @@ export const services = [
   {
     slug: 'screen-replacement', group: 'PC',
     title: 'Laptop & PC Screen Replacement | PCKlinik',
-    description: 'Cracked or damaged screen? Replacement for any laptop brand in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Cracked or damaged screen? Replacement for any laptop brand in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Screen Replacement', subhead: 'Any laptop brand, cracked to flickering',
     intro: ['Cracked, black, or flickering screen? We replace laptop and monitor screens for any brand — see our specific brand pages for model-level detail, or come to us directly if you\'re not sure which page applies.'],
     faq: [
@@ -86,7 +86,7 @@ export const services = [
   {
     slug: 'charging-port-repair', group: 'PC',
     title: 'Laptop Charging Port Repair | PCKlinik',
-    description: 'Charging port not working or loose? Repair for any laptop brand in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Charging port not working or loose? Repair for any laptop brand in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Charging Port Repair', subhead: 'Loose, damaged, or not charging at all',
     intro: ['A loose, damaged, or non-functional charging port is a common but fixable issue. We diagnose whether it\'s the port itself, the cable, or the charging circuit, and repair or replace accordingly.'],
     faq: [
@@ -113,7 +113,7 @@ export const services = [
   {
     slug: 'mac-battery-replacement', group: 'Mac',
     title: 'Mac Battery Replacement | PCKlinik',
-    description: 'MacBook battery not holding a charge, or swollen? Replacement in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'MacBook battery not holding a charge, or swollen? Replacement in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Mac Battery Replacement', subhead: 'Degraded or swollen — we replace it safely',
     intro: ["Whether your MacBook's battery has degraded over time or is visibly swollen (a safety concern — see below), we replace it with a quality battery and test it thoroughly afterward."],
     callout: { label: 'Safety note', text: "A swollen battery should be brought in as soon as possible — don't puncture it or continue heavy use." },
@@ -128,7 +128,7 @@ export const services = [
   {
     slug: 'mac-screen-replacement', group: 'Mac',
     title: 'Mac Screen Replacement | PCKlinik',
-    description: 'Cracked or damaged MacBook or iMac screen? Replacement in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Cracked or damaged MacBook or iMac screen? Replacement in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Mac Screen Replacement', subhead: 'MacBook and iMac displays, Intel to Apple Silicon',
     intro: ['Cracked, discolored, or flickering screen on a MacBook or iMac? We replace Mac displays with quality parts across both current Apple Silicon models and older Intel Macs.'],
     faq: [
@@ -152,7 +152,7 @@ export const services = [
   {
     slug: 'mac-trackpad-replacement', group: 'Mac',
     title: 'MacBook Trackpad Replacement | PCKlinik',
-    description: 'Unresponsive or clicking MacBook trackpad? Replacement in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'Unresponsive or clicking MacBook trackpad? Replacement in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'MacBook Trackpad Replacement', subhead: 'Erratic, unresponsive, or physically damaged',
     intro: ['An unresponsive, erratic, or physically damaged trackpad is a common MacBook issue, particularly after a liquid spill or drop. We diagnose and replace the trackpad assembly.'],
     faq: [
@@ -179,7 +179,7 @@ export const services = [
   {
     slug: 'virus-removal', group: 'Cross-cutting',
     title: 'Virus & Malware Removal | PCKlinik',
-    description: 'PC or Mac infected with a virus or malware? Removal and security cleanup in Frederiksberg and Copenhagen. Free diagnostics, fixed quote.',
+    description: 'PC or Mac infected with a virus or malware? Removal and security cleanup in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote.',
     h1: 'Virus & Malware Removal', subhead: 'Pop-ups, slowdowns, suspicious activity',
     intro: ['Pop-ups, sluggish performance, or suspicious activity on your PC or Mac? We remove viruses and malware, and where relevant, set up ongoing protection so it doesn\'t happen again.'],
     faq: [
@@ -198,7 +198,7 @@ export const services = [
     title: 'Remote Computer Support | PCKlinik',
     description: 'Software issues, virus removal, or setup help without visiting the workshop. Remote support for PC and Mac, available across Denmark.',
     h1: 'Remote Support', subhead: 'Software problems solved without leaving your desk',
-    intro: ["Not every problem needs a workshop visit. Software issues, virus infections, email setup, slow performance, and many configuration problems can be diagnosed and fixed remotely — we connect to your computer with your permission, you watch what we're doing, and most sessions resolve the issue on the spot. Available for both PC and Mac, anywhere in Denmark, not just Frederiksberg and Copenhagen.", 'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — the same pricing model as our in-person repairs, since remote diagnostics work the same way.'],
+    intro: ["Not every problem needs a workshop visit. Software issues, virus infections, email setup, slow performance, and many configuration problems can be diagnosed and fixed remotely — we connect to your computer with your permission, you watch what we're doing, and most sessions resolve the issue on the spot. Available for both PC and Mac, anywhere in Denmark, not just Frederiksberg and Copenhagen.", 'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — the same pricing model as our in-person repairs, since remote diagnostics work the same way.'],
     bulletSections: [{ heading: 'What we fix remotely', items: ['Virus and malware removal', 'Slow performance and startup issues', 'Email and account setup', 'Software configuration and troubleshooting', 'Network and WiFi issues (where not hardware-related)', 'Setting up automated cloud backup solutions (configuration only — recovering data from an already-failed drive requires physical access, see our Data Backup & Recovery page for that)'] }],
     callout: { label: "What we can't fix remotely", text: 'Anything requiring physical access — screen replacement, battery replacement, hardware repairs. Bring those into the workshop or ask about our on-site visit service.' },
     faq: [
@@ -342,7 +342,7 @@ export const services = [
       { q: "Does the type of liquid spilled matter for repair chances?", a: "Yes — sugary or salty liquids (coffee, soda) tend to cause more corrosion than plain water." },
       { q: "Should I put a liquid-damaged laptop in rice?", a: "No — this is a myth that doesn't meaningfully help. Power it off and bring it in instead." },
       { q: 'I spilled liquid on my laptop — what should I do right now?', a: "Power it off immediately, don't try to turn it back on, and bring it in as soon as you can. Continuing to use it risks corrosion spreading on the logic board." },
-      { q: 'Why is liquid damage priced differently from your other repairs?', a: 'A proper liquid-damage assessment involves full disassembly, cleaning, and corrosion inspection, which takes 3–4 days — so it is a flat 600 kr diagnostic with no express option, rather than the free/express model used elsewhere.' },
+      { q: 'Why is liquid damage priced differently from your other repairs?', a: 'A proper liquid-damage assessment involves full disassembly, cleaning, and corrosion inspection, which takes 3–4 days — so it is a flat 600 kr diagnostic with no express option, rather than the standard/express model used elsewhere.' },
       { q: 'Can liquid-damaged laptops always be saved?', a: "Not always, but early action significantly improves the odds. We assess and give you an honest fixed price — PC or Mac." },
     ],
     crosslinks: [{ label: 'Data Backup & Recovery', href: '/data-backup-and-recovery/' }, { label: 'Keyboard Replacement', href: '/keyboard-replacement/' }],
