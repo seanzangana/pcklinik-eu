@@ -54,7 +54,7 @@ const AR_NEWS = [
     description: 'قاعدة بسيطة وسهلة التذكر لعمل نسخة احتياطية صحيحة لبياناتكم — حتى لا يمحو عطل أو سرقة أو خطأ واحد كل شيء.' },
 ];
 
-const arPathSet = new Set(['/ar/', ...arPages.map((x) => x.slug), ...arBrands.map((b) => `/ar/${b.slug}/`), ...arServices.map((sv) => `/ar/${sv.slug}/`), ...arNetwork.map((n) => `/ar/${n.slug}/`), ...arShop.map((sh) => `/ar/${sh.slug}/`), ...arLocations.map((l) => `/ar/${l.slug}/`), '/ar/business-it-service-agreement/', '/ar/contact/', '/ar/thank-you/', '/ar/faq/', '/ar/news/', ...AR_NEWS.map((n) => `/ar/news/${n.slug}/`)]);
+const arPathSet = new Set(['/ar/', ...arPages.map((x) => x.slug), ...arBrands.map((b) => `/ar/${b.slug}/`), ...arServices.map((sv) => `/ar/${sv.slug}/`), ...arNetwork.map((n) => `/ar/${n.slug}/`), ...arShop.map((sh) => `/ar/${sh.slug}/`), ...arLocations.map((l) => `/ar/${l.slug}/`), '/ar/business-it-service-agreement/', '/ar/contact/', '/ar/thank-you/', '/ar/students/', '/ar/faq/', '/ar/news/', ...AR_NEWS.map((n) => `/ar/news/${n.slug}/`)]);
 const AR_EN_MAP = { '/ar/': '/', '/ar/website-design/': '/website-design-development/', '/ar/google-ads/': '/google-ads-management/', '/ar/business-it/': '/business-it-service-agreement/' };
 const EN_AR_MAP = { '/website-design-development/': '/ar/website-design/', '/google-ads-management/': '/ar/google-ads/', '/business-it-service-agreement/': '/ar/business-it-service-agreement/' };
 function arCounterpart(p) { return EN_AR_MAP[p] || (p === '/' ? '/ar/' : `/ar${p}`); }
@@ -105,7 +105,7 @@ function footer() {
   return `<footer class="site-footer"><div class="wrap"><div class="cols">
     <div><img src="/logo.png" alt="PCKlinik" class="logo-foot" width="85" height="34" /><p>Fast, honest PC and Mac repair for individuals and businesses in Frederiksberg and Copenhagen.</p><p>${site.address}</p></div>
     <div><h2>Repairs</h2><a href="/lenovo-repair/">Lenovo</a><a href="/hp-repair/">HP</a><a href="/dell-repair/">Dell</a><a href="/macbook-repair/">MacBook</a><a href="/mac-desktop-repair/">Mac (desktop)</a><a href="/microsoft-surface-repair/">Microsoft Surface</a></div>
-    <div><h2>More</h2><a href="/shop/">Shop</a><a href="/shop/computers/refurbished/">Refurbished Computers</a><a href="/business-it-service-agreement/">Business IT Support</a><a href="/about-us/">Meet the Team</a><a href="/faq/">FAQ</a><a href="/news/">News</a><a href="/ask-a-question/">Ask Us a Question</a><a href="/contact/">Contact</a></div>
+    <div><h2>More</h2><a href="/shop/">Shop</a><a href="/shop/computers/refurbished/">Refurbished Computers</a><a href="/business-it-service-agreement/">Business IT Support</a><a href="/about-us/">Meet the Team</a><a href="/students/">Students (CBS &amp; DTU)</a><a href="/faq/">FAQ</a><a href="/news/">News</a><a href="/ask-a-question/">Ask Us a Question</a><a href="/contact/">Contact</a></div>
     <div><h2>Areas we serve</h2><a href="/computer-repair-copenhagen/">Copenhagen</a><a href="/computer-repair-frederiksberg/">Frederiksberg</a><a href="/computer-repair-vesterbro/">Vesterbro</a><a href="/computer-repair-vanloese/">Vanløse</a><a href="/computer-repair-valby/">Valby</a><a href="/computer-repair-nordvest/">Nordvest</a></div>
     
     <div><h2>Get in touch</h2><p>📞 <a href="${site.phoneHref}" style="display:inline">${site.phone}</a></p><p>✉️ <a href="mailto:${site.emailConsumer}" style="display:inline">${site.emailConsumer}</a></p><p style="margin-top:14px">Mon–Fri 10:00–18:00<br />Sat 10:00–14:00<br />Sun closed</p></div>
@@ -222,7 +222,7 @@ function repairBody(r) {
   ${photosSection}
   ${whySection}
   <section class="section alt"><div class="wrap"><div class="eyebrow">FAQ</div><h2>${esc(r.brand)} repair — common questions</h2><div class="faq">${faq}</div></div></section>
-  <section class="section"><div class="wrap"><div class="cta-band"><h2>${ctaHeading}</h2><p>Free diagnostics (2–4 days) or express for 600 kr (1–2 hours). Fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">${esc(r.ctaPrimary)}</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
+  <section class="section"><div class="wrap"><div class="cta-band"><h2>${ctaHeading}</h2><p>Diagnostics 300 kr (2–4 days) or express for 600 kr (1–2 hours). Fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">${esc(r.ctaPrimary)}</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related repairs</p><div class="crosslinks">${cross}</div></div></div></section>`;
 }
 function repairSchema(r) {
@@ -235,7 +235,7 @@ const HOME_FAQ = [
   ["Do you offer any way to check the status of an ongoing repair without calling?", "Contact us directly for a status update — call or email works best for a small, personal operation like ours."],
   ['Do you speak English?', 'Yes — our entire service is in English. No Danish required, whether you\'re calling, emailing, or visiting the workshop.'],
   ['Do you repair every computer brand?', 'Yes — we repair all major PC and Mac brands, plus custom builds and brands not individually listed. See "Other Brands & Custom Builds" if you don\'t see yours.'],
-  ['How much does a repair cost?', 'Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours). You\'ll always get a fixed quote before any repair work starts, so there are no surprises.'],
+  ['How much does a repair cost?', 'Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours). You\'ll always get a fixed quote before any repair work starts, so there are no surprises.'],
   ['How long does a repair take?', 'Many repairs are completed the same day, especially with express diagnostics. More involved repairs depend on parts availability.'],
   ['Do you serve businesses as well as individuals?', 'Yes — alongside device repair, we offer fixed-price IT service agreements for businesses, including unlimited support, monitoring, and security. See our Business IT page for details.'],
   ['Where are you located?', 'Falkoner Allé 108, Frederiksberg. We serve Frederiksberg and Copenhagen directly, plus the rest of Denmark via remote support for IT service agreements.'],
@@ -275,11 +275,11 @@ function homeBody() {
     <h1>Computer &amp; IT support — for you or your business</h1>
     <p class="lead">Fast, honest repair for individuals. Fixed-price IT support for businesses. No Danish required — pick your path below.</p>
     <div class="grid grid-2 hero-paths">
-      <a class="card card-link" href="/contact/"><div class="card-icon">🖥️</div><h3>For Individuals</h3><p>PC &amp; Mac repair — free or express diagnostics, fixed quote, most repairs same-day.</p><span class="arrow">Book a repair →</span></a>
+      <a class="card card-link" href="/contact/"><div class="card-icon">🖥️</div><h3>For Individuals</h3><p>PC &amp; Mac repair — standard or express diagnostics, fixed quote, most repairs same-day.</p><span class="arrow">Book a repair →</span></a>
       <a class="card card-link" href="/business-it-service-agreement/"><div class="card-icon">🏢</div><h3>For Business</h3><p>IT service agreements — unlimited support, monitoring, and security for one fixed monthly price.</p><span class="arrow">See Business IT plans →</span></a>
     </div></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">Our Promise</div><h2>How it works</h2><div class="steps">
-    <div class="step"><div class="num">1</div><h3>Diagnostics</h3><p>Free (2–4 days), or express for 600 kr (1–2 hours).</p></div>
+    <div class="step"><div class="num">1</div><h3>Diagnostics</h3><p>300 kr (2–4 days), or express for 600 kr (1–2 hours).</p></div>
     <div class="step"><div class="num">2</div><h3>Fixed quote</h3><p>You get a clear price before we touch anything.</p></div>
     <div class="step"><div class="num">3</div><h3>Repair</h3><p>We carry out the repair with the same care as the diagnostics.</p></div></div></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">What we repair</div><h2>Every major computer brand — PC and Mac</h2>
@@ -560,7 +560,7 @@ function footerAr() {
   const links = arNav.map((i) => `<a href="${i.href}">${esc(i.label)}</a>`).join('');
   return `<footer class="site-footer"><div class="wrap"><div class="cols">
     <div><h2>PCKlinik</h2><a href="/ar/" style="color:var(--muted)">دعم تقني وخدمات ويب عن بُعد — بفريق يتحدث العربية.</a></div>
-    <div><h2>الخدمات عن بُعد</h2>${links}<a href="/ar/faq/">الأسئلة الشائعة</a><a href="/ar/news/">الأخبار</a></div>
+    <div><h2>الخدمات عن بُعد</h2>${links}<a href="/ar/faq/">الأسئلة الشائعة</a><a href="/ar/news/">الأخبار</a><a href="/ar/students/">الطلاب (CBS و DTU)</a></div>
     <div><h2>المتجر</h2>${arShop.map((sh) => `<a href="/ar/${sh.slug}/">${esc(sh.label)}</a>`).join('')}</div>
     <div><h2>المناطق التي نخدمها</h2><a href="/ar/computer-repair-copenhagen/" lang="en">Copenhagen</a><a href="/ar/computer-repair-frederiksberg/" lang="en">Frederiksberg</a><a href="/ar/computer-repair-vesterbro/" lang="en">Vesterbro</a><a href="/ar/computer-repair-vanloese/" lang="en">Vanl&oslash;se</a><a href="/ar/computer-repair-valby/" lang="en">Valby</a><a href="/ar/computer-repair-nordvest/" lang="en">Nordvest</a></div>
     <div><h2>لغة أخرى</h2><a href="/" hreflang="en" lang="en">English site</a><a href="/contact/" hreflang="en" lang="en">Contact (in English)</a></div>
@@ -581,14 +581,14 @@ function arPageHtml(pg) {
 const AR_HOME_FAQ = [
   { q: 'هل تتحدثون العربية؟', a: 'نعم، فريقنا يضم متحدثين بالعربية والدنماركية والإنجليزية.' },
   { q: 'هل تصلحون كل ماركات الحاسوب؟', a: 'نعم، نصلح جميع الماركات الرئيسية، بالإضافة إلى الأجهزة المخصصة.' },
-  { q: 'كم تكلفة الإصلاح؟', a: 'التشخيص القياسي مجاني (2–4 أيام)، أو سريع مقابل 600 كرونة (1–2 ساعة). ستحصلون دائمًا على سعر ثابت قبل بدء أي عمل.' },
+  { q: 'كم تكلفة الإصلاح؟', a: 'التشخيص القياسي يكلف 300 كرونة (2–4 أيام)، أو سريع مقابل 600 كرونة (1–2 ساعة). ستحصلون دائمًا على سعر ثابت قبل بدء أي عمل.' },
   { q: "كيف يتم الدفع للعملاء خارج الدنمارك؟", a: "نقبل التحويل البنكي الدولي وبطاقات الدفع. سنوضح تفاصيل الدفع بوضوح عند الاتفاق على المشروع." },
   { q: "هل تتعاملون مع فروق التوقيت؟", a: "نعم، نتفق مسبقًا على أوقات مناسبة للتواصل تناسب منطقتكم الزمنية." },
   { q: "هل تتحدثون لهجات عربية غير الفصحى؟", a: "نتواصل بالعربية الفصحى بشكل أساسي، وبعض أفراد الفريق يفهمون لهجات معينة — أخبرونا وسنبذل جهدنا للتواصل بالطريقة الأنسب لكم." },
   { q: "بأي عملة تكون الفواتير؟", a: "عادة باليورو أو الكرونة الدنماركية — يمكن مناقشة ذلك حسب موقعكم عند بدء المشروع." },
   { q: "هل هناك حد أدنى لحجم المشروع؟", a: "لا يوجد حد أدنى صارم — تواصلوا معنا وسنخبركم إن كان مشروعكم مناسبًا لخدماتنا." },
 ];
-const AR_FAQ_GROUPS = [["عام والإجراءات", [["هل تتحدثون العربية؟", "نعم — خدمتنا بالكامل متاحة بالعربية والدنماركية والإنجليزية، من أول اتصال أو رسالة حتى استلام جهازكم المُصلح. لا حاجة للدنماركية."], ["كيف يعمل التشخيص والإصلاح؟", "نشخص المشكلة الفعلية أولاً، ثم نعطيكم سعرًا ثابتًا قبل بدء أي إصلاح. التشخيص القياسي مجاني (2-4 أيام)، أو اختاروا السريع مقابل 600 كرونة (1-2 ساعة) — مع الإصلاح والتسليم خلال 24 ساعة إذا لم تكن هناك حاجة لقطع غيار خاصة."], ["ماذا لو احتجت جهازي أسرع من التشخيص القياسي؟", "اختاروا التشخيص السريع (600 كرونة، 1-2 ساعة) بدلاً من الخيار المجاني القياسي. معظم الإصلاحات السريعة تكتمل خلال 24 ساعة إذا لم تكن هناك حاجة لقطع غيار خاصة."], ["هل تقدمون ضمانًا على الإصلاحات؟", "نعم، الإصلاحات تأتي بضمان. اسألوا عند الحجز عن تفاصيل نوع إصلاحكم."], ["هل بياناتي آمنة أثناء الإصلاح؟", "نعم. لا نصل إلى بياناتكم الشخصية أو نشاركها إلا بالقدر اللازم لإتمام الإصلاح، وننصح دائمًا بعمل نسخة احتياطية للملفات المهمة مسبقًا."], ["هل أحتاج موعدًا مسبقًا، أم يمكنني الحضور مباشرة؟", "خدمة بدون موعد مسبق — لا حاجة لحجز موعد."], ["هل يمكنكم استلام وتوصيل حاسوبي؟", "نعم، الاستلام والتوصيل متاحان — تواصلوا معنا للتفاصيل حسب موقعكم."], ["ماذا لو تعذر إصلاح جهازي؟", "سنخبركم بصراحة. إذا لم يكن الإصلاح مجديًا اقتصاديًا مقارنة بالاستبدال، سنقول ذلك بدلاً من تحصيل رسوم على عمل غير مجدٍ — ويمكننا توجيهكم لخيارات مجددة أو جديدة في متجرنا إذا كان ذلك الخيار الأفضل."], ["كيف أعرف إذا كان يستحق إصلاح حاسوبي، أم يجب استبداله؟", "قاعدة شائعة: إذا كانت تكلفة الإصلاح أكثر من 25-50% من تكلفة استبدال مماثل، فالاستبدال عادة القيمة الأفضل — خصوصًا لجهاز أقدم. العمر مهم أيضًا: جهاز عمره 2-3 سنوات يستحق الإصلاح غالبًا؛ جهاز عمره 7-8 سنوات قد يكون من الصعب إيجاد قطع غياره. سنعطيكم رأينا الصادق كجزء من عرض السعر الثابت، وليس فقط تقدير إصلاح."], ["ما وسائل الدفع التي تقبلونها؟", "الدفع بالبطاقة والتحويل البنكي."]]], ["الماركات التي نصلحها", [["هل تصلحون أجهزة Lenovo؟", "نعم — ThinkPad (T14، T14s، X1 Carbon، P16 والمزيد)، IdeaPad، Legion، Yoga، وThinkBook."], ["هل تصلحون أجهزة Acer؟", "نعم — طرازات Aspire وSwift وNitro وPredator."], ["هل تصلحون أجهزة HP؟", "نعم — EliteBook وProBook وPavilion وSpectre وOmen."], ["هل تصلحون أجهزة Dell؟", "نعم — XPS وLatitude وInspiron وPrecision وAlienware."], ["هل تصلحون أجهزة Asus؟", "نعم — ZenBook وVivobook وROG وTUF Gaming."], ["هل تصلحون أجهزة MSI؟", "نعم — Katana وسلسلة GF وStealth وPrestige. نحن أيضًا من الورش القليلة في الدنمارك التي تخزن قطع غيار MSI."], ["هل تصلحون أجهزة Huawei؟", "نعم — MateBook D14 وD15 وX Pro."], ["هل تصلحون MacBook وأجهزة Mac المكتبية؟", "نعم — كل أجيال MacBook (Intel وApple Silicon)، بالإضافة إلى iMac وMac mini وMac Studio وMac Pro."], ["هل تصلحون أجهزة Microsoft Surface؟", "نعم — Surface Pro وSurface Laptop وSurface Book، بما في ذلك إصلاح الشاشة اللمسية المتخصص."], ["هل تصلحون أجهزة Samsung Galaxy Book؟", "نعم — Galaxy Book3 وGalaxy Book4 Pro وGalaxy Book3 360 وGalaxy Book Go. نحن من الورش القليلة في Copenhagen ذات الخبرة الحقيقية بهذه الماركة الأحدث."], ["ماذا عن الماركات غير المذكورة هنا — Toshiba، Gigabyte، LG gram، Razer؟", "نصلح تقريبًا أي ماركة أو جهاز مخصص، وليس فقط ما له صفحات مخصصة — راجعوا صفحة \"ماركات أخرى وأجهزة مخصصة\"."], ["هل تبنون حواسيب ألعاب مخصصة، وليس فقط إصلاحها؟", "نعم — أخبرونا بميزانيتكم والاستخدام المطلوب، وسنقترح المكونات ونبنيها ونختبرها قبل التسليم."]]], ["الخدمات", [["هل يمكنكم ترقية حاسوبي القديم إلى SSD؟", "نعم — غالبًا واحد من أكثر التحسينات وضوحًا التي يمكن إجراؤها على جهاز قديم."], ["هل تصلحون أضرار السوائل؟", "نعم، لأي ماركة أو طراز. ملاحظة: تشخيص أضرار السوائل يختلف عن أسعارنا القياسية — سعر ثابت 600 كرونة، يستغرق 3-4 أيام، بدون خيار سريع، لأن التقييم السليم يحتاج وقتًا."], ["هل يمكنكم استرجاع البيانات من قرص صلب فاشل؟", "غالبًا نعم — يعتمد على نوع وشدة العطل. نقيّم أولاً ونعطي إجابة صادقة."], ["هل تزيلون الفيروسات والبرامج الضارة؟", "نعم، على كل من PC وMac."], ["هل تنظفون الغبار وتعيدون وضع معجون التبريد؟", "نعم — إصلاح شائع لمشاكل ارتفاع الحرارة أو ضجيج المروحة على اللابتوب وحواسيب الألعاب المكتبية."], ["هل تصلحون منافذ الشحن؟", "نعم، عبر جميع ماركات اللابتوب."]]], ["الدعم التقني للشركات", [["هل تقدمون دعمًا تقنيًا مستمرًا للشركات، وليس فقط إصلاحات لمرة واحدة؟", "نعم — نقدم اتفاقيات دعم تقني بسعر ثابت تشمل دعمًا غير محدود، ومراقبة، وأمانًا. راجعوا صفحة الدعم التقني للشركات للأسعار والتفاصيل."], ["ما الفرق بين إصلاح لمرة واحدة واتفاقية دعم؟", "الإصلاح حل واحد لمشكلة محددة. اتفاقية الدعم ترتيب شهري ثابت ومستمر يشمل دعمًا غير محدود ومراقبة وأمانًا لتقنية شركتكم — مصمم لمنع المشاكل بدلاً من إصلاحها بعد وقوعها فقط."]]], ["المتجر", [["هل تبيعون حواسيب، وليس فقط إصلاحها؟", "نعم — حواسيب جديدة ومجددة، بالإضافة إلى معدات النسخ الاحتياطي والأمان، متوفرة في متجرنا."], ["هل الحواسيب المجددة مضمونة؟", "نعم — الحواسيب المجددة تأتي بضمان؛ راجعوا المتجر للتفاصيل."]]]];
+const AR_FAQ_GROUPS = [["عام والإجراءات", [["هل تتحدثون العربية؟", "نعم — خدمتنا بالكامل متاحة بالعربية والدنماركية والإنجليزية، من أول اتصال أو رسالة حتى استلام جهازكم المُصلح. لا حاجة للدنماركية."], ["كيف يعمل التشخيص والإصلاح؟", "نشخص المشكلة الفعلية أولاً، ثم نعطيكم سعرًا ثابتًا قبل بدء أي إصلاح. التشخيص القياسي يكلف 300 كرونة (2-4 أيام)، أو اختاروا السريع مقابل 600 كرونة (1-2 ساعة) — مع الإصلاح والتسليم خلال 24 ساعة إذا لم تكن هناك حاجة لقطع غيار خاصة."], ["ماذا لو احتجت جهازي أسرع من التشخيص القياسي؟", "اختاروا التشخيص السريع (600 كرونة، 1-2 ساعة) بدلاً من الخيار القياسي. معظم الإصلاحات السريعة تكتمل خلال 24 ساعة إذا لم تكن هناك حاجة لقطع غيار خاصة."], ["هل تقدمون ضمانًا على الإصلاحات؟", "نعم، الإصلاحات تأتي بضمان. اسألوا عند الحجز عن تفاصيل نوع إصلاحكم."], ["هل بياناتي آمنة أثناء الإصلاح؟", "نعم. لا نصل إلى بياناتكم الشخصية أو نشاركها إلا بالقدر اللازم لإتمام الإصلاح، وننصح دائمًا بعمل نسخة احتياطية للملفات المهمة مسبقًا."], ["هل أحتاج موعدًا مسبقًا، أم يمكنني الحضور مباشرة؟", "خدمة بدون موعد مسبق — لا حاجة لحجز موعد."], ["هل يمكنكم استلام وتوصيل حاسوبي؟", "نعم، الاستلام والتوصيل متاحان — تواصلوا معنا للتفاصيل حسب موقعكم."], ["ماذا لو تعذر إصلاح جهازي؟", "سنخبركم بصراحة. إذا لم يكن الإصلاح مجديًا اقتصاديًا مقارنة بالاستبدال، سنقول ذلك بدلاً من تحصيل رسوم على عمل غير مجدٍ — ويمكننا توجيهكم لخيارات مجددة أو جديدة في متجرنا إذا كان ذلك الخيار الأفضل."], ["كيف أعرف إذا كان يستحق إصلاح حاسوبي، أم يجب استبداله؟", "قاعدة شائعة: إذا كانت تكلفة الإصلاح أكثر من 25-50% من تكلفة استبدال مماثل، فالاستبدال عادة القيمة الأفضل — خصوصًا لجهاز أقدم. العمر مهم أيضًا: جهاز عمره 2-3 سنوات يستحق الإصلاح غالبًا؛ جهاز عمره 7-8 سنوات قد يكون من الصعب إيجاد قطع غياره. سنعطيكم رأينا الصادق كجزء من عرض السعر الثابت، وليس فقط تقدير إصلاح."], ["ما وسائل الدفع التي تقبلونها؟", "الدفع بالبطاقة والتحويل البنكي."]]], ["الماركات التي نصلحها", [["هل تصلحون أجهزة Lenovo؟", "نعم — ThinkPad (T14، T14s، X1 Carbon، P16 والمزيد)، IdeaPad، Legion، Yoga، وThinkBook."], ["هل تصلحون أجهزة Acer؟", "نعم — طرازات Aspire وSwift وNitro وPredator."], ["هل تصلحون أجهزة HP؟", "نعم — EliteBook وProBook وPavilion وSpectre وOmen."], ["هل تصلحون أجهزة Dell؟", "نعم — XPS وLatitude وInspiron وPrecision وAlienware."], ["هل تصلحون أجهزة Asus؟", "نعم — ZenBook وVivobook وROG وTUF Gaming."], ["هل تصلحون أجهزة MSI؟", "نعم — Katana وسلسلة GF وStealth وPrestige. نحن أيضًا من الورش القليلة في الدنمارك التي تخزن قطع غيار MSI."], ["هل تصلحون أجهزة Huawei؟", "نعم — MateBook D14 وD15 وX Pro."], ["هل تصلحون MacBook وأجهزة Mac المكتبية؟", "نعم — كل أجيال MacBook (Intel وApple Silicon)، بالإضافة إلى iMac وMac mini وMac Studio وMac Pro."], ["هل تصلحون أجهزة Microsoft Surface؟", "نعم — Surface Pro وSurface Laptop وSurface Book، بما في ذلك إصلاح الشاشة اللمسية المتخصص."], ["هل تصلحون أجهزة Samsung Galaxy Book؟", "نعم — Galaxy Book3 وGalaxy Book4 Pro وGalaxy Book3 360 وGalaxy Book Go. نحن من الورش القليلة في Copenhagen ذات الخبرة الحقيقية بهذه الماركة الأحدث."], ["ماذا عن الماركات غير المذكورة هنا — Toshiba، Gigabyte، LG gram، Razer؟", "نصلح تقريبًا أي ماركة أو جهاز مخصص، وليس فقط ما له صفحات مخصصة — راجعوا صفحة \"ماركات أخرى وأجهزة مخصصة\"."], ["هل تبنون حواسيب ألعاب مخصصة، وليس فقط إصلاحها؟", "نعم — أخبرونا بميزانيتكم والاستخدام المطلوب، وسنقترح المكونات ونبنيها ونختبرها قبل التسليم."]]], ["الخدمات", [["هل يمكنكم ترقية حاسوبي القديم إلى SSD؟", "نعم — غالبًا واحد من أكثر التحسينات وضوحًا التي يمكن إجراؤها على جهاز قديم."], ["هل تصلحون أضرار السوائل؟", "نعم، لأي ماركة أو طراز. ملاحظة: تشخيص أضرار السوائل يختلف عن أسعارنا القياسية — سعر ثابت 600 كرونة، يستغرق 3-4 أيام، بدون خيار سريع، لأن التقييم السليم يحتاج وقتًا."], ["هل يمكنكم استرجاع البيانات من قرص صلب فاشل؟", "غالبًا نعم — يعتمد على نوع وشدة العطل. نقيّم أولاً ونعطي إجابة صادقة."], ["هل تزيلون الفيروسات والبرامج الضارة؟", "نعم، على كل من PC وMac."], ["هل تنظفون الغبار وتعيدون وضع معجون التبريد؟", "نعم — إصلاح شائع لمشاكل ارتفاع الحرارة أو ضجيج المروحة على اللابتوب وحواسيب الألعاب المكتبية."], ["هل تصلحون منافذ الشحن؟", "نعم، عبر جميع ماركات اللابتوب."]]], ["الدعم التقني للشركات", [["هل تقدمون دعمًا تقنيًا مستمرًا للشركات، وليس فقط إصلاحات لمرة واحدة؟", "نعم — نقدم اتفاقيات دعم تقني بسعر ثابت تشمل دعمًا غير محدود، ومراقبة، وأمانًا. راجعوا صفحة الدعم التقني للشركات للأسعار والتفاصيل."], ["ما الفرق بين إصلاح لمرة واحدة واتفاقية دعم؟", "الإصلاح حل واحد لمشكلة محددة. اتفاقية الدعم ترتيب شهري ثابت ومستمر يشمل دعمًا غير محدود ومراقبة وأمانًا لتقنية شركتكم — مصمم لمنع المشاكل بدلاً من إصلاحها بعد وقوعها فقط."]]], ["المتجر", [["هل تبيعون حواسيب، وليس فقط إصلاحها؟", "نعم — حواسيب جديدة ومجددة، بالإضافة إلى معدات النسخ الاحتياطي والأمان، متوفرة في متجرنا."], ["هل الحواسيب المجددة مضمونة؟", "نعم — الحواسيب المجددة تأتي بضمان؛ راجعوا المتجر للتفاصيل."]]]];
 const AR_GENERAL_FAQ = AR_FAQ_GROUPS.flatMap(([, items]) => items.map(([q, a]) => ({ q, a })));
 function arFaqPageHtml() {
   const sections = AR_FAQ_GROUPS.map(([title, items], i) => {
@@ -616,7 +616,7 @@ function arNewsPostHtml(n) {
   <section class="section"><div class="wrap"><div class="lead-copy" style="max-width:760px"><p>${esc(n.description)}</p>
     <div class="callout"><strong>الترجمة العربية الكاملة قيد الإعداد.</strong> المقال بالكامل متاح حاليًا بالإنجليزية — <a href="/news/${n.slug}/">اقرؤوه هنا ←</a></div>
     ${others ? `<div style="margin-top:40px"><p class="eyebrow">المزيد من الأخبار</p><div class="crosslinks">${others}</div></div>` : ''}</div></section>
-  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>تحتاجون مساعدة في هذا؟</h2><p>تشخيص مجاني (2–4 أيام) أو سريع مقابل 600 كرونة (1–2 ساعة). سعر ثابت قبل أن نبدأ.</p><div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></div></section>`;
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>تحتاجون مساعدة في هذا؟</h2><p>تشخيص 300 كرونة (2–4 أيام) أو سريع مقابل 600 كرونة (1–2 ساعة). سعر ثابت قبل أن نبدأ.</p><div class="cta-row"><a class="btn btn-white" href="/ar/contact/">اتصلوا بنا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></div></section>`;
 }
 function arNewsPostSchema(n) {
   return { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: n.title, datePublished: n.date, dateModified: n.date, description: n.description, inLanguage: 'ar', author: { '@type': 'Organization', name: 'PCKlinik' }, publisher: { '@type': 'Organization', name: 'PCKlinik' }, mainEntityOfPage: `${site.domain}/ar/news/${n.slug}/` };
@@ -636,11 +636,11 @@ function arHomeHtml() {
     <p class="lead">إصلاح سريع وصادق للأفراد. دعم تقني بسعر ثابت للشركات. لا حاجة للدنماركية أو الإنجليزية — نتحدث العربية أيضًا.</p>
     <p class="lead" style="font-size:15px">إذا كنتم في Copenhagen، يمكننا أيضًا الاجتماع شخصيًا في ورشتنا لمناقشة مشروعكم — الخدمة عن بُعد اختيارية، وليست إلزامية.</p></div></section>
   <section class="section"><div class="wrap"><div class="grid grid-2">
-    <a class="card card-link" href="/ar/mac-repair/"><div class="card-icon">🖥️</div><h3>للأفراد</h3><p>إصلاح الحاسوب وMac — تشخيص مجاني أو سريع، سعر ثابت، معظم الإصلاحات في نفس اليوم.</p><span class="arrow">احجز إصلاحًا ←</span></a>
+    <a class="card card-link" href="/ar/mac-repair/"><div class="card-icon">🖥️</div><h3>للأفراد</h3><p>إصلاح الحاسوب وMac — تشخيص قياسي أو سريع، سعر ثابت، معظم الإصلاحات في نفس اليوم.</p><span class="arrow">احجز إصلاحًا ←</span></a>
     <a class="card card-link" href="/ar/business-it/"><div class="card-icon">🏢</div><h3>للشركات</h3><p>اتفاقيات دعم تقني بسعر ثابت — دعم غير محدود، مراقبة، وأمان لسعر شهري ثابت.</p><span class="arrow">شاهد خطط الدعم التقني ←</span></a>
   </div></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">كيف نعمل</div><h2>ثلاث خطوات بسيطة</h2><div class="steps">
-    <div class="step"><div class="num">1</div><h3>التشخيص</h3><p>مجاني (2–4 أيام)، أو سريع مقابل 600 كرونة (1–2 ساعة).</p></div>
+    <div class="step"><div class="num">1</div><h3>التشخيص</h3><p>300 كرونة (2–4 أيام)، أو سريع مقابل 600 كرونة (1–2 ساعة).</p></div>
     <div class="step"><div class="num">2</div><h3>سعر ثابت</h3><p>تحصلون على سعر واضح قبل أن نلمس أي شيء.</p></div>
     <div class="step"><div class="num">3</div><h3>الإصلاح</h3><p>ننفذ الإصلاح بنفس العناية.</p></div>
   </div></div></section>
@@ -673,7 +673,7 @@ function arBrandHtml(b, extra = {}) {
   return `  <section class="hero"><div class="wrap"><div class="crumbs"><a href="/ar/">الرئيسية</a> › <span>${esc(b.label)}</span></div><h1>${esc(b.h1)}</h1></div></section>
   <section class="section"><div class="wrap"><div class="lead-copy" style="max-width:760px"><p>${esc(b.intro)}</p></div>${models}</div></section>
   ${callout}${cards}${svc}${trust}${refurb}${faq}${map}
-  <section class="section"><div class="wrap"><div class="cta-band"><h2>احجز تشخيصًا</h2><p>تشخيص مجاني (2–4 أيام) أو سريع مقابل 600 كرونة (1–2 ساعة). سعر ثابت قبل أن نبدأ.</p><div class="cta-row"><a class="btn btn-white" href="${site.phoneHref}">📞 ${arPhone}</a><a class="btn btn-ghost-light" href="mailto:${site.emailConsumer}">${arEmail}</a></div></div></div></section>`;
+  <section class="section"><div class="wrap"><div class="cta-band"><h2>احجز تشخيصًا</h2><p>تشخيص 300 كرونة (2–4 أيام) أو سريع مقابل 600 كرونة (1–2 ساعة). سعر ثابت قبل أن نبدأ.</p><div class="cta-row"><a class="btn btn-white" href="${site.phoneHref}">📞 ${arPhone}</a><a class="btn btn-ghost-light" href="mailto:${site.emailConsumer}">${arEmail}</a></div></div></div></section>`;
 }
 
 // ---------- Arabic Business IT (full pricing page) ----------
@@ -806,7 +806,7 @@ function newsPostHtml(n) {
     <h1>${esc(n.title)}</h1><p class="lead">${esc(fmtDate(n.date))}</p></div></section>
   <section class="section"><div class="wrap"><div class="lead-copy" style="max-width:760px">${n.body}</div>
     ${others ? `<div style="margin-top:40px"><p class="eyebrow">More from News</p><div class="crosslinks">${others}</div></div>` : ''}</div></section>
-  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Need a hand with this?</h2><p>Free diagnostics (2–4 days) or express for 600 kr (1–2 hours). Fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Contact us</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div></div></section>`;
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Need a hand with this?</h2><p>Diagnostics 300 kr (2–4 days) or express for 600 kr (1–2 hours). Fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Contact us</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div></div></section>`;
 }
 function newsPostSchema(n) {
   return { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: n.title, datePublished: n.date, dateModified: n.date, description: n.description, author: { '@type': 'Organization', name: 'PCKlinik' }, publisher: { '@type': 'Organization', name: 'PCKlinik' }, mainEntityOfPage: `${site.domain}/news/${n.slug}/` };
@@ -837,7 +837,7 @@ function serviceBody(s) {
   const callout = s.callout ? `<section class="section"><div class="wrap"><div class="callout"><strong>${esc(s.callout.label)}:</strong> ${esc(s.callout.text)}</div></div></section>` : '';
   const pricing = s.pricing
     ? `<section class="section alt"><div class="wrap"><div class="eyebrow">Pricing</div><h2>${esc(s.pricing.h2)}</h2><p class="sub">${esc(s.pricing.text)}</p></div></section>`
-    : `<section class="section alt"><div class="wrap"><div class="eyebrow">Diagnostics &amp; pricing</div><h2>Free or express — your choice</h2><p class="sub">Standard diagnostics are free (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. You get a fixed quote before we start, always.</p></div></section>`;
+    : `<section class="section alt"><div class="wrap"><div class="eyebrow">Diagnostics &amp; pricing</div><h2>Standard or express — your choice</h2><p class="sub">Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. You get a fixed quote before we start, always.</p></div></section>`;
   const cta = esc(s.ctaLabel || 'Book diagnostics');
   const faq = s.faq.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
   const why = new Set(['website-design-development', 'seo-services', 'google-ads-management']).has(s.slug) ? WHY_WEB : '';
@@ -872,7 +872,7 @@ function locationBody(loc) {
   ${areas}
   <section class="section"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Common questions</h2><div class="faq">${faq}</div></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">Find us</div><h2>Our workshop — Falkoner Allé 108, Frederiksberg</h2><p class="sub">We serve this area from our Frederiksberg workshop; drop-off, pickup and delivery options available depending on your location.</p>${mapFrame}</div></section>
-  <section class="section"><div class="wrap"><div class="cta-band"><h2>Need a repair in ${esc(loc.h1.replace('Computer Repair in ', ''))}?</h2><p>Free diagnostics (2–4 days) or express (600 kr, 1–2 hours). English-speaking, fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book a repair</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
+  <section class="section"><div class="wrap"><div class="cta-band"><h2>Need a repair in ${esc(loc.h1.replace('Computer Repair in ', ''))}?</h2><p>Diagnostics 300 kr (2–4 days) or express (600 kr, 1–2 hours). English-speaking, fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book a repair</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks">${cross}</div></div></div></section>`;
 }
 // ---------- write helpers ----------
@@ -890,6 +890,62 @@ async function copyDir(src, dst) {
 }
 
 // ---------- run ----------
+
+// ---------- Students (CBS & DTU) — EN + AR ----------
+const STUDENTS_FAQ = [
+  { q: 'How close are you to CBS?', a: 'PCKlinik is a short walk from Solbjerg Plads — easy to drop off your laptop between classes.' },
+  { q: 'Do I need an appointment?', a: 'No — walk-ins are always welcome. No booking required.' },
+  { q: 'I study at DTU in Lyngby — is there a pickup option?', a: "Yes, we offer pickup service for DTU students based in Lyngby, so you don't need to travel into the city." },
+  { q: 'Can I get a loaner laptop while mine is being repaired?', a: "Subject to availability, yes — we may be able to lend you a laptop while yours is being repaired. Since we have a limited number of loaner devices, this isn't guaranteed and depends on what's free at the time. Ask us when you drop off your device." },
+  { q: 'Do you repair university-owned laptops (CBS/DTU-issued devices)?', a: "Yes, we repair university-owned devices from CBS, DTU, and other institutions — not just personal computers. Bring in your institution-issued laptop and we'll assess it on the same terms as a personal device." },
+  { q: 'Is there a student discount?', a: 'Yes — students get 10% off the repair price. Just show your student ID (CBS, DTU, or another institution) when you drop off your device.' },
+  { q: 'Do you back up my data before repair?', a: 'Yes — we help secure your data (coursework, projects, notes) before a repair or before you finish your studies, and we stock backup & security gear in our shop. See our Backup & Security page, or contact us.' },
+];
+function studentsHtml() {
+  const services = [
+    ['Screen repair', 'Cracked or damaged displays — one of the most common student repairs.', '/screen-replacement/'],
+    ['Battery replacement', "Extend your laptop's life through exam season.", '/mac-battery-replacement/'],
+    ['SSD upgrades', 'Faster boot times for heavy coursework on an older machine.', '/ssd-upgrade/'],
+    ['Data backup', 'Secure your files before a repair — or before graduation.', '/data-backup-and-recovery/'],
+    ['Liquid damage recovery', 'Coffee spills happen — bring it in fast for the best outcome.', '/liquid-damage-repair/'],
+  ].map(([t,d,h]) => `<a class="card card-link" href="${h}"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="arrow">Learn more →</span></a>`).join('');
+  const faqHtml = STUDENTS_FAQ.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
+  return `  <section class="hero"><div class="wrap"><div class="eyebrow">Students · CBS &amp; DTU</div>
+    <h1>Student Repair Services — CBS &amp; DTU</h1>
+    <p class="lead">Studying at CBS or DTU and need fast, reliable computer repair? PCKlinik is a short walk from Solbjerg Plads, and we offer pickup service for DTU students based in Lyngby. No appointment needed — just walk in.</p>
+    <div class="cta-row"><a class="btn btn-white" href="/contact/">Book a repair</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div></section>
+  <section class="section"><div class="wrap lead-copy"><div class="crumbs"><a href="/">Home</a> › <span>Students</span></div>
+    <p>We know how disruptive it is when your laptop dies right before a deadline. We repair PCs and Macs for CBS and DTU students in English — our workshop on Falkoner All&eacute; is a short walk from Solbjerg Plads, so a MacBook repair or a cracked screen needn't cost you a whole day.</p>
+    <p>Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours) — with repair and delivery within 24 hours if no special parts need ordering. You always get a fixed quote before we start, so there are no surprises on a student budget.</p></div></section>
+  <section class="section alt"><div class="wrap"><div class="eyebrow">Popular among students</div><h2>What students get done most</h2><div class="grid grid-3">${services}</div></div></section>
+  <section class="section"><div class="wrap"><div class="eyebrow">FAQ</div><h2>Students — common questions</h2><div class="faq">${faqHtml}</div></div></section>
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>Laptop down before a deadline?</h2><p>Walk in — no appointment needed — or call. Diagnostics 300 kr (2–4 days) or express 600 kr (1–2 hours), fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book a repair</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
+    <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks"><a href="/computer-repair-frederiksberg/">Computer Repair Frederiksberg →</a><a href="/shop/backup-security/">Backup &amp; Security →</a><a href="/macbook-repair/">MacBook Repair →</a><a href="/contact/">Contact →</a></div></div></div></section>`;
+}
+const AR_STUDENTS_FAQ = [
+  { q: 'ما مدى قربكم من CBS؟', a: 'يقع PCKlinik على بعد خطوات قليلة من Solbjerg Plads — يمكنك تسليم حاسوبك بسهولة بين المحاضرات.' },
+  { q: 'هل أحتاج إلى حجز موعد؟', a: 'لا — يمكنك الحضور مباشرة دون الحاجة لحجز موعد مسبق.' },
+  { q: 'أدرس في DTU في Lyngby — هل توجد خدمة استلام؟', a: 'نعم، نوفر خدمة استلام لطلاب DTU المقيمين في Lyngby، حتى لا تحتاج للتنقل إلى المدينة.' },
+  { q: 'هل يمكنني الحصول على حاسوب بديل أثناء إصلاح جهازي؟', a: 'حسب التوفر، نعم — قد نتمكن من إعارتك حاسوبًا محمولًا أثناء إصلاح جهازك. ولأن لدينا عددًا محدودًا من الأجهزة للإعارة، فإن ذلك غير مضمون ويعتمد على المتوفر في حينه. اسألنا عند تسليم جهازك.' },
+  { q: 'هل تقومون بإصلاح الحواسيب المملوكة للجامعة (أجهزة CBS/DTU)؟', a: 'نعم، نقوم بإصلاح الأجهزة المملوكة للجامعات من CBS وDTU وغيرها من المؤسسات التعليمية — وليس فقط الحواسيب الشخصية. أحضر حاسوبك الصادر عن مؤسستك التعليمية وسنقوم بفحصه بنفس شروط الأجهزة الشخصية.' },
+  { q: 'هل يوجد خصم للطلاب؟', a: 'نعم — يحصل الطلاب على خصم 10% على سعر الإصلاح. فقط أظهر بطاقتك الجامعية (من CBS أو DTU أو أي مؤسسة أخرى) عند تسليم جهازك.' },
+  { q: 'هل تقومون بعمل نسخة احتياطية لبياناتي قبل الإصلاح؟', a: 'نعم — نساعدك في تأمين بياناتك (الواجبات والمشاريع والملاحظات) قبل الإصلاح أو قبل انتهاء دراستك، ونوفر أجهزة النسخ الاحتياطي والأمان في متجرنا. تواصل معنا لإيجاد الحل المناسب.' },
+];
+function arStudentsHtml() {
+  const items = ['إصلاح الشاشة (الشاشات المكسورة أو التالفة)','استبدال البطارية (لإطالة عمر الحاسوب المحمول خلال فترة الامتحانات)','ترقية SSD (لتسريع وقت الإقلاع أثناء المهام الدراسية الكثيفة)','نسخ احتياطي للبيانات قبل الإصلاح أو قبل التخرج','إصلاح أضرار السوائل (انسكاب القهوة يحدث للجميع)'].map((it) => `<li>${esc(it)}</li>`).join('');
+  const faqHtml = AR_STUDENTS_FAQ.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
+  return `  <section class="hero"><div class="wrap"><div class="eyebrow">الطلاب · CBS و DTU</div>
+    <h1>خدمات إصلاح الحاسوب للطلاب — CBS و DTU</h1>
+    <p class="lead">هل تدرس في CBS أو DTU وتحتاج إلى إصلاح حاسوب سريع وموثوق؟ يقع PCKlinik على بعد خطوات قليلة من Solbjerg Plads، ونوفر خدمة استلام للطلاب المقيمين في Lyngby الذين يدرسون في DTU. لا حاجة لحجز موعد — فقط تفضل بالزيارة.</p>
+    <div class="cta-row"><a class="btn btn-white" href="/ar/contact/">احجز إصلاحًا</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 ${arPhone}</a></div></div></section>
+  <section class="section"><div class="wrap"><div class="lead-copy" style="max-width:760px">
+    <p>نعرف كم يكون الأمر مزعجًا عندما يتعطل حاسوبك قبل موعد تسليم مهم. نصلح أجهزة PC وMac لطلاب CBS وDTU — ورشتنا في Falkoner Allé على بعد خطوات من Solbjerg Plads. التشخيص القياسي يكلف 300 كرونة (2–4 أيام)، أو سريع مقابل 600 كرونة (1–2 ساعة)، دائمًا مع سعر ثابت قبل أن نبدأ.</p></div></div></section>
+  <section class="section alt"><div class="wrap"><div class="eyebrow">الأكثر طلبًا بين الطلاب</div><h2>ما يطلبه الطلاب غالبًا</h2><ul class="check-list">${items}</ul></div></section>
+  <section class="section"><div class="wrap"><div class="eyebrow">الأسئلة الشائعة</div><h2>الطلاب — أسئلة شائعة</h2><div class="faq">${faqHtml}</div></div></section>
+  <section class="section alt"><div class="wrap"><div class="cta-band"><h2>تعطل حاسوبك قبل موعد تسليم؟</h2><p>تفضل بالزيارة دون موعد، أو اتصل بنا. التشخيص 300 كرونة (2–4 أيام) أو سريع 600 كرونة (1–2 ساعة)، سعر ثابت قبل أن نبدأ.</p><div class="cta-row"><a class="btn btn-white" href="/ar/contact/">احجز إصلاحًا</a><a class="btn btn-ghost-light" href="mailto:${site.emailConsumer}">${arEmail}</a></div></div></div></section>`;
+}
+
+
 async function run() {
   await fs.rm(DIST, { recursive: true, force: true });
   await fs.mkdir(DIST, { recursive: true });
@@ -901,7 +957,7 @@ async function run() {
 
   const pages = [];
   // home
-  pages.push(['/', page({ title: 'PCKlinik | Computer & Mac Repair in Copenhagen', description: 'Fast, honest PC and Mac repair in Frederiksberg and Copenhagen. Free diagnostics (2-4 days) or express (600 kr, 1-2 hours). Call 91 81 61 81.', p: '/', body: homeBody(), schema: faqSchemaFrom(HOME_FAQ) })]);
+  pages.push(['/', page({ title: 'PCKlinik | Computer & Mac Repair in Copenhagen', description: 'Fast, honest PC and Mac repair in Frederiksberg and Copenhagen. Diagnostics 300 kr (2-4 days) or express (600 kr, 1-2 hours). Call 91 81 61 81.', p: '/', body: homeBody(), schema: faqSchemaFrom(HOME_FAQ) })]);
   // repairs
   for (const r of repairs) {
     pages.push([`/${r.slug}/`, page({ title: r.title, description: r.description, p: `/${r.slug}/`, body: repairBody(r), schema: repairSchema(r) })]);
@@ -918,7 +974,7 @@ async function run() {
   pages.push(['/shop/backup-security/', page({ title: 'Backup & Security | PCKlinik Shop', description: 'External hard drives, NAS solutions and security software recommended by PCKlinik. Secure payment via Stripe.', p: '/shop/backup-security/', body: shopBackup() })]);
 
   // Mac Repair hub (broad intent)
-  pages.push(['/mac-repair/', page({ title: 'Mac Repair in Frederiksberg & Copenhagen | PCKlinik', description: 'MacBook, iMac, Mac mini, Mac Studio and Mac Pro repair in Frederiksberg and Copenhagen. Free diagnostics, fixed quote, fast turnaround.', p: '/mac-repair/', body: macHubHtml(), schema: faqSchemaFrom(MAC_HUB_FAQ) })]);
+  pages.push(['/mac-repair/', page({ title: 'Mac Repair in Frederiksberg & Copenhagen | PCKlinik', description: 'MacBook, iMac, Mac mini, Mac Studio and Mac Pro repair in Frederiksberg and Copenhagen. Diagnostics from 300 kr, fixed quote, fast turnaround.', p: '/mac-repair/', body: macHubHtml(), schema: faqSchemaFrom(MAC_HUB_FAQ) })]);
   // Gaming PC repair, service & custom builds
   pages.push(['/gaming-pc-repair-and-build/', page({ title: 'Gaming PC Repair, Service & Custom Builds | PCKlinik', description: 'Gaming PC repair, cooling service, and custom PC builds in Frederiksberg and Copenhagen. GPU, overheating, upgrades — plus builds from scratch.', p: '/gaming-pc-repair-and-build/', body: gamingHtml(), schema: faqSchemaFrom(GAMING_FAQ) })]);
   // Error messages reference page
@@ -933,6 +989,7 @@ async function run() {
   pages.push(['/websites-seo-google-ads/', page({ title: 'Website Design, SEO & Google Ads | PCKlinik', description: 'Website design, SEO, and Google Ads management for businesses in Copenhagen. Built and optimized by someone who actually does this work.', p: '/websites-seo-google-ads/', body: websitesHubHtml(), schema: faqSchemaFrom(WEBSITES_HUB_FAQ) })]);
   // About / Meet the Team
   pages.push(['/about-us/', page({ title: 'About PCKlinik & Our Team | PCKlinik', description: 'Meet the PCKlinik team — 7 people covering PC, Mac, networks, on-site support, and web/SEO, based in Frederiksberg.', p: '/about-us/', body: aboutBody() })]);
+  pages.push(['/students/', page({ title: 'Student Repair Services — CBS & DTU | PCKlinik', description: 'Fast, English-speaking computer repair for CBS and DTU students — a short walk from Solbjerg Plads, DTU pickup in Lyngby, loaner laptops and a 10% student discount.', p: '/students/', body: studentsHtml(), schema: faqSchemaFrom(STUDENTS_FAQ) })]);
   // News section
   pages.push(['/news/', page({ title: 'News & Guides | PCKlinik', description: 'Practical computer, Mac, and IT guides from PCKlinik in Frederiksberg — straight answers to common questions, no jargon.', p: '/news/', body: newsIndexHtml() })]);
   for (const n of news) pages.push([`/news/${n.slug}/`, page({ title: `${n.title} | PCKlinik News`, description: n.description, p: `/news/${n.slug}/`, body: newsPostHtml(n), schema: newsPostSchema(n) })]);
@@ -944,7 +1001,7 @@ async function run() {
   pages.push(['/ar/contact/', page({ title: 'اتصل بنا | PCKlinik', description: 'تواصلوا مع PCKlinik في Frederiksberg وCopenhagen. نتحدث العربية والدنماركية والإنجليزية.', p: '/ar/contact/', body: arContactHtml(), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic (RTL) remote-services section
   // Arabic homepage (Batch 1)
-  pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'إصلاح حاسوب وMac في Frederiksberg وCopenhagen. فريق يتحدث العربية والدنماركية والإنجليزية. تشخيص مجاني، سعر ثابت.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'إصلاح حاسوب وMac في Frederiksberg وCopenhagen. فريق يتحدث العربية والدنماركية والإنجليزية. تشخيص من 300 كرونة، سعر ثابت.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   pages.push(['/ar/faq/', page({ title: 'الأسئلة الشائعة | PCKlinik', description: 'أسئلة شائعة حول إصلاح الحاسوب وMac، الأسعار، الماركات، والخدمات في PCKlinik. فريق يتحدث العربية والدنماركية والإنجليزية.', p: '/ar/faq/', body: arFaqPageHtml(), schema: faqSchemaFrom(AR_GENERAL_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   pages.push(['/ar/news/', page({ title: 'الأخبار والأدلة | PCKlinik', description: 'أدلة عملية حول إصلاح الحاسوب وMac من PCKlinik في Frederiksberg وCopenhagen.', p: '/ar/news/', body: arNewsIndexHtml(), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   for (const n of AR_NEWS) pages.push([`/ar/news/${n.slug}/`, page({ title: `${n.title} | PCKlinik`, description: n.description, p: `/ar/news/${n.slug}/`, body: arNewsPostHtml(n), schema: arNewsPostSchema(n), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
@@ -960,6 +1017,7 @@ async function run() {
   for (const it of arLocations) pages.push([`/ar/${it.slug}/`, page({ title: `${it.h1} | PCKlinik`, description: it.intro.slice(0, 155), p: `/ar/${it.slug}/`, body: arBrandHtml(it), schema: it.faq ? faqSchemaFrom(it.faq) : null, lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic Business IT full pricing page (Batch 6)
   pages.push(['/ar/business-it-service-agreement/', page({ title: 'اتفاقية الدعم التقني للشركات | PCKlinik', description: 'دعم تقني بسعر شهري ثابت للشركات — دعم غير محدود، مراقبة، وأمان. فريق يتحدث العربية والدنماركية والإنجليزية.', p: '/ar/business-it-service-agreement/', body: arBusinessHtml(), schema: faqSchemaFrom(AR_BIZ_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  pages.push(['/ar/students/', page({ title: 'خدمات إصلاح الحاسوب للطلاب — CBS و DTU | PCKlinik', description: 'إصلاح حاسوب سريع لطلاب CBS وDTU — على بعد خطوات من Solbjerg Plads، خدمة استلام لطلاب DTU في Lyngby، حاسوب بديل وخصم 10% للطلاب.', p: '/ar/students/', body: arStudentsHtml(), schema: faqSchemaFrom(AR_STUDENTS_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Location / area pages
   for (const loc of locations) pages.push([`/${loc.slug}/`, page({ title: loc.title, description: loc.description, p: `/${loc.slug}/`, body: locationBody(loc), schema: faqSchemaFrom(loc.faq) })]);
   // 15 task-based service pages
