@@ -7,8 +7,8 @@ export const site = {
   formMode: 'cloudflare', // 'formspree' (Formspree) or 'cloudflare' (Resend via /api/submit-form). LIVE-GATED: verify domain in Resend + set RESEND_API_KEY secret before deploying.
   emailConsumer: 'contact@pcklinik.eu',
   emailBusiness: 'support@pcklinik.eu',
-  address: 'Falkoner Allé 108, 2000 Frederiksberg',
-  addressStreet: 'Falkoner Allé 108',
+  address: 'Falkoner Allé 108, st. th., 2000 Frederiksberg',
+  addressStreet: 'Falkoner Allé 108, st. th.',
   addressLocality: 'Frederiksberg',
   addressPostal: '2000',
   hours: 'Mon–Fri 10:00–18:00 · Sat 10:00–14:00 · Sun closed',

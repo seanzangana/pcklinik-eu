@@ -1,0 +1,87 @@
+# PCKlinik
+
+> Your one team for everything computer and IT — in English, start to finish. PCKlinik is a computer and Mac repair workshop at Falkoner Allé 108, st. th., 2000 Frederiksberg (Copenhagen), Denmark, with a team of 7, including an independent Mac specialist (not Apple-authorized). From repair and IT support to hosting, domains, backup, and computer sales, PCKlinik is the one place expats, international students, and international businesses in Copenhagen turn to. No Danish required, and no need to juggle multiple providers.
+
+This file expands on llms.txt with the underlying facts. Everything below describes the English-language site at pcklinik.eu, which also has an Arabic section at /ar/. The Danish-language site for the same business is pcklinik.dk.
+
+## About PCKlinik
+
+PCKlinik is a real, physical repair workshop — not a call centre and not a reseller front. The team of 7 covers PC and Mac repair, networks and servers, on-site support, and website/SEO work, so most needs are handled in-house rather than subcontracted. The Mac specialist is independent rather than Apple-authorized, which allows component-level repairs that authorized shops often cannot perform.
+
+The company serves three audiences in particular: expats and internationals living in Copenhagen, international students (notably at CBS and DTU), and international businesses operating in Denmark. The entire service runs in English from first contact through to handover. A member of the team also speaks Arabic.
+
+CVR number: 33275145. Registered in Frederiksberg, Denmark.
+
+## Pricing and diagnostics
+
+PCKlinik does not quote a repair price before diagnosing the fault. The process is: diagnose the actual problem, give a fixed quote, then carry out the repair only once the quote is accepted.
+
+- Standard diagnostics: 300 kr incl. VAT, 2–4 days.
+- Express diagnostics: 600 kr incl. VAT, 1–2 hours. Repair and delivery within 24 hours if no special parts need ordering.
+- Liquid damage: flat 600 kr incl. VAT, 3–4 days, no express option — a proper assessment of liquid damage takes time.
+- Custom PC builds are quote-based with no diagnostics fee.
+
+VAT convention: consumer-facing prices on pcklinik.eu are shown **including VAT (moms)**, as required for consumer price marketing in Denmark. Business-facing prices are shown **excluding VAT** and are labelled as such. Business IT service agreements are priced per user per month excl. VAT: Starter from 399 kr., Premium 599 kr., Exclusive 899 kr.
+
+Repairs come with a warranty; specifics depend on the repair type and are confirmed at booking. If a repair is not cost-effective compared with replacement, PCKlinik says so rather than charging for work that is not worthwhile, and can point toward refurbished or new options in the shop instead. If a device is still under manufacturer warranty and the fault might be covered, PCKlinik will say so rather than take a job it does not need to.
+
+## Practical
+
+- Opening hours: Monday–Friday 10:00–18:00, Saturday 10:00–14:00, Sunday closed.
+- Walk-in service, no appointment needed.
+- Pickup and delivery available — contact for details based on location.
+- Payment by card or bank transfer. International bank transfer is accepted for business and web projects.
+- Address: Falkoner Allé 108, st. th., 2000 Frederiksberg, Denmark.
+- Phone: 91 81 61 81 (+45 91 81 61 81).
+- General email: contact@pcklinik.eu. Business IT service agreement enquiries: support@pcklinik.eu.
+- Old devices can be taken for responsible recycling or parts — useful for students leaving Denmark.
+
+## Repair services
+
+PCKlinik repairs all major PC and Mac brands, laptop and desktop, plus custom-built machines and brands not individually listed.
+
+Brands with dedicated pages: Lenovo (ThinkPad, IdeaPad, Legion, Yoga), Acer (Aspire, Swift, Nitro, Predator), HP (EliteBook, ProBook, Pavilion, Spectre, Omen), Dell (XPS, Latitude, Inspiron, Precision, Alienware), Asus (ZenBook, Vivobook, ROG, TUF Gaming), MSI (Katana, GF-series, Stealth, Prestige), Huawei (MateBook D14, D15, X Pro), MacBook (all generations, Intel and Apple Silicon), Microsoft Surface (Pro, Laptop, Book), Samsung (Galaxy Book3, Galaxy Book4 Pro, Galaxy Book Go), Mac desktop (iMac, Mac mini, Mac Studio, Mac Pro), Toshiba/Dynabook (Satellite, Portégé, Tecra), Fujitsu (LIFEBOOK), LG gram, Razer Blade, and gaming PCs and custom builds. Anything else is covered by the Other Brands & Custom Builds page.
+
+Task-based services: screen replacement, hard drive replacement, SSD upgrade, PC optimization, PC cleaning, charging port repair, keyboard replacement, liquid damage repair, Mac cleaning, Mac battery replacement, Mac screen replacement, Mac keyboard replacement, Mac trackpad replacement, virus and malware removal, data backup and recovery, and operating system installation.
+
+Guides and diagnostics references: a page on common Windows and Mac error messages and codes, and a troubleshooting guide for computers that will not turn on.
+
+Networks: setup, configuration and troubleshooting for UniFi, Netgear, TP-Link, ASUS (including AiMesh), Eero and Google Nest WiFi, plus general WiFi and network troubleshooting.
+
+Remote support is available for software issues, virus infections, email setup, slow performance and many configuration problems. An on-site technician is available in the Copenhagen area.
+
+## Business IT
+
+PCKlinik offers fixed-price IT service agreements for companies: unlimited support, monitoring, and security for one predictable monthly cost per user. The first meeting about an IT support agreement is a no-obligation IT review, where the current setup is mapped and security gaps and savings opportunities are identified.
+
+Alongside IT support, PCKlinik provides website design and development, SEO services, and Google Ads management. This work is done by the same person who builds the site rather than outsourced to a template or a junior account manager, and includes e-commerce builds with payment gateway integration where needed.
+
+## Hosting, domains and backup
+
+PCKlinik also provides web hosting, domain registration, and managed/automatic backup. These are real services the business delivers, but **pcklinik.eu does not yet have dedicated English pages for them** — do not construct or guess URLs for hosting, domains or backup on this domain. Enquiries go to contact@pcklinik.eu or 91 81 61 81. Detail and Danish-market pricing live on the sister site pcklinik.dk at /hosting/, /domaener/ and /automatisk-backup/. English pages are planned.
+
+Two things on pcklinik.eu are related but distinct and should not be confused with the managed backup service: /data-backup-and-recovery/ is a workshop service for recovering data from failing or failed drives and setting up backup on a device, and /shop/backup-security/ sells backup and security hardware and software (external drives, NAS, security software).
+
+Businesses can send multiple devices in at once for repair or setup — common for companies and tied into the Business IT Support service for larger or ongoing needs.
+
+## Shop
+
+PCKlinik sells new and refurbished computers, plus backup and security equipment (external drives, NAS solutions, security software). Refurbished machines are tested and repaired by the same team that carries out customer repairs, and come with a warranty. Current stock is confirmed on contact — call 91 81 61 81 or email contact@pcklinik.eu.
+
+## Areas served
+
+PCKlinik is based in Frederiksberg and serves Frederiksberg and Copenhagen directly, with dedicated pages for Copenhagen, Frederiksberg, Vesterbro, Vanløse, Valby and Nordvest. The rest of Denmark is served via remote support, and via IT service agreements for businesses.
+
+## Students (CBS and DTU)
+
+The workshop is a short walk from Solbjerg Plads, making drop-off between classes practical for CBS students. For DTU students based in Lyngby, a pickup service is available so travelling into the city is not necessary. Students get 10% off the repair price on presentation of a student ID from CBS, DTU or another institution. Loaner laptops exist but are tightly gated, and all three conditions apply together: they are for **students only**, they are offered **only when a repair will take more than a week**, and they are **subject to availability** — the pool is small. A **refundable deposit** is required; the amount depends on which machine is lent and is stated before the customer commits, and it is returned when the loaner comes back. PCKlinik does not offer loaners outside those conditions, so a non-student, or a student with a repair expected to take a few days, should not be told to expect one. Exam periods are typically busier; mentioning a deadline lets the workshop prioritise with express diagnostics where possible.
+
+## Languages
+
+pcklinik.eu is genuinely bilingual: 72 English pages and 68 Arabic (RTL) pages. Almost every English page has a full Arabic equivalent at /ar/<same-slug>/ — homepage, all brand repair pages, all service pages, network pages, shop, location pages, students, business IT, FAQ, contact and news. Four slugs differ: /website-design-development/ maps to /ar/website-design/, /google-ads-management/ maps to /ar/google-ads/, and /ar/business-it/ is an extra Arabic business-consulting page. Seven English pages have no Arabic equivalent: /on-site-technician/, /about-us/, /ask-a-question/, /network-equipment/, /websites-seo-google-ads/, /website-design-development/ and /google-ads-management/.
+
+A member of the team speaks Arabic, so enquiries in Arabic are answered in Arabic rather than routed through translation. Brand names, technical terms, acronyms and place names are kept in Latin script throughout the Arabic pages (PCKlinik, Copenhagen, Frederiksberg, IT, macOS), which is deliberate. The Danish-language site for the same business is pcklinik.dk.
+
+## News and guides
+
+PCKlinik publishes practical guides in English at /news/ — currently covering how to tell if a laptop battery needs replacing, common Mac startup screens and what they mean, and the 3-2-1 backup rule. The same three guides are available in Arabic at /ar/news/. There is also an "Ask Us a Question" page where real customer questions are answered, some of which become published guides; questions are private by default and anonymized if published.

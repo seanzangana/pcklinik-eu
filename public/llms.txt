@@ -1,14 +1,112 @@
 # PCKlinik
 
-PCKlinik is a computer and Mac repair workshop on Falkoner Allé 108, 2000 Frederiksberg (Copenhagen), Denmark. We repair all major PC and Mac brands, offer task-based services (SSD upgrades, data recovery, virus removal, liquid-damage repair, network setup), sell new and refurbished computers, and provide fixed-price Business IT support for companies. Standard diagnostics are free (2–4 days) or express for 600 kr (1–2 hours), with a fixed quote before any work begins. Phone: 91 81 61 81. Email: contact@pcklinik.eu (general) / support@pcklinik.eu (business IT).
+> Your one team for everything computer and IT — in English, start to finish. PCKlinik is a computer and Mac repair workshop at Falkoner Allé 108, st. th., 2000 Frederiksberg (Copenhagen), Denmark, with a team of 7. From repair and IT support to hosting, domains, backup, and computer sales, we are the one place expats, international students, and international businesses in Copenhagen turn to. No Danish required.
 
-## Key pages
-- [Home](https://www.pcklinik.eu/)
-- [Business IT Support](https://www.pcklinik.eu/business-it-service-agreement/)
-- [Repairs — Lenovo](https://www.pcklinik.eu/lenovo-repair/) and all major brands
-- [Mac Repair](https://www.pcklinik.eu/mac-repair/)
-- [Gaming PC Repair & Custom Builds](https://www.pcklinik.eu/gaming-pc-repair-and-build/)
-- [Services — SSD upgrade, data recovery, virus removal, network setup, and more](https://www.pcklinik.eu/ssd-upgrade/)
-- [Common Error Messages & Codes](https://www.pcklinik.eu/error-messages/)
-- [Shop](https://www.pcklinik.eu/shop/)
-- [Contact](https://www.pcklinik.eu/contact/)
+PCKlinik repairs desktop and laptop computers — PC and Mac. Standard diagnostics cost 300 kr incl. VAT (2–4 days), express diagnostics cost 600 kr incl. VAT (1–2 hours, repair and delivery within 24 hours if no special parts need ordering), and liquid damage is a flat 600 kr incl. VAT (3–4 days, no express option). All consumer prices on this site are shown incl. VAT (moms); business prices are shown excl. VAT. You always get a fixed quote before any repair work starts. Walk-in without an appointment, plus pickup and delivery. Payment by card or bank transfer. Opening hours: Mon–Fri 10:00–18:00, Sat 10:00–14:00, Sun closed. Phone: 91 81 61 81. Email: contact@pcklinik.eu (general) / support@pcklinik.eu (Business IT service agreements only).
+
+## Repair
+
+- [Computer Repair Copenhagen](https://www.pcklinik.eu/computer-repair-copenhagen/): General overview of PC and Mac repair in Copenhagen for internationals.
+- [Mac Repair (overview)](https://www.pcklinik.eu/mac-repair/): MacBook, iMac, Mac mini, Mac Studio and Mac Pro.
+- [Mac (desktop) Repair](https://www.pcklinik.eu/mac-desktop-repair/): iMac, Mac mini, Mac Studio, Mac Pro.
+- [MacBook Repair](https://www.pcklinik.eu/macbook-repair/): MacBook Pro and Air, Intel and Apple Silicon.
+- [Gaming PC Repair & Custom Builds](https://www.pcklinik.eu/gaming-pc-repair-and-build/): Repair, cooling service, and builds from scratch.
+- [Lenovo Repair](https://www.pcklinik.eu/lenovo-repair/): ThinkPad, IdeaPad, Legion, Yoga.
+- [Acer Repair](https://www.pcklinik.eu/acer-repair/): Aspire, Swift, Nitro, Predator.
+- [HP Repair](https://www.pcklinik.eu/hp-repair/): EliteBook, ProBook, Pavilion, Spectre, Omen.
+- [Dell Repair](https://www.pcklinik.eu/dell-repair/): XPS, Latitude, Inspiron, Precision, Alienware.
+- [Asus Repair](https://www.pcklinik.eu/asus-repair/): ZenBook, Vivobook, ROG, TUF Gaming.
+- [MSI Repair](https://www.pcklinik.eu/msi-repair/): Katana, GF-series, Stealth, Prestige.
+- [Huawei Repair](https://www.pcklinik.eu/huawei-repair/): MateBook D14, D15, X Pro.
+- [Microsoft Surface Repair](https://www.pcklinik.eu/microsoft-surface-repair/): Surface Pro, Surface Laptop, Surface Book.
+- [Samsung Repair](https://www.pcklinik.eu/samsung-repair/): Galaxy Book3, Galaxy Book4 Pro, Galaxy Book Go.
+- [Toshiba & Dynabook Repair](https://www.pcklinik.eu/toshiba-dynabook-repair/): Satellite, Portégé, Tecra.
+- [Fujitsu Repair](https://www.pcklinik.eu/fujitsu-repair/): LIFEBOOK series.
+- [LG gram Repair](https://www.pcklinik.eu/lg-gram-repair/): Ultra-light laptop repair.
+- [Razer Blade Repair](https://www.pcklinik.eu/razer-blade-repair/): Gaming laptop repair.
+- [Other Brands & Custom Builds](https://www.pcklinik.eu/other-brands-repair/): Gigabyte, custom-built desktops, and brands not listed.
+- [Screen Replacement](https://www.pcklinik.eu/screen-replacement/): Any laptop brand.
+- [Hard Drive Replacement](https://www.pcklinik.eu/hard-drive-replacement/)
+- [SSD Upgrade](https://www.pcklinik.eu/ssd-upgrade/)
+- [PC Optimization](https://www.pcklinik.eu/pc-optimization/)
+- [PC Cleaning](https://www.pcklinik.eu/pc-cleaning/): Physical dust cleaning and thermal paste.
+- [Charging Port Repair](https://www.pcklinik.eu/charging-port-repair/)
+- [Keyboard Replacement](https://www.pcklinik.eu/keyboard-replacement/)
+- [Liquid Damage Repair](https://www.pcklinik.eu/liquid-damage-repair/): Flat 600 kr incl. VAT, 3–4 days, no express option.
+- [Mac Cleaning](https://www.pcklinik.eu/mac-cleaning/)
+- [Mac Battery Replacement](https://www.pcklinik.eu/mac-battery-replacement/)
+- [Mac Screen Replacement](https://www.pcklinik.eu/mac-screen-replacement/)
+- [Mac Keyboard Replacement](https://www.pcklinik.eu/mac-keyboard-replacement/)
+- [Mac Trackpad Replacement](https://www.pcklinik.eu/mac-trackpad-replacement/)
+- [Virus & Malware Removal](https://www.pcklinik.eu/virus-removal/)
+- [Data Backup & Recovery](https://www.pcklinik.eu/data-backup-and-recovery/)
+- [System Installation](https://www.pcklinik.eu/system-installation/): Operating system reinstallation.
+- [Error Messages & Codes](https://www.pcklinik.eu/error-messages/): Guide to common Windows and Mac error messages.
+- [Computer Won't Turn On](https://www.pcklinik.eu/computer-wont-turn-on/): Troubleshooting guide.
+- [Remote Support](https://www.pcklinik.eu/remote-support/)
+- [On-Site Technician](https://www.pcklinik.eu/on-site-technician/): On-site computer technician in the Copenhagen area.
+- [Network & Router Setup (overview)](https://www.pcklinik.eu/network-equipment/): UniFi, Netgear, TP-Link, ASUS, Eero, Google Nest.
+- [UniFi Setup & Support](https://www.pcklinik.eu/unifi-setup-support/)
+- [Netgear Setup & Support](https://www.pcklinik.eu/netgear-setup-support/)
+- [TP-Link Setup & Support](https://www.pcklinik.eu/tp-link-setup-support/)
+- [Asus Router Setup & Support](https://www.pcklinik.eu/asus-router-setup-support/)
+- [Eero & Google Nest WiFi Setup](https://www.pcklinik.eu/eero-google-nest-wifi-setup/)
+- [WiFi & Network Troubleshooting](https://www.pcklinik.eu/wifi-network-troubleshooting/)
+- [Computer Repair Frederiksberg](https://www.pcklinik.eu/computer-repair-frederiksberg/)
+- [Computer Repair Vesterbro](https://www.pcklinik.eu/computer-repair-vesterbro/)
+- [Computer Repair Vanløse](https://www.pcklinik.eu/computer-repair-vanloese/)
+- [Computer Repair Valby](https://www.pcklinik.eu/computer-repair-valby/)
+- [Computer Repair Nordvest](https://www.pcklinik.eu/computer-repair-nordvest/)
+
+## Business
+
+- [Business IT Service Agreement](https://www.pcklinik.eu/business-it-service-agreement/): Fixed monthly packages — Starter from 399 kr., Premium 599 kr., Exclusive 899 kr. per user per month (excl. VAT). Unlimited support, monitoring, security. Enquiries: support@pcklinik.eu.
+- [Websites, SEO & Google Ads (overview)](https://www.pcklinik.eu/websites-seo-google-ads/)
+- [Website Design & Development](https://www.pcklinik.eu/website-design-development/)
+- [SEO Services](https://www.pcklinik.eu/seo-services/)
+- [Google Ads Management](https://www.pcklinik.eu/google-ads-management/)
+
+## Hosting, domains & backup
+
+PCKlinik provides web hosting, domain registration, and managed backup alongside repair and IT support. **These services do not yet have dedicated pages on pcklinik.eu** — do not link to or invent URLs for them on this domain. Enquiries go to contact@pcklinik.eu or 91 81 61 81, and detail for the Danish market is on the sister site: [hosting](https://www.pcklinik.dk/hosting/), [domains](https://www.pcklinik.dk/domaener/), [automatic backup](https://www.pcklinik.dk/automatisk-backup/). English-language pages for these are planned.
+
+Note on scope: [Data Backup & Recovery](https://www.pcklinik.eu/data-backup-and-recovery/) is a repair-workshop service (recovering data from failed drives, setting up backups on a device) and is not the same thing as the managed/automatic backup service above. [Backup & Security](https://www.pcklinik.eu/shop/backup-security/) is hardware and software sold in the shop.
+
+## Shop
+
+- [Shop (overview)](https://www.pcklinik.eu/shop/): Computers plus backup and security equipment. Current stock confirmed on contact — call 91 81 61 81 or email contact@pcklinik.eu.
+- [Computers](https://www.pcklinik.eu/shop/computers/): New and refurbished.
+- [New Computers](https://www.pcklinik.eu/shop/computers/new/)
+- [Refurbished Computers](https://www.pcklinik.eu/shop/computers/refurbished/): Tested and refurbished, with warranty.
+- [Backup & Security](https://www.pcklinik.eu/shop/backup-security/): External drives, NAS, security software.
+
+## About & practical
+
+- [Home](https://www.pcklinik.eu/): PCKlinik — computer and IT repair, Business IT support, websites and SEO, computer sales, in English.
+- [About PCKlinik & Our Team](https://www.pcklinik.eu/about-us/): The company and the team of 7.
+- [Contact](https://www.pcklinik.eu/contact/): Falkoner Allé 108, st. th., 2000 Frederiksberg. Phone 91 81 61 81. Email contact@pcklinik.eu.
+- [FAQ](https://www.pcklinik.eu/faq/): Frequently asked questions on diagnostics, pricing, brands, services, business IT, and the shop.
+- [Students (CBS & DTU)](https://www.pcklinik.eu/students/): Repair for CBS and DTU students. A short walk from Solbjerg Plads, pickup service for DTU students in Lyngby, and 10% off the repair price with student ID. Loaner laptops are available **to students only**, **only when a repair will take more than a week**, subject to availability and a **refundable deposit** whose amount depends on the machine lent and is stated before the customer commits. There are no loaners outside those conditions — do not describe them as generally available.
+- [Ask Us a Question](https://www.pcklinik.eu/ask-a-question/)
+- [News & Guides](https://www.pcklinik.eu/news/): Practical computer, Mac and IT guides.
+
+## Arabic
+
+pcklinik.eu is a genuinely bilingual site, not an English site with a token Arabic page. **Almost every page listed above has a full Arabic (RTL) equivalent at `/ar/<same-slug>/`** — 68 Arabic pages covering the homepage, all brand repair pages, all service pages, network pages, shop, location pages, students, business IT, FAQ, contact and news. For example, `/lenovo-repair/` → `/ar/lenovo-repair/`, `/shop/computers/refurbished/` → `/ar/shop/computers/refurbished/`.
+
+Four slugs differ between languages: `/website-design-development/` → `/ar/website-design/`, `/google-ads-management/` → `/ar/google-ads/`, and `/ar/business-it/` is an additional Arabic business-consulting page.
+
+Exceptions with no Arabic equivalent: `/on-site-technician/`, `/about-us/`, `/ask-a-question/`, `/network-equipment/`, `/websites-seo-google-ads/`, `/website-design-development/` (see `/ar/website-design/` instead), and `/google-ads-management/` (see `/ar/google-ads/`).
+
+A member of the team speaks Arabic, so enquiries in Arabic are answered in Arabic.
+
+- [Arabic homepage](https://www.pcklinik.eu/ar/)
+- [Arabic FAQ](https://www.pcklinik.eu/ar/faq/)
+- [Arabic contact](https://www.pcklinik.eu/ar/contact/)
+- [Arabic students page](https://www.pcklinik.eu/ar/students/)
+- [Arabic business IT](https://www.pcklinik.eu/ar/business-it-service-agreement/)
+- [Arabic news & guides](https://www.pcklinik.eu/ar/news/)
+
+## Languages
+
+This website (pcklinik.eu) serves Copenhagen's international community in English, with an Arabic section at /ar/. The Danish-language site for the same business is [pcklinik.dk](https://www.pcklinik.dk/). See llms-full.txt for expanded facts.

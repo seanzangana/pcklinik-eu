@@ -32,10 +32,10 @@ const popular = [
 const homeFaq = [
   ['Do you speak English?', "Yes — our entire service is in English. No Danish required, whether you're calling, emailing, or visiting the workshop."],
   ['Do you repair every computer brand?', 'Yes — we repair all major PC and Mac brands, plus custom builds and brands not individually listed. See "Other Brands & Custom Builds" if you don\'t see yours.'],
-  ['How much does a repair cost?', "Standard diagnostics are 300 kr (2–4 days), or express for 600 kr (1–2 hours). You'll always get a fixed quote before any repair work starts, so there are no surprises."],
+  ['How much does a repair cost?', "Standard diagnostics are 300 kr incl. VAT (2–4 days), or express for 600 kr incl. VAT (1–2 hours). You'll always get a fixed quote before any repair work starts, so there are no surprises."],
   ['How long does a repair take?', 'Many repairs are completed the same day, especially with express diagnostics. More involved repairs depend on parts availability.'],
   ['Do you serve businesses as well as individuals?', 'Yes — alongside device repair, we offer fixed-price IT service agreements for businesses, including unlimited support, monitoring, and security. See our Business IT page for details.'],
-  ['Where are you located?', 'Falkoner Allé 108, Frederiksberg. We serve Frederiksberg and Copenhagen directly, plus the rest of Denmark via remote support for IT service agreements.'],
+  ['Where are you located?', 'Falkoner Allé 108, st. th., Frederiksberg. We serve Frederiksberg and Copenhagen directly, plus the rest of Denmark via remote support for IT service agreements.'],
   ['Do you sell computers as well as repair them?', 'Yes — new and refurbished computers, plus backup and security equipment, are available in our shop.'],
 ];
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: homeFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
@@ -62,7 +62,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
     <div class="wrap">
       <div class="eyebrow">Our Promise</div><h2>How it works</h2>
       <div class="steps">
-        <div class="step"><div class="num">1</div><h3>Diagnostics</h3><p>300 kr (2–4 days), or express for 600 kr (1–2 hours).</p></div>
+        <div class="step"><div class="num">1</div><h3>Diagnostics</h3><p>300 kr incl. VAT (2–4 days), or express for 600 kr incl. VAT (1–2 hours).</p></div>
         <div class="step"><div class="num">2</div><h3>Fixed quote</h3><p>You get a clear price before we touch anything.</p></div>
         <div class="step"><div class="num">3</div><h3>Repair</h3><p>We carry out the repair with the same care as the diagnostics.</p></div>
       </div>
