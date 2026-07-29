@@ -41,16 +41,16 @@ const homeFaq = [
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: homeFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
 ---
 <BaseLayout
-  title="PCKlinik | Computer & Mac Repair in Copenhagen"
-  description="Fast, honest PC and Mac repair in Frederiksberg and Copenhagen. Diagnostics 300 kr (2-4 days) or express (600 kr, 1-2 hours). Call 91 81 61 81."
+  title="PCKlinik | Computer & IT — One English-Speaking Team in Copenhagen"
+  description="Repair, IT support, hosting, domains, backup and computer sales — one English-speaking team in Copenhagen for expats, students and international businesses."
   path="/"
   schema={faqSchema}
 >
   <section class="hero">
     <div class="wrap">
       <div class="eyebrow">Frederiksberg & Copenhagen · English-speaking</div>
-      <h1>Computer & IT support — for you or your business</h1>
-      <p class="lead">Fast, honest repair for individuals. Fixed-price IT support for businesses. No Danish required — pick your path below.</p>
+      <h1>Your one team for everything computer and IT — in English, start to finish.</h1>
+      <p class="lead">From repair and IT support to hosting, domains, backup, and computer sales — PCKlinik is the one place expats, international students, and international businesses in Copenhagen turn to. No Danish required, no juggling multiple providers — just one experienced team who speaks your language.</p>
       <div class="grid grid-2 hero-paths">
         <a class="card card-link" href="/contact/"><div class="card-icon">🖥️</div><h3>For Individuals</h3><p>PC & Mac repair — standard or express diagnostics, fixed quote, most repairs same-day.</p><span class="arrow">Book a repair →</span></a>
         <a class="card card-link" href="/business-it-service-agreement/"><div class="card-icon">🏢</div><h3>For Business</h3><p>IT service agreements — unlimited support, monitoring, and security for one fixed monthly price.</p><span class="arrow">See Business IT plans →</span></a>

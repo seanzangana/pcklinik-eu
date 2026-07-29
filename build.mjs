@@ -103,7 +103,7 @@ function header(p) {
 function footer() {
   const year = new Date().getFullYear();
   return `<footer class="site-footer"><div class="wrap"><div class="cols">
-    <div><img src="/logo.png" alt="PCKlinik" class="logo-foot" width="85" height="34" /><p>Fast, honest PC and Mac repair for individuals and businesses in Frederiksberg and Copenhagen.</p><p>${site.address}</p></div>
+    <div><img src="/logo.png" alt="PCKlinik" class="logo-foot" width="85" height="34" /><p>Your one team for everything computer and IT — in English, start to finish. Frederiksberg and Copenhagen.</p><p>${site.address}</p></div>
     <div><h2>Repairs</h2><a href="/lenovo-repair/">Lenovo</a><a href="/hp-repair/">HP</a><a href="/dell-repair/">Dell</a><a href="/macbook-repair/">MacBook</a><a href="/mac-desktop-repair/">Mac (desktop)</a><a href="/microsoft-surface-repair/">Microsoft Surface</a></div>
     <div><h2>More</h2><a href="/shop/">Shop</a><a href="/shop/computers/refurbished/">Refurbished Computers</a><a href="/business-it-service-agreement/">Business IT Support</a><a href="/about-us/">Meet the Team</a><a href="/students/">Students (CBS &amp; DTU)</a><a href="/faq/">FAQ</a><a href="/news/">News</a><a href="/ask-a-question/">Ask Us a Question</a><a href="/contact/">Contact</a></div>
     <div><h2>Areas we serve</h2><a href="/computer-repair-copenhagen/">Copenhagen</a><a href="/computer-repair-frederiksberg/">Frederiksberg</a><a href="/computer-repair-vesterbro/">Vesterbro</a><a href="/computer-repair-vanloese/">Vanløse</a><a href="/computer-repair-valby/">Valby</a><a href="/computer-repair-nordvest/">Nordvest</a></div>
@@ -272,8 +272,8 @@ function homeBody() {
   ].map(([t, d, h]) => `<a class="card card-link" href="${h}"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="arrow">Learn more →</span></a>`).join('');
   const faqHtml = HOME_FAQ.map(([q, a]) => `<details><summary>${esc(q)}</summary><div class="answer">${esc(a)}</div></details>`).join('');
   return `  <section class="hero"><div class="wrap"><div class="eyebrow">Frederiksberg &amp; Copenhagen · English-speaking</div>
-    <h1>Computer &amp; IT support — for you or your business</h1>
-    <p class="lead">Fast, honest repair for individuals. Fixed-price IT support for businesses. No Danish required — pick your path below.</p>
+    <h1>Your one team for everything computer and IT — in English, start to finish.</h1>
+    <p class="lead">From repair and IT support to hosting, domains, backup, and computer sales — PCKlinik is the one place expats, international students, and international businesses in Copenhagen turn to. No Danish required, no juggling multiple providers — just one experienced team who speaks your language.</p>
     <div class="grid grid-2 hero-paths">
       <a class="card card-link" href="/contact/"><div class="card-icon">🖥️</div><h3>For Individuals</h3><p>PC &amp; Mac repair — standard or express diagnostics, fixed quote, most repairs same-day.</p><span class="arrow">Book a repair →</span></a>
       <a class="card card-link" href="/business-it-service-agreement/"><div class="card-icon">🏢</div><h3>For Business</h3><p>IT service agreements — unlimited support, monitoring, and security for one fixed monthly price.</p><span class="arrow">See Business IT plans →</span></a>
@@ -499,7 +499,7 @@ const TEAM = [
 function aboutBody() {
   const cards = TEAM.map(([name, img, bio]) => `<div class="card"><img class="img-placeholder" src="${img}" alt="${esc(name)}" loading="lazy" width="480" height="360" /><h3>${esc(name)}</h3><p>${esc(bio)}</p></div>`).join('');
   return `  <section class="hero"><div class="wrap"><div class="eyebrow">About PCKlinik</div><h1>Meet the Team</h1>
-    <p class="lead">Real people, real experience — not a call center. PCKlinik is a team of 7, based in our workshop on Falkoner All&eacute; in Frederiksberg. Between us, we cover PC and Mac repair, networks and servers, on-site support, and website/SEO work — so whatever you need, there's someone on the team who genuinely knows it well.</p></div></section>
+    <p class="lead">Real people, real experience — not a call center. PCKlinik is a team of 7, based in our workshop on Falkoner All&eacute; in Frederiksberg. We're your one team for everything computer and IT — in English, start to finish: PC and Mac repair, IT support, hosting, domains, backup, networks and servers, on-site support, computer sales, and website/SEO work. Expats, international students, and international businesses in Copenhagen come to us so they don't have to juggle multiple providers — whatever you need, there's someone on the team who genuinely knows it well.</p></div></section>
   <section class="section"><div class="wrap"><div class="eyebrow">The team</div><h2>Seven people, one workshop</h2>
     <div class="grid grid-3" style="margin-top:24px">${cards}</div></div></section>
   <section class="section alt"><div class="wrap"><div class="eyebrow">Why this matters for you</div><h2>A bigger team — same straight answers</h2>
@@ -559,7 +559,7 @@ function footerAr() {
   const year = new Date().getFullYear();
   const links = arNav.map((i) => `<a href="${i.href}">${esc(i.label)}</a>`).join('');
   return `<footer class="site-footer"><div class="wrap"><div class="cols">
-    <div><h2>PCKlinik</h2><a href="/ar/" style="color:var(--muted)">دعم تقني وخدمات ويب عن بُعد — بفريق يتحدث العربية.</a></div>
+    <div><h2>PCKlinik</h2><a href="/ar/" style="color:var(--muted)">فريقك الواحد لكل ما يخص الكمبيوتر وتقنية المعلومات — نتحدث لغتك، من البداية إلى النهاية.</a></div>
     <div><h2>الخدمات عن بُعد</h2>${links}<a href="/ar/faq/">الأسئلة الشائعة</a><a href="/ar/news/">الأخبار</a><a href="/ar/students/">الطلاب (CBS و DTU)</a></div>
     <div><h2>المتجر</h2>${arShop.map((sh) => `<a href="/ar/${sh.slug}/">${esc(sh.label)}</a>`).join('')}</div>
     <div><h2>المناطق التي نخدمها</h2><a href="/ar/computer-repair-copenhagen/" lang="en">Copenhagen</a><a href="/ar/computer-repair-frederiksberg/" lang="en">Frederiksberg</a><a href="/ar/computer-repair-vesterbro/" lang="en">Vesterbro</a><a href="/ar/computer-repair-vanloese/" lang="en">Vanl&oslash;se</a><a href="/ar/computer-repair-valby/" lang="en">Valby</a><a href="/ar/computer-repair-nordvest/" lang="en">Nordvest</a></div>
@@ -632,8 +632,8 @@ function arHomeHtml() {
   ].map(([h, t, d]) => `<a class="card card-link" href="${h}"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="arrow">التفاصيل →</span></a>`).join('');
   const faq = AR_HOME_FAQ.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
   return `  <section class="hero"><div class="wrap"><div class="eyebrow">Frederiksberg وCopenhagen · نتحدث العربية والدنماركية والإنجليزية</div>
-    <h1>إصلاح الحاسوب وخدمات تقنية المعلومات — لك أو لعملك</h1>
-    <p class="lead">إصلاح سريع وصادق للأفراد. دعم تقني بسعر ثابت للشركات. لا حاجة للدنماركية أو الإنجليزية — نتحدث العربية أيضًا.</p>
+    <h1>فريقك الواحد لكل ما يخص الكمبيوتر وتقنية المعلومات — نتحدث لغتك، من البداية إلى النهاية.</h1>
+    <p class="lead">من الإصلاح والدعم الفني إلى الاستضافة والدومينات والنسخ الاحتياطي وبيع الكمبيوترات — PCKlinik هو المكان الذي يلجأ إليه المغتربون والطلاب الدوليون والشركات الدولية في Copenhagen. لا حاجة للتنقل بين عدة مزودين — فريق واحد ذو خبرة، يتحدث العربية أيضاً.</p>
     <p class="lead" style="font-size:15px">إذا كنتم في Copenhagen، يمكننا أيضًا الاجتماع شخصيًا في ورشتنا لمناقشة مشروعكم — الخدمة عن بُعد اختيارية، وليست إلزامية.</p></div></section>
   <section class="section"><div class="wrap"><div class="grid grid-2">
     <a class="card card-link" href="/ar/mac-repair/"><div class="card-icon">🖥️</div><h3>للأفراد</h3><p>إصلاح الحاسوب وMac — تشخيص قياسي أو سريع، سعر ثابت، معظم الإصلاحات في نفس اليوم.</p><span class="arrow">احجز إصلاحًا ←</span></a>
@@ -957,7 +957,7 @@ async function run() {
 
   const pages = [];
   // home
-  pages.push(['/', page({ title: 'PCKlinik | Computer & Mac Repair in Copenhagen', description: 'Fast, honest PC and Mac repair in Frederiksberg and Copenhagen. Diagnostics 300 kr (2-4 days) or express (600 kr, 1-2 hours). Call 91 81 61 81.', p: '/', body: homeBody(), schema: faqSchemaFrom(HOME_FAQ) })]);
+  pages.push(['/', page({ title: 'PCKlinik | Computer & IT — One English-Speaking Team in Copenhagen', description: 'Repair, IT support, hosting, domains, backup and computer sales — one English-speaking team in Copenhagen for expats, students and international businesses.', p: '/', body: homeBody(), schema: faqSchemaFrom(HOME_FAQ) })]);
   // repairs
   for (const r of repairs) {
     pages.push([`/${r.slug}/`, page({ title: r.title, description: r.description, p: `/${r.slug}/`, body: repairBody(r), schema: repairSchema(r) })]);
@@ -988,7 +988,7 @@ async function run() {
   // Websites & SEO hub
   pages.push(['/websites-seo-google-ads/', page({ title: 'Website Design, SEO & Google Ads | PCKlinik', description: 'Website design, SEO, and Google Ads management for businesses in Copenhagen. Built and optimized by someone who actually does this work.', p: '/websites-seo-google-ads/', body: websitesHubHtml(), schema: faqSchemaFrom(WEBSITES_HUB_FAQ) })]);
   // About / Meet the Team
-  pages.push(['/about-us/', page({ title: 'About PCKlinik & Our Team | PCKlinik', description: 'Meet the PCKlinik team — 7 people covering PC, Mac, networks, on-site support, and web/SEO, based in Frederiksberg.', p: '/about-us/', body: aboutBody() })]);
+  pages.push(['/about-us/', page({ title: 'About PCKlinik & Our Team | PCKlinik', description: 'Meet the PCKlinik team — one English-speaking team in Frederiksberg covering PC and Mac repair, IT support, networks, on-site help, hosting and web/SEO.', p: '/about-us/', body: aboutBody() })]);
   pages.push(['/students/', page({ title: 'Student Repair Services — CBS & DTU | PCKlinik', description: 'Fast, English-speaking computer repair for CBS and DTU students — a short walk from Solbjerg Plads, DTU pickup in Lyngby, loaner laptops and a 10% student discount.', p: '/students/', body: studentsHtml(), schema: faqSchemaFrom(STUDENTS_FAQ) })]);
   // News section
   pages.push(['/news/', page({ title: 'News & Guides | PCKlinik', description: 'Practical computer, Mac, and IT guides from PCKlinik in Frederiksberg — straight answers to common questions, no jargon.', p: '/news/', body: newsIndexHtml() })]);
@@ -1001,7 +1001,7 @@ async function run() {
   pages.push(['/ar/contact/', page({ title: 'اتصل بنا | PCKlinik', description: 'تواصلوا مع PCKlinik في Frederiksberg وCopenhagen. نتحدث العربية والدنماركية والإنجليزية.', p: '/ar/contact/', body: arContactHtml(), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   // Arabic (RTL) remote-services section
   // Arabic homepage (Batch 1)
-  pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'إصلاح حاسوب وMac في Frederiksberg وCopenhagen. فريق يتحدث العربية والدنماركية والإنجليزية. تشخيص من 300 كرونة، سعر ثابت.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
+  pages.push(['/ar/', page({ title: 'PCKlinik | إصلاح الحاسوب وأجهزة Mac في Copenhagen', description: 'من الإصلاح والدعم الفني إلى الاستضافة والدومينات والنسخ الاحتياطي وبيع الكمبيوترات — فريق واحد في Copenhagen يتحدث العربية، من البداية إلى النهاية.', p: '/ar/', body: arHomeHtml(), schema: faqSchemaFrom(AR_HOME_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   pages.push(['/ar/faq/', page({ title: 'الأسئلة الشائعة | PCKlinik', description: 'أسئلة شائعة حول إصلاح الحاسوب وMac، الأسعار، الماركات، والخدمات في PCKlinik. فريق يتحدث العربية والدنماركية والإنجليزية.', p: '/ar/faq/', body: arFaqPageHtml(), schema: faqSchemaFrom(AR_GENERAL_FAQ), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   pages.push(['/ar/news/', page({ title: 'الأخبار والأدلة | PCKlinik', description: 'أدلة عملية حول إصلاح الحاسوب وMac من PCKlinik في Frederiksberg وCopenhagen.', p: '/ar/news/', body: arNewsIndexHtml(), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);
   for (const n of AR_NEWS) pages.push([`/ar/news/${n.slug}/`, page({ title: `${n.title} | PCKlinik`, description: n.description, p: `/ar/news/${n.slug}/`, body: arNewsPostHtml(n), schema: arNewsPostSchema(n), lang: 'ar', dir: 'rtl', chrome: 'ar' })]);

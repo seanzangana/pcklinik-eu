@@ -331,7 +331,8 @@ export function websitesHubHtml() {
     ['Google Ads Management', 'Targeted campaigns managed properly, with your budget spent on the right searches.', '/google-ads-management/'],
   ].map(([t, d, h]) => `<a class="card card-link" href="${h}"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="arrow">Learn more →</span></a>`).join('');
   const faqHtml = WEBSITES_HUB_FAQ.map((f) => `<details><summary>${esc(f.q)}</summary><div class="answer">${esc(f.a)}</div></details>`).join('');
-  const quote = `mailto:${site.emailBusiness}?subject=${encodeURIComponent('Websites & SEO enquiry')}`;
+  // Standing rule: support@ appears only on the Business IT Service Agreement page.
+  const quote = `mailto:${site.emailConsumer}?subject=${encodeURIComponent('Websites & SEO enquiry')}`;
   return `  <section class="hero"><div class="wrap"><div class="eyebrow">Business · Websites &amp; SEO</div>
     <h1>Websites &amp; SEO</h1><p class="lead">A website that works, found by the people looking for it.</p>
     <div class="cta-row"><a class="btn btn-white" href="${quote}">Get a quote</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div></section>
