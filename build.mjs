@@ -154,7 +154,7 @@ const businessSchema = {
   ],
 };
 
-function page({ title, description, p, body, schema = null, lang = 'en', dir = '', chrome = 'en' }) {
+function page({ title, description, p, body, schema = null, lang = 'en', dir = '', chrome = 'en', noindex = false }) {
   const canonical = site.domain + p;
   const dk = hreflangMap[p];
   let altHreflang = '';
@@ -170,7 +170,7 @@ function page({ title, description, p, body, schema = null, lang = 'en', dir = '
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}" />
-  <link rel="canonical" href="${canonical}" />
+  ${noindex ? '<meta name="robots" content="noindex, follow" />\n  ' : ''}<link rel="canonical" href="${canonical}" />
   <link rel="alternate" hreflang="${lang}" href="${canonical}" />
   ${dk ? `<link rel="alternate" hreflang="da" href="${dk}" />\n  <link rel="alternate" hreflang="x-default" href="${canonical}" />` : ''}${altHreflang}
   <meta property="og:type" content="website" />
@@ -877,6 +877,25 @@ function locationBody(loc) {
   <section class="section"><div class="wrap"><div class="cta-band"><h2>Need a repair in ${esc(loc.h1.replace('Computer Repair in ', ''))}?</h2><p>Diagnostics 300 kr incl. VAT (2–4 days) or express (600 kr incl. VAT, 1–2 hours). English-speaking, fixed quote before we start.</p><div class="cta-row"><a class="btn btn-white" href="/contact/">Book a repair</a><a class="btn btn-ghost-light" href="${site.phoneHref}">📞 Call ${site.phone}</a></div></div>
     <div style="margin-top:32px"><p class="eyebrow">Related</p><div class="crosslinks">${cross}</div></div></div></section>`;
 }
+// ---------- 404 ----------
+// Cloudflare Pages serves dist/404.html with a real 404 status. Without this file
+// Pages falls back to serving index.html at HTTP 200 for every unknown URL, which
+// turns typos and stale inbound links into indexable homepage duplicates.
+function notFoundBody() {
+  return `  <section class="hero"><div class="wrap"><div class="eyebrow">Error 404</div>
+    <h1>Page not found</h1>
+    <p class="lead">The page you are looking for does not exist \u2014 it may have moved, been renamed, or the address may contain a typo.</p>
+    <div class="cta-row"><a class="btn btn-white" href="/">Go to the homepage</a><a class="btn btn-ghost-light" href="/contact/">Contact us</a></div>
+  </div></section>
+  <section class="section"><div class="wrap"><div class="eyebrow">Try instead</div><h2>Popular pages</h2>
+    <div class="grid grid-4">
+      <a class="card card-link" href="/contact/"><h3>Bring your device in</h3><p>Diagnostics from 300 kr incl. VAT, fixed quote before we start.</p><span class="arrow">Go to contact \u2192</span></a>
+      <a class="card card-link" href="/shop/"><h3>Shop</h3><p>Computers, backup &amp; security.</p><span class="arrow">Visit the shop \u2192</span></a>
+      <a class="card card-link" href="/business-it-service-agreement/"><h3>Business IT</h3><p>Fixed price per user per month.</p><span class="arrow">See business IT \u2192</span></a>
+      <a class="card card-link" href="/faq/"><h3>FAQ</h3><p>Frequently asked questions.</p><span class="arrow">See the FAQ \u2192</span></a>
+    </div></div></section>`;
+}
+
 // ---------- write helpers ----------
 async function writePage(p, html) {
   const dir = p === '/' ? DIST : path.join(DIST, p);
@@ -1029,6 +1048,14 @@ async function run() {
   for (const s of services) pages.push([`/${s.slug}/`, page({ title: s.title, description: s.description, p: `/${s.slug}/`, body: serviceBody(s), schema: faqSchemaFrom(s.faq) })]);
 
   for (const [p, html] of pages) await writePage(p, html);
+
+  // 404 page \u2014 Cloudflare Pages serves this file with an actual 404 status.
+  // Deliberately not added to `pages`, so it stays out of the sitemap.
+  await fs.writeFile(path.join(DIST, '404.html'), page({
+    title: 'Page not found (404) | PCKlinik',
+    description: 'This page does not exist. Go to the homepage, or find what you are looking for in the menu.',
+    p: '/404.html', body: notFoundBody(), noindex: true,
+  }));
 
   // sitemap + robots
   const urls = pages.map(([p]) => `  <url><loc>${site.domain}${p}</loc></url>`).join('\n');
