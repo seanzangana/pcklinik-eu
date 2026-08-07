@@ -156,10 +156,29 @@ const businessSchema = {
 
 function page({ title, description, p, body, schema = null, lang = 'en', dir = '', chrome = 'en', noindex = false }) {
   const canonical = site.domain + p;
-  const dk = hreflangMap[p];
-  let altHreflang = '';
-  if (chrome === 'ar') { const enHref = enHrefAr(p); altHreflang = `\n  <link rel="alternate" hreflang="en" href="${site.domain + enHref}" />\n  <link rel="alternate" hreflang="x-default" href="${site.domain + enHref}" />`; }
-  else { const arCand = arCounterpart(p); if (arPathSet.has(arCand)) altHreflang = `\n  <link rel="alternate" hreflang="ar" href="${site.domain + arCand}" />`; }
+  // hreflang cluster. Google only honours an annotation set if every page in the
+  // cluster lists every member, including itself. So each page emits the SAME set:
+  // en, ar (when an Arabic twin exists), da (when a genuine Danish twin exists),
+  // and x-default pointing at the English URL as the international default.
+  const isAr = chrome === 'ar';
+  const enPath = isAr ? enHrefAr(p) : p;
+  const arPath = arCounterpart(enPath);
+  const arExists = arPathSet.has(arPath);
+  // Reciprocity guard: an Arabic page only joins the cluster if the English page
+  // points back at it. /ar/business-it/ is Arabic-only extra content whose English
+  // page's real twin is /ar/business-it-service-agreement/, so it self-references only.
+  const inCluster = !isAr || (arExists && arPath === p);
+  const dk = inCluster ? hreflangMap[enPath] : undefined;
+  const alts = [];
+  if (!inCluster) {
+    alts.push(`<link rel="alternate" hreflang="${lang}" href="${canonical}" />`);
+  } else {
+    alts.push(`<link rel="alternate" hreflang="en" href="${site.domain + enPath}" />`);
+    if (arExists) alts.push(`<link rel="alternate" hreflang="ar" href="${site.domain + arPath}" />`);
+    if (dk) alts.push(`<link rel="alternate" hreflang="da" href="${dk}" />`);
+    alts.push(`<link rel="alternate" hreflang="x-default" href="${site.domain + enPath}" />`);
+  }
+  const hreflangTags = alts.join('\n  ');
   const schemas = [businessSchema];
   if (schema) Array.isArray(schema) ? schemas.push(...schema) : schemas.push(schema);
   const ld = schemas.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n  ');
@@ -171,8 +190,7 @@ function page({ title, description, p, body, schema = null, lang = 'en', dir = '
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}" />
   ${noindex ? '<meta name="robots" content="noindex, follow" />\n  ' : ''}<link rel="canonical" href="${canonical}" />
-  <link rel="alternate" hreflang="${lang}" href="${canonical}" />
-  ${dk ? `<link rel="alternate" hreflang="da" href="${dk}" />\n  <link rel="alternate" hreflang="x-default" href="${canonical}" />` : ''}${altHreflang}
+  ${hreflangTags}
   <meta property="og:type" content="website" />
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(description)}" />
